@@ -1,0 +1,21 @@
+{
+  "extracted_at_utc": "2026-08-07T00:33:59.347926+00:00",
+  "sources": [
+    {
+      "file": "outputs/florida_ed_concordance_analysis_20260726/qa/cohort_validation_report.json",
+      "sha256": "153197dd95d814b5189706f42e8f85bc5b74991266db81185343508acc688275"
+    },
+    {
+      "file": "outputs/florida_ed_concordance_analysis_20260726/qa/pre_estimation_measurement_gate.json",
+      "sha256": "575095a279b632b407792142b6d92ec596a1d073781a6306479cfc695f22c786"
+    }
+  ],
+  "status": "PASS",
+  "period": "2010-2024",
+  "expected_partitions": 60,
+  "validated_partitions": 60,
+  "cohort_rows": 119543044,
+  "failed_checks": 0,
+  "source_release_modified": false,
+  "rebuilt_from_immutable_phase1_facts": true
+}

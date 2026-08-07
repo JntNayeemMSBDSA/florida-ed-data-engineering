@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# Local demo products (recreated by the documented commands)
+synthetic_demo/generated/
+synthetic_demo/output/
+
+# Private configuration and credentials
+.env
+.env.*
+!.env.example
+secrets/
+credentials/
+
+# Data and analytical products that must never enter this public repository
+*.parquet
+*.h5
+*.hdf5
+*.feather
+*.sas7bdat
+*.sas7bcat
+*.db
+*.sqlite
+*.sqlite3
+*.dta
+*.sav
+*.npy
+*.npz
+*.mmap
+*.memmap
+*coefficient*.csv
+*model_result*.csv
+*partial_estimate*
+
+# Editors and operating systems
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

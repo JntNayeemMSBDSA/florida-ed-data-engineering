@@ -1,0 +1,8 @@
+demo:
+  synthetic: true
+  seed: 20260806
+  encounter_rows: 800
+  schema_families: 5
+  generated_input_dir: synthetic_demo/generated/raw
+  output_dir: synthetic_demo/output
+  estimate_concordance: false

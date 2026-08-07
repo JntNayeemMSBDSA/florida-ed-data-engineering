@@ -1,0 +1,49 @@
+{
+  "extracted_at_utc": "2026-08-07T00:33:59.347926+00:00",
+  "sources": [
+    {
+      "file": "outputs/florida_ed_full_build_20260724/build_manifest_final.json",
+      "sha256": "0ca547d9179d913c7b4af0668f06107383e86d75013a2ea1b5694736d55c218f"
+    }
+  ],
+  "release_id": "florida_ed_full_build_20260724",
+  "scope_years": [
+    2005,
+    2006,
+    2007,
+    2008,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+  ],
+  "excluded_years": [
+    2009,
+    2025
+  ],
+  "expected_quarters": 76,
+  "completed_quarters": 76,
+  "encounter_records": 148686146,
+  "distinct_visit_keys": 148686146,
+  "fact_field_count": 342,
+  "schema_family_count": 5,
+  "schema_families": [
+    "2005-2008",
+    "2010-2015 Q3",
+    "2015 Q4-2017",
+    "2018-2022",
+    "2023-2024"
+  ],
+  "raw_data_mutated": false
+}

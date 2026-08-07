@@ -1,0 +1,66 @@
+{
+  "extracted_at_utc": "2026-08-07T00:33:59.347926+00:00",
+  "sources": [
+    {
+      "file": "outputs/florida_ed_concordance_analysis_20260726/qa/provider_master_v2_qa.json",
+      "sha256": "15e3e2548e9f5dcc1cb32ef15e13cea318801ec56909ad126a2a738c1bbed541"
+    },
+    {
+      "file": "outputs/florida_ed_concordance_analysis_20260726/qa/provider_race_proxy_v2_qa.json",
+      "sha256": "2c9d1a80519db33e80e05703db010f36df554149608ef174495c9b272868f9de"
+    },
+    {
+      "file": "outputs/florida_ed_concordance_analysis_20260726/qa/pre_estimation_measurement_gate.json",
+      "sha256": "575095a279b632b407792142b6d92ec596a1d073781a6306479cfc695f22c786"
+    },
+    {
+      "file": "outputs/florida_ed_concordance_analysis_20260726/qa/provider_gender_measurement_checkpoint.json",
+      "sha256": "aa973aabe29f03a0af667e84ed8415ee1be4116a9391956c7567e83145baacdf"
+    }
+  ],
+  "provider_master": {
+    "status": "PASS",
+    "unique_npis": 1813546,
+    "duplicate_npis": 0,
+    "ed_observed_npis_absent": 0,
+    "complete_ed_observed_universe": true
+  },
+  "ed_observed_provider_counts": {
+    "master_npis": 1813546,
+    "ed_observed_npis": 83541,
+    "phase1_linked_ed_observed_npis": 75790,
+    "newly_added_ed_observed_npis": 7751,
+    "ed_observed_individual_npis": 78843,
+    "ed_observed_organization_npis": 2152,
+    "ed_observed_md_do_npis": 65912,
+    "ed_observed_np_npis": 5972,
+    "ed_observed_pa_npis": 4028,
+    "organizational_npis_classified_md_do": 0
+  },
+  "race_measurement": {
+    "status": "PASS",
+    "method": "Bayesian full-name proxy without residential geography; not BISG",
+    "interpretation": "Algorithm-inferred probabilities, not self-identified physician race/ethnicity.",
+    "method_id": "wru_name_likelihoods_aamc_fl_physician_prior_v1",
+    "name_likelihood_release": "wru 2.0.0",
+    "primary_prior": "AAMC Florida active physicians, 2020",
+    "sensitivity_prior": "wru national 2020 population marginal",
+    "uses_residential_geography": false,
+    "is_bisg": false,
+    "is_self_reported": false
+  },
+  "gender_measurement": {
+    "status": "PASS",
+    "primary_sources": [
+      "NPPES",
+      "NPPES February 2026 current snapshot",
+      "CMS Doctors and Clinicians",
+      "CMS Doctors and Clinicians June 2026 current snapshot"
+    ],
+    "categories": [
+      "Female",
+      "Male"
+    ],
+    "is_self_identified_gender_identity": false
+  }
+}

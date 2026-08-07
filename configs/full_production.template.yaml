@@ -1,0 +1,19 @@
+# Documentation-only template. It contains no credentials or real local paths.
+production:
+  dataset_root: <authorized-private-dataset-root>
+  dictionary_root: <authorized-reference-file-root>
+  analysis_root: <authorized-analysis-root>
+  phase1_output: <private-phase1-release-root>
+  phase1_scratch: <private-phase1-scratch-root>
+  phase2_output: <private-phase2-release-root>
+  phase2_scratch: <private-phase2-scratch-root>
+
+runtime:
+  threads: <set-for-host>
+  memory_limit: <set-for-host>
+
+notes:
+  - The public repository does not contain the inputs needed for a production run.
+  - Phase 1 portfolio copies read FL_ED_* environment variables for private roots.
+  - Phase 2 portfolio copies receive private roots through command-line arguments.
+  - Access authorization, source licenses, and institutional controls still apply.

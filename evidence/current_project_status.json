@@ -1,0 +1,46 @@
+{
+  "extracted_at_utc": "2026-08-07T00:33:59.347926+00:00",
+  "sources": [
+    {
+      "file": "repository_construction_brief.txt",
+      "sha256": "b590dd7bcc3537280ffee98dc0c1826cd20c0deadbc6148564f37eb40ba098fe"
+    },
+    {
+      "file": "demeaning_state.json",
+      "sha256": "30eab886f9f7d198a2ac30e66720d4862eaa31900ed9e81e32215369f0469dfd"
+    }
+  ],
+  "status_statement": "Phase 1 complete and independently validated; Phase 2 measurement, cohort construction, historical analyses, and analytical specifications complete; primary 2010-2024 estimation and final analytical audits in progress.",
+  "development_history": {
+    "prototype_share": "approximately 0.5%",
+    "prototype_encounter_rows": 743767,
+    "production_identity_claim": false
+  },
+  "primary_race_progress": {
+    "checkpoint_updated_utc": "2026-08-06T23:08:42.929877+00:00",
+    "cohort_id": "race",
+    "model_id": "m3_physician_facility_yq_clinical_fe",
+    "design_columns_completed": 107,
+    "design_columns_total": 107,
+    "outcome_columns_completed": 8,
+    "outcomes_completed": false,
+    "overall_completion_flag": false
+  },
+  "final_analytical_pass_exists": false,
+  "component_status": {
+    "phase1_database_construction": "COMPLETE",
+    "phase1_independent_validation": "COMPLETE",
+    "provider_master_v2": "COMPLETE",
+    "primary_phase2_cohort": "COMPLETE",
+    "historical_cohort": "COMPLETE",
+    "historical_analyses": "COMPLETE",
+    "primary_race_models": "IN PROGRESS",
+    "primary_gender_models": "PENDING",
+    "outcome_specific_models": "PENDING",
+    "directional_dyad_models": "PENDING",
+    "corrected_primary_ami": "PENDING",
+    "multiplicity": "PENDING",
+    "final_analytical_audit": "PENDING",
+    "final_research_report": "PENDING"
+  }
+}

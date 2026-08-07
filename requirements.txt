@@ -1,0 +1,3 @@
+# Public demo and repository validation only. Production copies need private inputs
+# and the separately managed scientific environment described in METHODOLOGY.md.
+pytest==8.4.1

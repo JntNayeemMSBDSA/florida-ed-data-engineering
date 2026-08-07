@@ -1,0 +1,6 @@
+schema_family,input_rows,output_rows,status
+schema_1_2005_2008,160,160,PASS
+schema_2_2010_2015q3,160,160,PASS
+schema_3_2015q4_2017,160,160,PASS
+schema_4_2018_2022,160,160,PASS
+schema_5_2023_2024,160,160,PASS

@@ -1,0 +1,65 @@
+{
+  "extracted_at_utc": "2026-08-07T00:33:59.347926+00:00",
+  "sources": [
+    {
+      "file": "outputs/florida_ed_concordance_analysis_20260726/qa/historical_provider_v2_pre_estimation_gate.json",
+      "sha256": "454fd433c1245294133a8eb7a29dfdc39d4843fbf21da117d49594cb2f97a12c"
+    },
+    {
+      "file": "outputs/florida_ed_concordance_analysis_20260726/qa/independent_historical_results_audit.json",
+      "sha256": "ca5358a2823d684dd3a408ab231d04bce39c38c52d93ec4ef377cd332d7b8d55"
+    },
+    {
+      "file": "outputs/florida_ed_concordance_analysis_20260726/qa/historical_ami_validation_report.json",
+      "sha256": "6c36c3003462d6f2081d3b2558c0a3cf47bfb73fbe3cdf12cf79141df2c80eb9"
+    },
+    {
+      "file": "outputs/florida_ed_concordance_analysis_20260726/qa/directional_dyad_extension_pre_estimation_gate.json",
+      "sha256": "416771e528cc1f41c9cbf869f446921e3777c0fa75d7bf676b131176c14ed4b8"
+    },
+    {
+      "file": "outputs/florida_ed_concordance_analysis_20260726/qa/directional_model_implementation_pre_estimation_gate.json",
+      "sha256": "aa74edf1ce780b43ff1f7401b9f11c8bd8b7fc1e6fcfc8930506aaf72fec1b83"
+    },
+    {
+      "file": "outputs/florida_ed_concordance_analysis_20260726/qa/ami_validation_report.json",
+      "sha256": "92a43b8ee9245022274ee04220ac5e84d7150c0af68feb8b95de3b51687a5f52"
+    },
+    {
+      "file": "outputs/florida_ed_concordance_analysis_20260726/qa/linkage_selection_audit.json",
+      "sha256": "bf58f868abd492f3fb6a219d95a8a53a4715bf3f2f6e6ae20eff2c47f8c710e4"
+    }
+  ],
+  "historical_cohort": {
+    "status": "PASS",
+    "period": "2005-2008",
+    "expected_partitions": 16,
+    "reconciled_partitions": 16,
+    "cohort_rows": 23304846,
+    "phase1_rows": 23304846,
+    "source_release_modified": false
+  },
+  "historical_analysis_audit": {
+    "status": "PASS",
+    "checks_passed": 38,
+    "checks_total": 38,
+    "source_release_modified": false
+  },
+  "historical_ami": {
+    "status": "PASS",
+    "setting": "standalone ED encounters",
+    "replication_claim_permitted": false
+  },
+  "primary_ami_definition_gate": {
+    "status": "PASS_FOR_ED_ONLY_EXTENSION_NOT_REPLICATION",
+    "interpretation_gate": "Passed for an ED-only observational extension. It cannot be called a replication of Greenwood et al."
+  },
+  "directional_plan_gate": "PASS",
+  "directional_implementation_gate": "PASS",
+  "directional_result_interpretation_authorized": false,
+  "linkage_selection_audit": {
+    "status": "PASS",
+    "ipw_used_as_primary_correction": false,
+    "source_release_modified": false
+  }
+}

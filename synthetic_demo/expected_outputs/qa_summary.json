@@ -1,0 +1,14 @@
+{
+  "synthetic": true,
+  "seed": 20260806,
+  "input_rows": 800,
+  "standardized_rows": 800,
+  "distinct_synthetic_visit_ids": 800,
+  "schema_families": 5,
+  "schema_reconciliation_passed": true,
+  "icd_transition_error_rows": 0,
+  "organization_classified_as_physician_rows": 0,
+  "facility_unmatched_rows": 0,
+  "historical_hourly_los_imputed_rows": 0,
+  "overall_status": "PASS"
+}

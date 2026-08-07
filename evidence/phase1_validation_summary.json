@@ -1,0 +1,23 @@
+{
+  "extracted_at_utc": "2026-08-07T00:33:59.347926+00:00",
+  "sources": [
+    {
+      "file": "outputs/florida_ed_full_build_20260724/qa/qa_summary.json",
+      "sha256": "5b66d41517eb0ea47f5fef09ad66cd695a29cd79152d9ad35a4eef4a8753bf3b"
+    },
+    {
+      "file": "outputs/florida_ed_full_build_20260724/qa/independent_release_validation.json",
+      "sha256": "758dd46559c0498433abf9ebba8f08a6e8f6085c6c60982bb4ecab58bfc0ad3e"
+    }
+  ],
+  "status": "PASS",
+  "quarter_manifest_count": 76,
+  "fact_partition_count": 76,
+  "fact_row_count": 148686146,
+  "fact_field_count": 342,
+  "visit_key_uniqueness_passed": true,
+  "excluded_years_passed": true,
+  "icd_transition_passed": true,
+  "structural_null_measure_check": true,
+  "required_release_artifacts_passed": true
+}
