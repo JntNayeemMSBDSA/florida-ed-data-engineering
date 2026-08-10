@@ -1,0 +1,178 @@
+[
+  {
+    "domain": "encounter identity",
+    "variable_or_outcome": "visit_key and quarter",
+    "historical_availability": "available",
+    "cross_period_status": "fully comparable",
+    "permitted_use": "reconciliation, fixed effects, trends",
+    "restriction": "All 16 partitions must reconcile exactly to Phase 1."
+  },
+  {
+    "domain": "patient demographics",
+    "variable_or_outcome": "age_years and age bands",
+    "historical_availability": "available",
+    "cross_period_status": "comparable with missingness checks",
+    "permitted_use": "covariate and stratification",
+    "restriction": "Do not infer values when age is missing."
+  },
+  {
+    "domain": "patient demographics",
+    "variable_or_outcome": "recorded patient sex",
+    "historical_availability": "available",
+    "cross_period_status": "comparable administrative field",
+    "permitted_use": "sex/gender concordance and covariate",
+    "restriction": "Not a measure of patient gender identity."
+  },
+  {
+    "domain": "patient demographics",
+    "variable_or_outcome": "race/ethnicity",
+    "historical_availability": "combined historical codes",
+    "cross_period_status": "partially comparable",
+    "permitted_use": "separate code-3 versus code-4 historical sensitivity",
+    "restriction": "Never pool with modern separate race and ethnicity fields; Hispanic historical codes are excluded from the Black/White contrast."
+  },
+  {
+    "domain": "provider linkage",
+    "variable_or_outcome": "attending NPI",
+    "historical_availability": "license-derived NPI only",
+    "cross_period_status": "not linkage-equivalent",
+    "permitted_use": "separate historical sensitivity after linkage audit",
+    "restriction": "No direct source NPI in 2005-2008; only unique Florida-license crosswalk links are eligible."
+  },
+  {
+    "domain": "provider measurement",
+    "variable_or_outcome": "MD/DO, clinician type, specialty",
+    "historical_availability": "provider master v2 cross-sectional linkage",
+    "cross_period_status": "partially comparable",
+    "permitted_use": "eligibility and sensitivity covariates",
+    "restriction": "Current registry attributes are not proof of historical activity, employment, specialty, or privilege."
+  },
+  {
+    "domain": "provider measurement",
+    "variable_or_outcome": "physician full-name race proxy",
+    "historical_availability": "same provider-v2 method as primary era",
+    "cross_period_status": "method-comparable, construct imperfect",
+    "permitted_use": "probabilistic and threshold sensitivity analyses",
+    "restriction": "Algorithm-inferred name probabilities without geography; not BISG and not self-identified race/ethnicity."
+  },
+  {
+    "domain": "provider measurement",
+    "variable_or_outcome": "physician recorded/inferred gender category",
+    "historical_availability": "provider master v2",
+    "cross_period_status": "method-comparable, temporal caveat",
+    "permitted_use": "recorded patient sex-physician gender concordance",
+    "restriction": "Not a measure of historical gender identity."
+  },
+  {
+    "domain": "clinical coding",
+    "variable_or_outcome": "diagnosis and clinical category",
+    "historical_availability": "ICD-9-CM",
+    "cross_period_status": "conceptually but not code-identical",
+    "permitted_use": "era-specific adjustment and separate sensitivity",
+    "restriction": "Do not assume ICD-9 and ICD-10 category equivalence."
+  },
+  {
+    "domain": "clinical coding",
+    "variable_or_outcome": "Elixhauser condition flags",
+    "historical_availability": "ICD-9-derived",
+    "cross_period_status": "partially comparable",
+    "permitted_use": "era-specific risk adjustment",
+    "restriction": "Use era-appropriate definitions and report version differences."
+  },
+  {
+    "domain": "AMI/Greenwood",
+    "variable_or_outcome": "AMI cohort",
+    "historical_availability": "ICD-9-CM 410.X1 strict; 410.X0/X1 sensitivity",
+    "cross_period_status": "conceptually comparable, code-era specific",
+    "permitted_use": "separate historical ED-only Greenwood extension",
+    "restriction": "Not an inpatient Greenwood replication."
+  },
+  {
+    "domain": "outcome",
+    "variable_or_outcome": "ED mortality",
+    "historical_availability": "available",
+    "cross_period_status": "comparable ED disposition measure",
+    "permitted_use": "binary outcome including historical AMI",
+    "restriction": "Does not capture post-ED inpatient mortality."
+  },
+  {
+    "domain": "outcome",
+    "variable_or_outcome": "routine discharge, transfer, hospice, left care",
+    "historical_availability": "available",
+    "cross_period_status": "comparable after code validation",
+    "permitted_use": "separate historical outcomes",
+    "restriction": "Report outcome-specific nonmissingness and code semantics."
+  },
+  {
+    "domain": "outcome",
+    "variable_or_outcome": "same-facility inpatient admission",
+    "historical_availability": "structurally unavailable in Phase 1 release",
+    "cross_period_status": "not available",
+    "permitted_use": "none",
+    "restriction": "Do not treat missing as no admission."
+  },
+  {
+    "domain": "outcome",
+    "variable_or_outcome": "length_of_stay_days",
+    "historical_availability": "available at day granularity",
+    "cross_period_status": "partially comparable",
+    "permitted_use": "historical day-level LOS outcome only",
+    "restriction": "Do not relabel or convert it to clock-hour LOS."
+  },
+  {
+    "domain": "outcome",
+    "variable_or_outcome": "hourly LOS",
+    "historical_availability": "structurally unavailable",
+    "cross_period_status": "not comparable",
+    "permitted_use": "none",
+    "restriction": "Must remain null; no 24-times-days imputation."
+  },
+  {
+    "domain": "outcome",
+    "variable_or_outcome": "procedure counts and treatment intensity",
+    "historical_availability": "available",
+    "cross_period_status": "partially comparable",
+    "permitted_use": "separate historical outcome and within-era comparisons",
+    "restriction": "Coding opportunities and procedure systems differ by era."
+  },
+  {
+    "domain": "outcome",
+    "variable_or_outcome": "reported/component charges",
+    "historical_availability": "available",
+    "cross_period_status": "comparable after inflation adjustment with caveats",
+    "permitted_use": "nominal and CPI-adjusted historical outcome",
+    "restriction": "Charges are not costs or payments; billing practices may change."
+  },
+  {
+    "domain": "utilization",
+    "variable_or_outcome": "7-day and 30-day revisit",
+    "historical_availability": "structurally unavailable in Phase 1 release",
+    "cross_period_status": "not available",
+    "permitted_use": "none",
+    "restriction": "Do not impute or interpret missing as no revisit."
+  },
+  {
+    "domain": "severity",
+    "variable_or_outcome": "true triage level",
+    "historical_availability": "structurally unavailable in Phase 1 release",
+    "cross_period_status": "not available",
+    "permitted_use": "none",
+    "restriction": "E/M proxies may be separately labeled but are not triage."
+  },
+  {
+    "domain": "operations",
+    "variable_or_outcome": "arrival hour, weekend, off-hours",
+    "historical_availability": "available with small source missingness",
+    "cross_period_status": "comparable after missingness checks",
+    "permitted_use": "covariates and stratification",
+    "restriction": "Arrival hour does not make hourly LOS available."
+  },
+  {
+    "domain": "facility",
+    "variable_or_outcome": "facility identifiers and fixed effects",
+    "historical_availability": "available",
+    "cross_period_status": "comparable identifiers with facility-history caveats",
+    "permitted_use": "fixed effects, clustering, within-era trends",
+    "restriction": "Contemporary facility/provider affiliations are not historical employment."
+  }
+]

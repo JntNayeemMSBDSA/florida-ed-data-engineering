@@ -1,0 +1,30 @@
+Perform the final independent quality review of the completed Florida ED Power BI portfolio dashboard.
+
+This is a QA and repair task only. Do not publish, upload, push, email, or share anything. Do not restart Phase 1 or Phase 2 analytics and do not inspect or disclose numerical concordance estimates.
+
+Locate the newest completed dashboard-preparation package under outputs/powerbi_dashboard_preparation. The expected PBIX is Florida_ED_Project_Portfolio_Dashboard.pbix in that package. Use its 00_READ_ME_FIRST.md, POWER_BI_BUILD_CLICKBOOK.md, POWER_BI_VISUAL_SPECIFICATION.csv, POWER_BI_DATA_MODEL.md, METRIC_AND_MEASURE_DICTIONARY.csv, POWER_BI_MEASURES.dax, DASHBOARD_QA_CHECKLIST.md, disclosure audit, and preparation validation as the controlling specification.
+
+If Power BI Desktop is open with the PBIX loaded, use the Windows-app control capability to inspect it. Otherwise inspect the PBIX and any screenshots or exported model metadata available locally. If visual access is genuinely unavailable, stop only the visual-verification portion and tell me exactly what screenshots or exports are required; continue every safe structural and file-level check.
+
+Create a backup copy of the PBIX before any edit. First audit without changing it. Then correct only clear, reversible defects that violate the frozen dashboard specification. Do not redesign the research, add new metrics, use private data, or introduce analytical results.
+
+Audit all of the following:
+
+1. File opens without repair warnings and uses only dashboard_data/POWER_BI_IMPORT.xlsx.
+2. Fourteen source tables, data types, eight relationships, cardinality, filter direction, hidden fields, and sort-by settings match the data-model document.
+3. Every DAX measure exists once, matches POWER_BI_MEASURES.dax, uses the correct display folder/format, and reconciles to the metric dictionary.
+4. All seven pages and all VisualIDs match the visual specification, including visual type, fields, filters, sorting, position, size, title, units, and tooltip context.
+5. Slicer interactions, the page-2 reset bookmark, page navigation, tab order, and alt text work.
+6. KPI values and totals reconcile to the prepared dashboard data.
+7. No clipped labels, broken visuals, blank categories, misleading scale, redundant legend, inconsistent status color, poor contrast, or unreadable table exists at normal laptop view.
+8. Phase 1 versus Phase 2, historical versus primary, completed estimation versus independent audit, and pending versus deferred work are stated correctly.
+9. Physician race is described only as algorithm-inferred probabilistic full-name measurement using wru v2.0.0; no geography, not BISG, not self-reported.
+10. Physician gender is described as recorded administrative categories with limitations.
+11. Association language is used and no causal conclusion appears.
+12. No raw/processed encounter rows, patient identifier, provider name/NPI, facility identifier/name, purchased source, local private path, credential, numerical concordance coefficient, confidence interval, p-value, q-value, or substantive treatment-outcome finding exists in the PBIX, data sources, tooltips, hidden pages, bookmarks, or metadata.
+13. Synthetic values are visibly labeled fictional/synthetic.
+14. Performance is appropriate for a small static portfolio dashboard.
+
+After corrections, rerun the full audit. Create a timestamped FINAL_POWER_BI_QA_REPORT.md and FINAL_POWER_BI_QA.json beside the PBIX. Record PASS/FAIL for data, model, DAX, visuals, interactions, accessibility, scientific language, status accuracy, disclosure safety, and performance. Include screenshots only when necessary to evidence a defect or the final page review; do not create report-only narrative artifacts.
+
+Fail closed if any privacy, result-disclosure, unsupported-completion, source-lineage, broken-measure, or reconciliation issue remains. Do not authorize GitHub publication unless the overall QA status is PASS. Even with PASS, do not publish; return the QA status and wait for my explicit publication instruction.

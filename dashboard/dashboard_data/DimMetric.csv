@@ -1,0 +1,26 @@
+MetricKey,MetricGroup,MetricName,Unit,FormatString,MetricDefinition,DisplayOrder,DisclosureClass
+M001,Project scale,Validated encounter records,records,"#,##0",One released record per validated Phase 1 encounter row,1,PUBLIC_SAFE_PROJECT_METADATA
+M002,Project scale,Completed quarterly partitions,quarters,0,Quarter partitions completed and reconciled,2,PUBLIC_SAFE_PROJECT_METADATA
+M003,Project scale,Covered years,years,0,Distinct included years,3,PUBLIC_SAFE_PROJECT_METADATA
+M004,Project scale,Standardized encounter fields,fields,0,Fields in the canonical encounter fact,4,PUBLIC_SAFE_PROJECT_METADATA
+M005,Project scale,Schema families,families,0,Approved historical layouts,5,PUBLIC_SAFE_PROJECT_METADATA
+M006,Dimensions,Facility dimension rows,facilities,"#,##0",One row per state facility identifier,6,PUBLIC_SAFE_PROJECT_METADATA
+M007,Dimensions,Phase 1 provider master rows,NPIs,"#,##0",One row per NPI in the Phase 1 provider master,7,PUBLIC_SAFE_PROJECT_METADATA
+M008,Cohorts,Primary cohort rows,encounters,"#,##0",Rebuilt 2010-2024 Phase 2 cohort,8,PUBLIC_SAFE_PROJECT_METADATA
+M009,Cohorts,Primary cohort partitions,quarters,0,Validated primary-period partitions,9,PUBLIC_SAFE_PROJECT_METADATA
+M010,Cohorts,Historical cohort rows,encounters,"#,##0",Separate 2005-2008 historical cohort,10,PUBLIC_SAFE_PROJECT_METADATA
+M011,Cohorts,Historical cohort partitions,quarters,0,Reconciled historical partitions,11,PUBLIC_SAFE_PROJECT_METADATA
+M012,Development,Exploratory prototype rows,encounters,"#,##0",Approximate 0.5% prototype; not the production release,12,PUBLIC_SAFE_PROJECT_METADATA
+M013,Synthetic demonstration,Synthetic demonstration rows,fictional rows,"#,##0",Deterministic fictional demonstration,13,PUBLIC_SAFE_PROJECT_METADATA
+M014,Project scale,Expected in-scope quarters,quarters,0,Four quarters for each of 19 included years,14,PUBLIC_SAFE_PROJECT_METADATA
+PM001,Provider coverage,Provider master v2 unique NPIs,NPIs,"#,##0",One-row-per-NPI provider master v2,101,PUBLIC_SAFE_PROJECT_METADATA
+PM002,Provider coverage,ED-observed distinct NPIs,NPIs,"#,##0",Distinct validated NPIs observed in selected ED roles,102,PUBLIC_SAFE_PROJECT_METADATA
+PM003,Provider coverage,Phase 1-linked ED-observed NPIs,NPIs,"#,##0",ED-observed NPIs represented in the Phase 1 master,103,PUBLIC_SAFE_PROJECT_METADATA
+PM004,Provider coverage,Newly added ED-observed NPIs,NPIs,"#,##0",ED-observed NPIs added by provider master v2,104,PUBLIC_SAFE_PROJECT_METADATA
+PM005,Provider coverage,ED-observed individual NPIs,NPIs,"#,##0",Entity category is individual,105,PUBLIC_SAFE_PROJECT_METADATA
+PM006,Provider coverage,ED-observed organizational NPIs,NPIs,"#,##0",Entity category is organization; never classified as physician,106,PUBLIC_SAFE_PROJECT_METADATA
+PM007,Clinician classification,ED-observed MD/DO NPIs,NPIs,"#,##0",Individual MD/DO clinician category,107,PUBLIC_SAFE_PROJECT_METADATA
+PM008,Clinician classification,ED-observed NP NPIs,NPIs,"#,##0",Nurse practitioner category,108,PUBLIC_SAFE_PROJECT_METADATA
+PM009,Clinician classification,ED-observed PA NPIs,NPIs,"#,##0",Physician assistant category,109,PUBLIC_SAFE_PROJECT_METADATA
+PM010,Entity safeguard,Organizational NPIs classified as physicians,NPIs,0,Must remain zero,110,PUBLIC_SAFE_PROJECT_METADATA
+PM011,Provider QA,Duplicate NPIs in provider master v2,NPIs,0,Must remain zero,111,PUBLIC_SAFE_PROJECT_METADATA

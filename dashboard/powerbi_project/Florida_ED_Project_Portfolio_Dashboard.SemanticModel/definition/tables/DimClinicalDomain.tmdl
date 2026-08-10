@@ -1,0 +1,52 @@
+table DimClinicalDomain
+	lineageTag: 64871e9a-f62f-4658-90dd-4a1de43bd109
+
+	column ClinicalDomainKey
+		dataType: string
+		isHidden
+		lineageTag: dab8f616-03ab-4d47-bda6-b9f9f40859a2
+		summarizeBy: none
+		sourceColumn: ClinicalDomainKey
+
+	column ClinicalDomainName
+		dataType: string
+		lineageTag: eb17817f-98cb-483f-a49c-abb326658e74
+		summarizeBy: none
+		sourceColumn: ClinicalDomainName
+		sortByColumn: DisplayOrder
+
+	column DisplayOrder
+		dataType: int64
+		isHidden
+		formatString: #,##0
+		lineageTag: 86476b3c-858f-42c3-843e-17d3d138dd9d
+		summarizeBy: none
+		sourceColumn: DisplayOrder
+
+	column DisclosureClass
+		dataType: string
+		isHidden
+		lineageTag: 4002eb6e-191a-4eb3-bf8e-462c44da276a
+		summarizeBy: none
+		sourceColumn: DisclosureClass
+
+	partition DimClinicalDomain = m
+		mode: import
+		source =
+				let
+				    Source = #table(type table [ClinicalDomainKey = text, ClinicalDomainName = text, DisplayOrder = Int64.Type, DisclosureClass = text], {
+				        {"CD01", "Clinical coding", 1, "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"CD02", "Comorbidity", 2, "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"CD03", "Patient demographics", 3, "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"CD04", "Visit operations", 4, "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"CD05", "Disposition and outcomes", 5, "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"CD06", "Charges", 6, "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"CD07", "Provider measurement", 7, "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"CD08", "Facility measurement", 8, "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"CD09", "Unsupported measures", 9, "PUBLIC_SAFE_PROJECT_METADATA"}
+				    })
+				in
+				    Source
+
+	annotation PBI_ResultType = Table
+

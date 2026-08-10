@@ -1,0 +1,7 @@
+CodingMapKey,SourceCodeSystem,ApplicablePeriod,TargetGrouping,Guardrail,DisplayOrder,DisclosureClass
+CM01,ICD-9-CM diagnosis,2005-2015 Q3,CCS,Era-specific diagnosis grouping,1,PUBLIC_SAFE_PROJECT_METADATA
+CM02,ICD-10-CM diagnosis,2015 Q4-2024,CCSR,Era-specific diagnosis grouping,2,PUBLIC_SAFE_PROJECT_METADATA
+CM03,ICD-9-CM procedure,When reported,CCS,Procedure grouping,3,PUBLIC_SAFE_PROJECT_METADATA
+CM04,ICD-10-PCS procedure,When reported,Procedure Classes Refined,Procedure grouping,4,PUBLIC_SAFE_PROJECT_METADATA
+CM05,CPT/HCPCS,When reported,CCS Services and Procedures plus permitted descriptions,"Current descriptions are reference aids, not historical codebooks",5,PUBLIC_SAFE_PROJECT_METADATA
+CM06,Secondary diagnoses,All supported eras,"Elixhauser, era-specific",External-cause fields excluded from comorbidities,6,PUBLIC_SAFE_PROJECT_METADATA

@@ -1,0 +1,95 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "e1fcee4f888189b3237d",
+  "position": {
+    "x": 600,
+    "y": 188,
+    "z": 0,
+    "height": 220,
+    "width": 656,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimMetric"
+                    }
+                  },
+                  "Property": "MetricName"
+                }
+              },
+              "queryRef": "DimMetric.MetricName",
+              "nativeQueryRef": "MetricName"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactProviderMeasurement"
+                    }
+                  },
+                  "Property": "MetricValue"
+                }
+              },
+              "queryRef": "FactProviderMeasurement.MetricValue",
+              "nativeQueryRef": "MetricValue"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactProviderMeasurement"
+                    }
+                  },
+                  "Property": "MeasurementScope"
+                }
+              },
+              "queryRef": "FactProviderMeasurement.MeasurementScope",
+              "nativeQueryRef": "MeasurementScope"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactProviderMeasurement"
+                    }
+                  },
+                  "Property": "MetricStatus"
+                }
+              },
+              "queryRef": "FactProviderMeasurement.MetricStatus",
+              "nativeQueryRef": "MetricStatus"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Provider measurement controls'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "status": "PASS",
+  "freeze_state": "FROZEN_ESTIMATE_BLIND_PASS",
+  "created_utc": "2026-07-27T08:47:58.9935426Z",
+  "freeze_id": "independent_global_multiplicity_audit_code_v1_20260727",
+  "timing": "Frozen while common-primary race M2 was still active, before global multiplicity execution and before the complete analytical release audit.",
+  "estimate_blind": true,
+  "real_result_values_viewed": false,
+  "purpose": "Bind the production multiplicity implementation, independent reconstruction implementation, and synthetic validation before the audit is applied to final real-data outputs.",
+  "code_inventory": [
+    {
+      "role": "production multiplicity implementation",
+      "path": "scripts/16_apply_multiple_testing.py",
+      "sha256": "870e1b056d66ecbb032815d6fa3e2c00e4c07ab588ee537d85c639a8cfb76da7"
+    },
+    {
+      "role": "independent complete-table reconstruction audit",
+      "path": "scripts/54_independent_global_multiplicity_audit.py",
+      "sha256": "b229a5cc955fa1f3f8417a53db6cee0c29de3aee207fef6a7b39e97b86200984"
+    },
+    {
+      "role": "independent audit synthetic tests",
+      "path": "scripts/54b_independent_global_multiplicity_audit_unit_tests.py",
+      "sha256": "3b7b919370fc67f29d3601fc800fb8b160e843df08b8c8b7b472e09e28af0ca8"
+    }
+  ],
+  "synthetic_validation": {
+    "path": "qa/independent_multiple_testing_audit_unit_tests.json",
+    "sha256": "5fdff15fa7056e0e4cc5a9d92c06653161197327c149b68476951a655aa91096",
+    "status": "PASS",
+    "tests_passed": 6,
+    "tests_total": 6,
+    "coverage": [
+      "Benjamini-Hochberg reference values",
+      "Holm reference values",
+      "missing p-value exclusion",
+      "separate family adjustment",
+      "exact outcome-specific confirmatory family",
+      "complete-table tamper detection"
+    ]
+  },
+  "scientific_scope_changed": false,
+  "production_results_changed": false,
+  "phase1_modified": false,
+  "source_release_modified": false,
+  "required_future_gate": "qa/independent_multiple_testing_audit.json must report PASS and bind the live code hashes before the complete analytical release audit may pass."
+}

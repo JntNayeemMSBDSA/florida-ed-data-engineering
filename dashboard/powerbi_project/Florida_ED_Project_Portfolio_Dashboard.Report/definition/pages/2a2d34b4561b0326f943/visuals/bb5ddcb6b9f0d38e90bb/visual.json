@@ -1,0 +1,77 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "bb5ddcb6b9f0d38e90bb",
+  "position": {
+    "x": 24,
+    "y": 184,
+    "z": 0,
+    "height": 206,
+    "width": 470,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "clusteredBarChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimProjectStage"
+                    }
+                  },
+                  "Property": "StageName"
+                }
+              },
+              "queryRef": "DimProjectStage.StageName",
+              "nativeQueryRef": "StageName",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "FactValidationStatus"
+                        }
+                      },
+                      "Property": "ValidationKey"
+                    }
+                  },
+                  "Function": 5
+                }
+              },
+              "queryRef": "Count(FactValidationStatus.ValidationKey)",
+              "nativeQueryRef": "Count of ValidationKey"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Checks by project stage'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

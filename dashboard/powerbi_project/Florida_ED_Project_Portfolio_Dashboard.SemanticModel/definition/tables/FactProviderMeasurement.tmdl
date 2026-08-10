@@ -1,0 +1,72 @@
+table FactProviderMeasurement
+	lineageTag: c50258fc-4127-49aa-ab61-4fb3e29d6229
+
+	column ProviderMetricKey
+		dataType: string
+		isHidden
+		lineageTag: bf29d9ad-eef2-412f-a5d5-bf37ad71b9c7
+		summarizeBy: none
+		sourceColumn: ProviderMetricKey
+
+	column MetricKey
+		dataType: string
+		isHidden
+		lineageTag: 62321f4c-fb51-4f3e-80de-e9a686d95748
+		summarizeBy: none
+		sourceColumn: MetricKey
+
+	column MetricValue
+		dataType: int64
+		formatString: #,##0
+		lineageTag: ce187021-14f7-4c5e-a9a8-fc11da40419d
+		summarizeBy: none
+		sourceColumn: MetricValue
+
+	column MetricStatus
+		dataType: string
+		lineageTag: e0bc0a05-1656-4cac-a858-0a3f6b4f9250
+		summarizeBy: none
+		sourceColumn: MetricStatus
+
+	column MeasurementScope
+		dataType: string
+		lineageTag: 80fe4c83-2d62-4478-a45b-886534bc117d
+		summarizeBy: none
+		sourceColumn: MeasurementScope
+
+	column SourceArtifactKey
+		dataType: string
+		isHidden
+		lineageTag: 33d0070a-bbe3-41e4-843b-1ed48a92a229
+		summarizeBy: none
+		sourceColumn: SourceArtifactKey
+
+	column DisclosureClass
+		dataType: string
+		isHidden
+		lineageTag: 1fcc418e-7f80-4d29-8ad3-f5fe0bc2e125
+		summarizeBy: none
+		sourceColumn: DisclosureClass
+
+	partition FactProviderMeasurement = m
+		mode: import
+		source =
+				let
+				    Source = #table(type table [ProviderMetricKey = text, MetricKey = text, MetricValue = Int64.Type, MetricStatus = text, MeasurementScope = text, SourceArtifactKey = text, DisclosureClass = text], {
+				        {"PV_PM001", "PM001", 1813546, "VALIDATED", "Full provider master v2", "SRC_PROVIDER_PUBLIC", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PV_PM002", "PM002", 83541, "VALIDATED", "ED-observed provider universe", "SRC_PROVIDER_PUBLIC", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PV_PM003", "PM003", 75790, "VALIDATED", "ED-observed provider universe", "SRC_PROVIDER_PUBLIC", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PV_PM004", "PM004", 7751, "VALIDATED", "ED-observed provider universe", "SRC_PROVIDER_PUBLIC", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PV_PM005", "PM005", 78843, "VALIDATED", "ED-observed provider universe", "SRC_PROVIDER_PUBLIC", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PV_PM006", "PM006", 2152, "VALIDATED", "ED-observed provider universe", "SRC_PROVIDER_PUBLIC", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PV_PM007", "PM007", 65912, "VALIDATED", "ED-observed provider universe", "SRC_PROVIDER_PUBLIC", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PV_PM008", "PM008", 5972, "VALIDATED", "ED-observed provider universe", "SRC_PROVIDER_PUBLIC", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PV_PM009", "PM009", 4028, "VALIDATED", "ED-observed provider universe", "SRC_PROVIDER_PUBLIC", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PV_PM010", "PM010", 0, "VALIDATED", "ED-observed provider universe", "SRC_PROVIDER_PUBLIC", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PV_PM011", "PM011", 0, "VALIDATED", "Full provider master v2", "SRC_PROVIDER_PUBLIC", "PUBLIC_SAFE_PROJECT_METADATA"}
+				    })
+				in
+				    Source
+
+	annotation PBI_ResultType = Table
+

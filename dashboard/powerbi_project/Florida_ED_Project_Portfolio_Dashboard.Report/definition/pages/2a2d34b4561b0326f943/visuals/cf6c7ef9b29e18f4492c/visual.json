@@ -1,0 +1,95 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "cf6c7ef9b29e18f4492c",
+  "position": {
+    "x": 24,
+    "y": 416,
+    "z": 0,
+    "height": 210,
+    "width": 1232,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimProjectStage"
+                    }
+                  },
+                  "Property": "StageName"
+                }
+              },
+              "queryRef": "DimProjectStage.StageName",
+              "nativeQueryRef": "StageName"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactValidationStatus"
+                    }
+                  },
+                  "Property": "ValidationCheck"
+                }
+              },
+              "queryRef": "FactValidationStatus.ValidationCheck",
+              "nativeQueryRef": "ValidationCheck"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactValidationStatus"
+                    }
+                  },
+                  "Property": "ValidationStatus"
+                }
+              },
+              "queryRef": "FactValidationStatus.ValidationStatus",
+              "nativeQueryRef": "ValidationStatus"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactValidationStatus"
+                    }
+                  },
+                  "Property": "EvidenceSummary"
+                }
+              },
+              "queryRef": "FactValidationStatus.EvidenceSummary",
+              "nativeQueryRef": "EvidenceSummary"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'High-value validation ledger'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

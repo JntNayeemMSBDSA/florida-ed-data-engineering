@@ -1,0 +1,54 @@
+table DimProjectStage
+	lineageTag: c9b99b01-9e6c-4f56-aaaa-d1527c297d74
+
+	column StageKey
+		dataType: string
+		isHidden
+		lineageTag: 6668c491-6395-4626-894c-dfd9e41536b2
+		summarizeBy: none
+		sourceColumn: StageKey
+
+	column StageName
+		dataType: string
+		lineageTag: 9f94d0c7-7fee-4f8c-8d97-56a140a8a024
+		summarizeBy: none
+		sourceColumn: StageName
+		sortByColumn: StageOrder
+
+	column StageOrder
+		dataType: int64
+		isHidden
+		formatString: #,##0
+		lineageTag: b68d0183-4048-4274-b458-631aa3ec6209
+		summarizeBy: none
+		sourceColumn: StageOrder
+
+	column StagePurpose
+		dataType: string
+		lineageTag: 6dc274af-63c8-45b2-8b9a-db6670feef32
+		summarizeBy: none
+		sourceColumn: StagePurpose
+
+	column DisclosureClass
+		dataType: string
+		isHidden
+		lineageTag: be12a803-f182-4a01-a4d8-93379a77f4e2
+		summarizeBy: none
+		sourceColumn: DisclosureClass
+
+	partition DimProjectStage = m
+		mode: import
+		source =
+				let
+				    Source = #table(type table [StageKey = text, StageName = text, StageOrder = Int64.Type, StagePurpose = text, DisclosureClass = text], {
+				        {"S01", "Phase 1 data engineering", 1, "Standardize, decode, enhance, reconcile, and validate encounter data", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"S02", "Phase 2 measurement and cohorts", 2, "Correct provider coverage, define measurements, and rebuild cohorts", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"S03", "Historical analyses", 3, "Analyze 2005-2008 separately using comparable variables", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"S04", "Primary analyses", 4, "Estimate 2010-2024 association models and sensitivities", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"S05", "Release and handoff", 5, "Independent audit, reporting, documentation, and controlled sharing", "PUBLIC_SAFE_PROJECT_METADATA"}
+				    })
+				in
+				    Source
+
+	annotation PBI_ResultType = Table
+

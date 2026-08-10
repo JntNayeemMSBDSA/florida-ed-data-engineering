@@ -1,0 +1,60 @@
+{
+  "checkpoint_type": "analysis_plan_extension_request_receipt",
+  "checkpoint_status": "QUEUED_PENDING_FULL_AUDIT_AND_FREEZE",
+  "captured_utc": "2026-07-26T19:55:43.6903207Z",
+  "instruction_timing_statement": "The directional-dyad extension was requested after primary-period descriptive and unadjusted contrast outputs and historical AMI model results had been generated, while the isolated historical race HDFE sequence was still running. No adjusted primary-period model result file or primary-period model matrix existed at this checkpoint. This receipt does not relabel the extension as originally prespecified.",
+  "execution_hold": {
+    "active_process": "isolated historical race HDFE sequence",
+    "instruction": "Do not interrupt the active historical HDFE worker or alter its queued historical jobs.",
+    "next_safe_action": "After the active historical sequence reaches a safe checkpoint, audit the completed Phase 2 partitions and scripts and freeze the complete directional-dyad extension manifest before fitting any extension model or beginning adjusted primary-period estimation."
+  },
+  "classification_pending_freeze": {
+    "originally_prespecified_components": [
+      "Binary Black/White physician-proxy by recorded non-Hispanic Black/White patient four-cell model and interaction contrast",
+      "Binary recorded physician gender by recorded patient sex four-cell model and interaction contrast",
+      "Conditional exploratory binary-race-by-sex/gender intersectional analysis"
+    ],
+    "new_extension_components": [
+      "Adjusted cell predictions and directional simple contrasts not already frozen in the original SAP",
+      "Five-class physician-race by compatible five-class recorded patient-race/ethnicity directional dyads",
+      "Expanded physician race-plus-gender by patient race/ethnicity-plus-sex directional intersectional dyads",
+      "New multiplicity families, cell-support rules, marginal estimands, probability-weighted directional models, and directional physician-level multiple-imputation contrasts"
+    ],
+    "provisional_tier_rule": "New non-intersectional directional components will be secondary and expanded intersectional components exploratory because relevant primary-period descriptive/unadjusted outputs already existed. The final frozen manifest must retain the originally prespecified status only for genuinely pre-existing components and must not describe the whole extension as prespecified."
+  },
+  "evidence_at_receipt": [
+    {
+      "path": "documentation/Statistical_Analysis_Plan.md",
+      "sha256": "91e0aae566e77bb33a30658f6377cf02c3d82690cc95ae734c193b7d9b9d584e",
+      "modified_utc": "2026-07-26T12:10:03.5082708Z"
+    },
+    {
+      "path": "documentation/Primary_Model_Implementation_Specification.md",
+      "sha256": "71818df4df566f4bbcde286a0c4e563e58afb3376a6f211eecfc5f2be79be391",
+      "modified_utc": "2026-07-26T12:10:03.5092732Z"
+    },
+    {
+      "path": "qa/pre_estimation_measurement_gate.json",
+      "sha256": "575095a279b632b407792142b6d92ec596a1d073781a6306479cfc695f22c786",
+      "modified_utc": "2026-07-26T18:16:37.1018180Z"
+    },
+    {
+      "path": "qa/cohort_validation_report.json",
+      "sha256": "153197dd95d814b5189706f42e8f85bc5b74991266db81185343508acc688275",
+      "modified_utc": "2026-07-26T18:17:41.6992047Z"
+    },
+    {
+      "path": "results/descriptive/descriptive_analysis_manifest.json",
+      "sha256": "425f462d4b8bbc620b74b245285231ca55291cc5abfc58106da345ccde30e8e8",
+      "modified_utc": "2026-07-26T18:29:09.1339048Z"
+    },
+    {
+      "path": "results/historical_provider_v2_ami/historical_ami_analysis_manifest.json",
+      "sha256": "5690732519525b17d67d7f971e79ec14720252066362c7a58ffef80698207e3c",
+      "modified_utc": "2026-07-26T19:07:59.4123779Z"
+    }
+  ],
+  "phase1_mutation_authorized": false,
+  "phase2_cohort_rebuild_authorized_only_if_required_field_absent": true,
+  "estimate_language": "association_only"
+}

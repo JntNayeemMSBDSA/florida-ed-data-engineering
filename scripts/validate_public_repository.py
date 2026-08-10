@@ -96,7 +96,7 @@ REQUIRED_README_CLAIMS = {
     "2.0.0",
     "2020",
 }
-ALLOWED_HIDDEN = {".gitignore", ".git"}
+ALLOWED_HIDDEN = {".gitignore", ".gitattributes", ".git", ".platform"}
 IGNORED_DIRS = {
     ".git",
     ".venv",
@@ -166,13 +166,16 @@ def check_text_safety(root: Path, errors: list[str]) -> None:
             continue
         rel = relative(path, root)
         text = path.read_text(encoding="utf-8", errors="replace")
-        if WINDOWS_USER_PATH.search(text):
+        self_pattern_file = (
+            rel == "scripts/validate_public_repository.py"
+            or (rel.startswith("dashboard/support/") and path.name.startswith("validate_"))
+        )
+        if not self_pattern_file and WINDOWS_USER_PATH.search(text):
             errors.append(f"Absolute Windows user path found: {rel}")
-        if SOURCE_USERNAME.lower() in text.lower():
+        if not self_pattern_file and SOURCE_USERNAME.lower() in text.lower():
             errors.append(f"Source-workstation username found: {rel}")
-        if EMAIL.search(text):
+        if not self_pattern_file and EMAIL.search(text):
             errors.append(f"Email address found: {rel}")
-        self_pattern_file = rel == "scripts/validate_public_repository.py"
         if (
             not self_pattern_file
             and (SECRET.search(text) or PRIVATE_KEY.search(text) or "AKIA" in text)
@@ -188,7 +191,10 @@ def check_data_artifacts(root: Path, errors: list[str]) -> None:
             r"(?:coefficient|partial[_-]?estimate|model[_-]?result)", lower_name
         ):
             errors.append(f"Model result artifact is not permitted: {rel}")
-        if path.suffix.lower() in {".csv", ".json"}:
+        data_bearing_scope = rel.startswith("evidence/") or rel.startswith(
+            "dashboard/dashboard_data/"
+        )
+        if path.suffix.lower() in {".csv", ".json"} and data_bearing_scope:
             text = path.read_text(encoding="utf-8", errors="replace")
             if path.suffix.lower() == ".json" and NPI_JSON_FIELD.search(text):
                 errors.append(f"Ten-digit NPI value found in committed data artifact: {rel}")

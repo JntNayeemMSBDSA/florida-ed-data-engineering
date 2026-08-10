@@ -1,0 +1,77 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "de45fa9e106c0765967b",
+  "position": {
+    "x": 24,
+    "y": 184,
+    "z": 0,
+    "height": 204,
+    "width": 400,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "clusteredBarChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactAnalyticalStatus"
+                    }
+                  },
+                  "Property": "ComponentStatus"
+                }
+              },
+              "queryRef": "FactAnalyticalStatus.ComponentStatus",
+              "nativeQueryRef": "ComponentStatus",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "FactAnalyticalStatus"
+                        }
+                      },
+                      "Property": "AnalyticalStatusKey"
+                    }
+                  },
+                  "Function": 5
+                }
+              },
+              "queryRef": "Count(FactAnalyticalStatus.AnalyticalStatusKey)",
+              "nativeQueryRef": "Count of AnalyticalStatusKey"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Components by status'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

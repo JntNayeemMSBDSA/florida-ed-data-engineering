@@ -1,0 +1,21 @@
+EnhancementKey,ClinicalDomainKey,EnhancementName,ImplementationStatus,AvailabilityScope,MethodSummary,InterpretationGuardrail,DisplayOrder,SourceArtifactKey,DisclosureClass
+E001,CD01,Diagnosis decoding,IMPLEMENTED,All in-scope years,Era-aware normalized diagnosis occurrences,Do not mix ICD-9-CM and ICD-10-CM definitions,1,SRC_FACT_DICTIONARY,PUBLIC_SAFE_PROJECT_METADATA
+E002,CD01,Procedure decoding,IMPLEMENTED,Subject to reported source fields,Preserves position and code-system semantics,CPT/HCPCS descriptions are reference aids,2,SRC_FACT_DICTIONARY,PUBLIC_SAFE_PROJECT_METADATA
+E003,CD01,CCS mapping,IMPLEMENTED,ICD-9-CM diagnoses and procedures,Clinically meaningful grouping,Era-specific,3,SRC_FACT_DICTIONARY,PUBLIC_SAFE_PROJECT_METADATA
+E004,CD01,CCSR mapping,IMPLEMENTED,ICD-10-CM diagnoses,Clinically meaningful grouping,Era-specific,4,SRC_FACT_DICTIONARY,PUBLIC_SAFE_PROJECT_METADATA
+E005,CD02,Elixhauser comorbidities,IMPLEMENTED,All supported eras,"Secondary-diagnosis, era-specific mapping",External-cause fields excluded,5,SRC_FACT_DICTIONARY,PUBLIC_SAFE_PROJECT_METADATA
+E006,CD03,Decoded demographics,IMPLEMENTED,All in-scope years subject to source definitions,Preserves raw values plus standardized categories,Historical definitions are not overwritten,6,SRC_FACT_DICTIONARY,PUBLIC_SAFE_PROJECT_METADATA
+E007,CD04,Arrival timing and off-hours,IMPLEMENTED,All in-scope years with source-hour validation,"Arrival hour, time band, weekend, and off-hours",Arrival hour does not create historical hourly LOS,7,SRC_FACT_DICTIONARY,PUBLIC_SAFE_PROJECT_METADATA
+E008,CD05,Disposition grouping,IMPLEMENTED,All in-scope years,Decoded discharge disposition groups,Not proof of same-facility inpatient admission,8,SRC_FACT_DICTIONARY,PUBLIC_SAFE_PROJECT_METADATA
+E009,CD04,Payer grouping,IMPLEMENTED,All in-scope years,Decoded payer label and analytical group,Source semantics vary historically,9,SRC_FACT_DICTIONARY,PUBLIC_SAFE_PROJECT_METADATA
+E010,CD04,Procedure counts,IMPLEMENTED,All in-scope years,CPT/HCPCS plus ICD procedures where those fields exist,Scope field records era differences,10,SRC_FACT_DICTIONARY,PUBLIC_SAFE_PROJECT_METADATA
+E011,CD06,Total charges and reconciliation,IMPLEMENTED,All in-scope years,Reported total prioritized; component diagnostics retained,Charges are not costs or payments,11,SRC_FACT_DICTIONARY,PUBLIC_SAFE_PROJECT_METADATA
+E012,CD04,Length of stay in days,IMPLEMENTED,All in-scope years,Preserved day-level measure,Historical day-level values are not relabeled as hours,12,SRC_FACT_DICTIONARY,PUBLIC_SAFE_PROJECT_METADATA
+E013,CD04,Clock-derived hourly LOS,IMPLEMENTED_PRIMARY_ONLY,Primary 2010-2024,Day count plus validated arrival/discharge hours,Never imputed for 2005-2008,13,SRC_FACT_DICTIONARY,PUBLIC_SAFE_PROJECT_METADATA
+E014,CD04,E/M acuity proxy,PROXY_ONLY,Where valid ED E/M codes are present,Ordinal billing-code proxy,Not clinical triage,14,SRC_FACT_DICTIONARY,PUBLIC_SAFE_PROJECT_METADATA
+E015,CD09,True clinical triage,STRUCTURALLY_UNAVAILABLE,All in-scope years,Reserved null field,Source extract has no clinical triage scale,15,SRC_FACT_DICTIONARY,PUBLIC_SAFE_PROJECT_METADATA
+E016,CD09,Same-facility inpatient admission,STRUCTURALLY_UNAVAILABLE,All in-scope years,Reserved null field,Not directly observed; transfer/disposition not substituted,16,SRC_FACT_DICTIONARY,PUBLIC_SAFE_PROJECT_METADATA
+E017,CD09,Seven-day revisit,STRUCTURALLY_UNAVAILABLE,All in-scope years,Reserved null field,No stable patient identifier and exact encounter date,17,SRC_FACT_DICTIONARY,PUBLIC_SAFE_PROJECT_METADATA
+E018,CD09,Thirty-day revisit,STRUCTURALLY_UNAVAILABLE,All in-scope years,Reserved null field,No stable patient identifier and exact encounter date,18,SRC_FACT_DICTIONARY,PUBLIC_SAFE_PROJECT_METADATA
+E019,CD07,Provider master v2,IMPLEMENTED,Full provider universe and ED-observed subset,"NPPES, CMS, and Florida DOH enrichment",Most external attributes are current snapshots,19,SRC_METHOD,PUBLIC_SAFE_PROJECT_METADATA
+E020,CD08,Facility master and affiliations,IMPLEMENTED,Facility and provider-facility metadata,"Controlled identifiers, current public attributes, and encounter-year activity",Current affiliation is not historical employment proof,20,SRC_METHOD,PUBLIC_SAFE_PROJECT_METADATA

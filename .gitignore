@@ -41,3 +41,11 @@ credentials/
 Thumbs.db
 .idea/
 .vscode/
+
+# Power BI Desktop local state and temporary build products
+**/.pbi/
+dashboard/build_temp/
+
+# Validation scratch products
+release/tmp/
+*.READY_TO_PUBLISH.tmp

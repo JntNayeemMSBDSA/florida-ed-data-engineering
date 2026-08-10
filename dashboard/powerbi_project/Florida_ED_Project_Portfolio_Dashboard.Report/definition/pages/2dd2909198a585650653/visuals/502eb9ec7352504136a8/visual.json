@@ -1,0 +1,95 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "502eb9ec7352504136a8",
+  "position": {
+    "x": 24,
+    "y": 184,
+    "z": 0,
+    "height": 176,
+    "width": 1232,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimModelSpec"
+                    }
+                  },
+                  "Property": "ModelLabel"
+                }
+              },
+              "queryRef": "DimModelSpec.ModelLabel",
+              "nativeQueryRef": "ModelLabel"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimModelSpec"
+                    }
+                  },
+                  "Property": "PlainLanguageDefinition"
+                }
+              },
+              "queryRef": "DimModelSpec.PlainLanguageDefinition",
+              "nativeQueryRef": "PlainLanguageDefinition"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimModelSpec"
+                    }
+                  },
+                  "Property": "FixedEffectsSummary"
+                }
+              },
+              "queryRef": "DimModelSpec.FixedEffectsSummary",
+              "nativeQueryRef": "FixedEffectsSummary"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimModelSpec"
+                    }
+                  },
+                  "Property": "ClusteringSummary"
+                }
+              },
+              "queryRef": "DimModelSpec.ClusteringSummary",
+              "nativeQueryRef": "ClusteringSummary"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'M1–M3 model progression'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

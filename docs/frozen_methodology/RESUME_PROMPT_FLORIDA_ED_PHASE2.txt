@@ -1,0 +1,101 @@
+Resume and complete the full Florida Emergency Department Phase 2 physician–patient concordance project from the authoritative state currently on disk. Work autonomously to the verified end state, with principal-data-scientist-level methodological, computational, documentation, and reproducibility quality. This prompt lifts my temporary Codex-work pause. It also lifts the prior report/public-release production deferral only after the analytical release has independently passed; build the final local reports and public-safe release package, but do not upload restricted data, push to GitHub, publish externally, or send anything without separate explicit authorization.
+
+The workspace is:
+<FLORIDA_ED_PROJECT_ROOT>
+
+The Phase 2 release is:
+outputs\florida_ed_concordance_analysis_20260726
+
+The Phase 2 temporary workspace is:
+tmp\florida_ed_concordance_analysis_20260726
+
+The immutable Phase 1 source release is:
+outputs\florida_ed_full_build_20260724
+
+Never modify Phase 1.
+
+Start by reading, in full:
+1. outputs\florida_ed_concordance_analysis_20260726\documentation\PAUSE_AND_RESUME_HANDOFF_20260728T010653Z.md
+2. outputs\florida_ed_concordance_analysis_20260726\documentation\LIVE_PHASE2_EXECUTION_CHECKPOINT.md
+3. outputs\florida_ed_concordance_analysis_20260726\qa\user_authorized_pause_20260728T010653Z.json
+4. outputs\florida_ed_concordance_analysis_20260726\qa\user_authorized_report_deferral_20260727T083046Z.json
+5. outputs\florida_ed_concordance_analysis_20260726\documentation\Final_Analytical_Release_Execution_FROZEN.json
+6. all relevant frozen manifests, SAP-deviation records, recovery checkpoints, and terminal logs referenced by those files.
+
+Treat the current filesystem, process state, hashes, manifests, and logs as authoritative. Do not assume that the historical pause snapshot—52 of 115 race-M2 design columns at 2026-07-28T00:11:08.760919Z—is still current, and never roll back to it. The detached pipeline may have advanced or completed after the snapshot.
+
+First perform a fail-closed state audit without inspecting real-data estimates:
+
+1. Check for:
+   - qa\run_logs\final_analytical_release\ANALYTICAL_RELEASE_COMPLETE_REPORTS_DEFERRED.log
+   - qa\run_logs\final_analytical_release\ANALYTICAL_RELEASE_FAILED_CLOSED.log
+2. Inspect current process command lines, start times, canonical and supervisor markers, and the newest restart-safe demeaning/model checkpoints.
+3. Verify every live checkpoint’s code, provider-gate, cohort-gate, gender-measurement, model-matrix, and source-manifest hashes.
+4. If a healthy estimator or supervisor is active, do not interrupt, restart, pause, modify, or duplicate it. Continue monitoring no more frequently than every 15 minutes; do not narrate unchanged status and do not run competing memory-intensive work.
+5. If the terminal PASS marker exists, do not rerun models. Verify the split-status JSON and every independent audit before viewing or reporting results.
+6. If a fail-closed marker exists, preserve all evidence, identify the exact failed stage, and recover only through the frozen stage-specific safe sequence. Do not weaken or redesign the analysis.
+7. If no healthy protected process and no terminal marker exists, determine the newest hash-valid committed checkpoint and resume the exact canonical sequence from there. Do not delete partial writes unless an audit proves they are uncommitted and the documented recovery procedure authorizes it.
+8. Re-enable a low-frequency, marker-only heartbeat only if useful; it must not inspect estimates, touch processes, run reports, or poll more frequently than allowed.
+
+Complete the entire frozen analytical plan without reducing samples, outcomes, contrasts, cells, priors, thresholds, imputations, robustness checks, or validation:
+
+- Primary 2010–2024 race and gender models.
+- Outcome-specific primary models.
+- Corrected AMI/Greenwood analysis, kept scientifically separate.
+- All 4 gender, 25 race, and 100 intersectional directional cells.
+- Every frozen directional contrast.
+- Florida and national physician-race priors.
+- Every frozen physician-race confidence threshold.
+- All required physician-level multiple imputations.
+- Probability-weighted analyses plus the frozen hard-classification and prior/threshold sensitivities.
+- Historical 2005–2008 cohort as a separately checkpointed, independently reconciled sensitivity/replication cohort using only comparable variables; do not force it into 2010–2024 or impute structurally unavailable hourly length of stay.
+- All frozen robustness and sensitivity analyses.
+- Sparse-cell and estimability rules.
+- All multiplicity families and adjusted q-values.
+- Independent matrix, model, covariance, reconstruction, multiplicity, result, and release audits.
+- Final 573-file Phase 1 immutability audit.
+
+Preserve these scientific invariants:
+
+- Physician race is algorithm-inferred from the frozen full-name probability method without geography. It is never self-reported race and never BISG.
+- Retain the full physician-race probability vector and propagate its uncertainty; do not replace the primary probabilistic analyses with only hard race labels.
+- Keep MD/DO physicians distinct from NP/PA and other clinicians.
+- Do not classify organizational NPIs as physicians.
+- Preserve all frozen eligibility rules, outcomes, transformations, covariates, fixed effects, clustering, weights, model forms, estimands, contrasts, reference categories, missingness rules, priors, thresholds, and multiplicity families.
+- Numerical fallbacks are allowed only where already authorized, only after documented block-specific strict failure, and must be independently audited.
+- Do not inspect partial estimates to guide later specifications.
+- Mark unstable or non-estimable cells explicitly; never silently combine sparse groups.
+- Use association language, not causal language.
+- Maintain exact commands and order, recovery checkpoints, matrix/model manifests, hashes, source and measurement provenance, SAP-deviation timing, strict failures and fallbacks, estimability decisions, environment details, and machine-readable results.
+
+The analytical release may pass only after every required model, sensitivity, multiplicity procedure, and independent analytical audit passes. Verify:
+
+ANALYTICAL_RELEASE=PASS_INDEPENDENTLY_AUDITED
+
+and, until documentation is finished:
+
+REPORT_AND_PUBLIC_RELEASE=DEFERRED_BY_USER_BUDGET
+
+Only after the analytical release is verified may you lift the local production deferral and complete the saved report framework. Build and independently audit:
+
+1. Florida_ED_Technical_Project_Dossier.pdf and its editable source.
+2. Florida_ED_Collaborator_Project_Report.pdf and its editable source.
+3. Evidence manifests mapping every important claim, number, table, and figure to final audited artifacts and hashes.
+4. Complete citations, source manifests, provenance, decision history, issue/resolution history, reproducibility instructions, execution order, software/environment details, limitations, data-use restrictions, and public-safety rules.
+5. Public-safe figures and tables based only on final audited results.
+6. Full page rendering and visual inspection of both PDFs; correct all clipping, overlap, broken tables, missing glyphs, pagination, cross-reference, citation, and readability defects.
+7. Final PDF reopening, page-count, text-extraction, metadata, link, citation, table/figure-reference, content-accuracy, public-safety, and SHA-256 audits.
+8. A collaborator navigation guide and final file inventory explaining what each folder contains, how to reproduce the work, what cannot be publicly shared, and where to begin further analysis.
+9. A local GitHub-ready public-safe package, without actually publishing or uploading it.
+
+Never expose encounter-level restricted data, PHI, credentials, sensitive identifiers, or unusable personal local paths in public-facing materials. Clearly separate restricted collaborator-access artifacts from public-safe artifacts. Do not hide null, inconsistent, unstable, or uncertain findings, and do not describe algorithm-inferred physician race as observed or self-reported.
+
+Before claiming completion, perform a requirement-by-requirement audit against this prompt, the frozen SAP and extension manifests, the report specifications, and the current filesystem. Inspect the authoritative evidence for every required model, sensitivity, contrast, audit, report, figure, table, manifest, and navigation deliverable. Completion requires:
+
+1. The analytical release is independently audited and PASS.
+2. Phase 1 immutability is independently verified.
+3. Both final reports and editable sources pass content, evidence, public-safety, render, and integrity audits.
+4. The final local release inventory and navigation guide are verified.
+5. No required work remains.
+
+Continue automatically through all safe steps. If access or credits stop, write a new durable recovery checkpoint containing the newest committed block, hashes, exact active and pending commands, incomplete artifacts, next required audit, and safe resumption sequence. Do not declare the whole project complete until all analytical and documentation requirements above are proven complete.

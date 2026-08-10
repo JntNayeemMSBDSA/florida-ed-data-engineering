@@ -1,0 +1,77 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "57a00268327da34d0d02",
+  "position": {
+    "x": 24,
+    "y": 184,
+    "z": 0,
+    "height": 204,
+    "width": 450,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "clusteredBarChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactEnhancementCoverage"
+                    }
+                  },
+                  "Property": "ImplementationStatus"
+                }
+              },
+              "queryRef": "FactEnhancementCoverage.ImplementationStatus",
+              "nativeQueryRef": "ImplementationStatus",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "FactEnhancementCoverage"
+                        }
+                      },
+                      "Property": "EnhancementKey"
+                    }
+                  },
+                  "Function": 5
+                }
+              },
+              "queryRef": "Count(FactEnhancementCoverage.EnhancementKey)",
+              "nativeQueryRef": "Count of EnhancementKey"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Enhancements by implementation status'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

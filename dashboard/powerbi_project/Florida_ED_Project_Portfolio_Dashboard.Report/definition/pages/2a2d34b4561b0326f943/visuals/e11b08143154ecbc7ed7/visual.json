@@ -1,0 +1,86 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "e11b08143154ecbc7ed7",
+  "position": {
+    "x": 510,
+    "y": 184,
+    "z": 0,
+    "height": 206,
+    "width": 746,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "clusteredColumnChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactSyntheticDemonstration"
+                    }
+                  },
+                  "Property": "Category"
+                }
+              },
+              "queryRef": "FactSyntheticDemonstration.Category",
+              "nativeQueryRef": "Category",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Dashboard Measures"
+                    }
+                  },
+                  "Property": "Synthetic Input Rows"
+                }
+              },
+              "queryRef": "Dashboard Measures.Synthetic Input Rows",
+              "nativeQueryRef": "Synthetic Input Rows"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Dashboard Measures"
+                    }
+                  },
+                  "Property": "Synthetic Output Rows"
+                }
+              },
+              "queryRef": "Dashboard Measures.Synthetic Output Rows",
+              "nativeQueryRef": "Synthetic Output Rows"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Synthetic schema reconciliation — fictional'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

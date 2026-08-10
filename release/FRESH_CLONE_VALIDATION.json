@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "validated_source_commit": "abb11773e4b8bb3f5b797235ed04bc84882ce2c4",
+  "validation_date": "2026-08-10",
+  "scope": "isolated local Git clone of the sanitized staging repository",
+  "checks": {
+    "power_bi_static_validation": "PASS_17_OF_17",
+    "repository_inventory_regeneration": "PASS",
+    "full_release_validation": "PASS",
+    "pytest": "PASS_10_OF_10",
+    "working_tree_after_reproduction": "CLEAN"
+  },
+  "restricted_data_copied": false,
+  "unpublished_concordance_estimates_inspected_or_copied": false,
+  "note": "The final deployment commit may differ from this staging commit only through publication evidence, inventory refresh, and integration into the existing repository history; it is validated again before push."
+}

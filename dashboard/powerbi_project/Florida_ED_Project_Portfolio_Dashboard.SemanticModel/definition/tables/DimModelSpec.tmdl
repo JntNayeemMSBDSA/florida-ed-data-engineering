@@ -1,0 +1,64 @@
+table DimModelSpec
+	lineageTag: c240feff-a989-41b1-9620-0d9e39f527fb
+
+	column ModelSpecKey
+		dataType: string
+		isHidden
+		lineageTag: 0a48d059-4efa-4b65-984f-38d70d8313fb
+		summarizeBy: none
+		sourceColumn: ModelSpecKey
+
+	column ModelLabel
+		dataType: string
+		lineageTag: 17bb4b87-a19f-42c3-939a-22d5fd85f499
+		summarizeBy: none
+		sourceColumn: ModelLabel
+		sortByColumn: ModelOrder
+
+	column ModelOrder
+		dataType: int64
+		isHidden
+		formatString: #,##0
+		lineageTag: 4e521fea-cf60-4091-bde3-1a5f91348998
+		summarizeBy: none
+		sourceColumn: ModelOrder
+
+	column PlainLanguageDefinition
+		dataType: string
+		lineageTag: 5efb2dea-f56d-4779-97a3-0d2f079815a3
+		summarizeBy: none
+		sourceColumn: PlainLanguageDefinition
+
+	column FixedEffectsSummary
+		dataType: string
+		lineageTag: 520b9356-38d0-467e-ac95-c49a83204f7b
+		summarizeBy: none
+		sourceColumn: FixedEffectsSummary
+
+	column ClusteringSummary
+		dataType: string
+		lineageTag: 385b2ba3-cc0e-4309-a4fa-b26349b4623e
+		summarizeBy: none
+		sourceColumn: ClusteringSummary
+
+	column DisclosureClass
+		dataType: string
+		isHidden
+		lineageTag: 227433ca-88aa-4037-a244-9bcaba680a99
+		summarizeBy: none
+		sourceColumn: DisclosureClass
+
+	partition DimModelSpec = m
+		mode: import
+		source =
+				let
+				    Source = #table(type table [ModelSpecKey = text, ModelLabel = text, ModelOrder = Int64.Type, PlainLanguageDefinition = text, FixedEffectsSummary = text, ClusteringSummary = text, DisclosureClass = text], {
+				        {"MS1", "M1 - Patient adjusted", 1, "Adjusts for measured patient characteristics and the frozen baseline covariates.", "Baseline specification", "Two-way physician and facility clustering where specified", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"MS2", "M2 - Facility/time/clinical adjusted", 2, "Adds facility-year-quarter and clinical fixed effects to compare more similar settings and clinical groups.", "Facility-year-quarter and clinical fixed effects", "Two-way physician and facility clustering", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"MS3", "M3 - Physician fixed effects", 3, "Adds physician fixed effects while retaining the frozen facility/time/clinical structure.", "Physician plus facility-year-quarter and clinical fixed effects", "Two-way physician and facility clustering", "PUBLIC_SAFE_PROJECT_METADATA"}
+				    })
+				in
+				    Source
+
+	annotation PBI_ResultType = Table
+

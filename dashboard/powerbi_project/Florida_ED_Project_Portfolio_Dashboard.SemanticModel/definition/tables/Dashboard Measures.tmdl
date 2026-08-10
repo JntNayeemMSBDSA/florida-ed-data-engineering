@@ -1,0 +1,185 @@
+table 'Dashboard Measures'
+	lineageTag: ecc21d11-62d0-4470-9a0e-7cf7118167c1
+
+	measure 'Total Validated Encounters' = CALCULATE(MAX('FactProjectCoverage'[MetricValue]), 'FactProjectCoverage'[MetricKey] = "M001")
+		formatString: #,##0
+		displayFolder: Executive KPIs
+		lineageTag: 8e04ceee-036b-4c81-ad56-4d9d6739b4b0
+
+	measure 'Completed Quarterly Partitions' = CALCULATE(MAX('FactProjectCoverage'[MetricValue]), 'FactProjectCoverage'[MetricKey] = "M002")
+		formatString: 0
+		displayFolder: Executive KPIs
+		lineageTag: 91439355-6375-4465-b872-da59a78850c8
+
+	measure 'Covered Years' = CALCULATE(DISTINCTCOUNT('DimPeriod'[Year]), 'DimPeriod'[AvailableFlag] = 1)
+		formatString: 0
+		displayFolder: Executive KPIs
+		lineageTag: 59878eaa-4f78-4e80-9431-282c55b7c517
+
+	measure 'Standardized Encounter Fields' = CALCULATE(MAX('FactProjectCoverage'[MetricValue]), 'FactProjectCoverage'[MetricKey] = "M004")
+		formatString: 0
+		displayFolder: Executive KPIs
+		lineageTag: e5a17168-2c04-445b-b42e-d0daced7e1f5
+
+	measure 'Schema Families' = CALCULATE(MAX('FactProjectCoverage'[MetricValue]), 'FactProjectCoverage'[MetricKey] = "M005")
+		formatString: 0
+		displayFolder: Executive KPIs
+		lineageTag: 7e8113b8-a477-41e4-af62-0ff79e9185ff
+
+	measure 'Expected In-Scope Quarters' = CALCULATE(MAX('FactProjectCoverage'[MetricValue]), 'FactProjectCoverage'[MetricKey] = "M014")
+		formatString: 0
+		displayFolder: Coverage
+		lineageTag: 6b9ae5ed-c168-4731-8449-e7611f47b2ed
+
+	measure 'Phase 1 Completion %' = DIVIDE([Completed Quarterly Partitions], [Expected In-Scope Quarters])
+		formatString: 0.0%
+		displayFolder: Coverage
+		lineageTag: cda7ce45-43ad-42db-aa89-d6474bb65d1e
+
+	measure 'Reconciled Available Quarters' = CALCULATE(COUNTROWS('FactPartitionStatus'), 'FactPartitionStatus'[AvailableFlag] = 1, 'FactPartitionStatus'[ReconciliationStatus] = "PASS")
+		formatString: 0
+		displayFolder: Coverage
+		lineageTag: 1663b3b5-6cba-4cd9-b6fc-024cc7f26cd8
+
+	measure 'Partition Reconciliation %' = DIVIDE([Reconciled Available Quarters], CALCULATE(COUNTROWS('FactPartitionStatus'), 'FactPartitionStatus'[AvailableFlag] = 1))
+		formatString: 0.0%
+		displayFolder: Coverage
+		lineageTag: 5da38e9a-665b-47a4-a63d-ffe2804796a8
+
+	measure 'Excluded Quarter Count' = CALCULATE(COUNTROWS('FactPartitionStatus'), 'FactPartitionStatus'[PartitionStatus] = "EXCLUDED")
+		formatString: 0
+		displayFolder: Coverage
+		lineageTag: b49d22e5-9271-489c-8496-34a74df871d9
+
+	measure 'Primary Cohort Rows' = CALCULATE(MAX('FactProjectCoverage'[MetricValue]), 'FactProjectCoverage'[MetricKey] = "M008")
+		formatString: #,##0
+		displayFolder: Cohorts
+		lineageTag: 0d5cb931-6819-499b-befa-828b48241f00
+
+	measure 'Historical Cohort Rows' = CALCULATE(MAX('FactProjectCoverage'[MetricValue]), 'FactProjectCoverage'[MetricKey] = "M010")
+		formatString: #,##0
+		displayFolder: Cohorts
+		lineageTag: 701a1f8f-579b-4c52-910c-eb7ba97a8e4b
+
+	measure 'Provider Master V2 NPIs' = CALCULATE(MAX('FactProviderMeasurement'[MetricValue]), 'FactProviderMeasurement'[MetricKey] = "PM001")
+		formatString: #,##0
+		displayFolder: Provider
+		lineageTag: 8480ccf4-23a6-4d19-8575-e938a1436f81
+
+	measure 'ED-Observed NPIs' = CALCULATE(MAX('FactProviderMeasurement'[MetricValue]), 'FactProviderMeasurement'[MetricKey] = "PM002")
+		formatString: #,##0
+		displayFolder: Provider
+		lineageTag: d1307777-bb17-4043-a4e3-da4e59a11c2e
+
+	measure 'Newly Added ED-Observed NPIs' = CALCULATE(MAX('FactProviderMeasurement'[MetricValue]), 'FactProviderMeasurement'[MetricKey] = "PM004")
+		formatString: #,##0
+		displayFolder: Provider
+		lineageTag: 1f2acf0a-4632-46d4-b0e2-81ebd9798f47
+
+	measure 'Provider Coverage Gain %' = DIVIDE([Newly Added ED-Observed NPIs], [ED-Observed NPIs])
+		formatString: 0.0%
+		displayFolder: Provider
+		lineageTag: b5cd6016-44f8-497a-a1fb-d446ba7b4381
+
+	measure 'ED-Observed MD/DO NPIs' = CALCULATE(MAX('FactProviderMeasurement'[MetricValue]), 'FactProviderMeasurement'[MetricKey] = "PM007")
+		formatString: #,##0
+		displayFolder: Provider
+		lineageTag: 903d40b1-598e-496b-9a80-6a948d7b6886
+
+	measure 'Organizational NPIs Classified as Physicians' = CALCULATE(MAX('FactProviderMeasurement'[MetricValue]), 'FactProviderMeasurement'[MetricKey] = "PM010")
+		formatString: 0
+		displayFolder: Provider
+		lineageTag: eb1e882e-ba8f-4a8b-981c-c3aa4c3827a1
+
+	measure 'Facility Dimension Rows' = CALCULATE(MAX('FactProjectCoverage'[MetricValue]), 'FactProjectCoverage'[MetricKey] = "M006")
+		formatString: #,##0
+		displayFolder: Provider
+		lineageTag: cd29c451-e6e8-4beb-a746-80da47a6b3e6
+
+	measure 'Enhancement Count' = COUNTROWS('FactEnhancementCoverage')
+		formatString: 0
+		displayFolder: Enhancements
+		lineageTag: c4ccf6cd-0252-434a-adb1-f34ababc68b0
+
+	measure 'Implemented Enhancements' = CALCULATE(COUNTROWS('FactEnhancementCoverage'), 'FactEnhancementCoverage'[ImplementationStatus] IN {"IMPLEMENTED", "IMPLEMENTED_PRIMARY_ONLY"})
+		formatString: 0
+		displayFolder: Enhancements
+		lineageTag: ca247a4a-993c-4f04-a1e9-6bda22cd570c
+
+	measure 'Proxy-Only Enhancements' = CALCULATE(COUNTROWS('FactEnhancementCoverage'), 'FactEnhancementCoverage'[ImplementationStatus] = "PROXY_ONLY")
+		formatString: 0
+		displayFolder: Enhancements
+		lineageTag: cc696404-f26d-4209-96c3-f175460d0d06
+
+	measure 'Structurally Unavailable Measures' = CALCULATE(COUNTROWS('FactEnhancementCoverage'), 'FactEnhancementCoverage'[ImplementationStatus] = "STRUCTURALLY_UNAVAILABLE")
+		formatString: 0
+		displayFolder: Enhancements
+		lineageTag: b7c5fb02-33c6-4903-ae7d-0e1fce576d8b
+
+	measure 'Validation Controls' = COUNTROWS('FactValidationStatus')
+		formatString: 0
+		displayFolder: Validation
+		lineageTag: 9922d82d-ed31-4d2e-bd03-112ca56c74cf
+
+	measure 'Passed Validation Controls' = CALCULATE(COUNTROWS('FactValidationStatus'), 'FactValidationStatus'[ValidationStatus] = "PASS")
+		formatString: 0
+		displayFolder: Validation
+		lineageTag: fb1c8dff-db71-49d0-af82-95c3910da098
+
+	measure 'Validation Pass %' = DIVIDE([Passed Validation Controls], CALCULATE(COUNTROWS('FactValidationStatus'), 'FactValidationStatus'[ValidationStatus] <> "PAUSED_VERIFIED"))
+		formatString: 0.0%
+		displayFolder: Validation
+		lineageTag: 61fe2fb3-8987-4965-847a-3141d35e311c
+
+	measure 'Completed Components' = CALCULATE(COUNTROWS('FactAnalyticalStatus'), 'FactAnalyticalStatus'[ComponentStatus] = "COMPLETE")
+		formatString: 0
+		displayFolder: Status
+		lineageTag: d9262d4c-d367-4490-927f-df252cd2f87c
+
+	measure 'Pending Components' = CALCULATE(COUNTROWS('FactAnalyticalStatus'), 'FactAnalyticalStatus'[ComponentStatus] = "PENDING")
+		formatString: 0
+		displayFolder: Status
+		lineageTag: e8867318-79b0-422d-9bfa-5b752c9798e2
+
+	measure 'Deferred Components' = CALCULATE(COUNTROWS('FactAnalyticalStatus'), 'FactAnalyticalStatus'[ComponentStatus] = "DEFERRED")
+		formatString: 0
+		displayFolder: Status
+		lineageTag: ab5c7fce-7650-4459-8028-4f3892e8bbb4
+
+	measure 'Synthetic Input Rows' = CALCULATE(SUM('FactSyntheticDemonstration'[MetricValue]), 'FactSyntheticDemonstration'[DemoSection] = "Schema reconciliation", 'FactSyntheticDemonstration'[MetricName] = "Input rows")
+		formatString: #,##0
+		displayFolder: Synthetic
+		lineageTag: 51fe68d4-78f4-4f64-b534-6aee892f8914
+
+	measure 'Synthetic Output Rows' = CALCULATE(SUM('FactSyntheticDemonstration'[MetricValue]), 'FactSyntheticDemonstration'[DemoSection] = "Schema reconciliation", 'FactSyntheticDemonstration'[MetricName] = "Output rows")
+		formatString: #,##0
+		displayFolder: Synthetic
+		lineageTag: a0cc74c2-73b3-40e6-9f00-7a2be3cf3166
+
+	measure 'Selected Period Label' = VAR MinYear = MIN('DimPeriod'[Year]) VAR MaxYear = MAX('DimPeriod'[Year]) RETURN IF(NOT ISFILTERED('DimPeriod'[Year]) && NOT ISFILTERED('DimPeriod'[PeriodGroup]), "All project periods", IF(MinYear = MaxYear, FORMAT(MinYear, "0"), FORMAT(MinYear, "0") & "-" & FORMAT(MaxYear, "0")))
+		displayFolder: Dynamic text
+		lineageTag: 6970c96c-78ec-4e87-a766-8f80d8ef97a0
+
+	measure 'Dashboard Overall Status' = "Phase 1 complete and independently validated. Phase 2 measurement, cohort construction, historical analyses, and primary race M1-M3 estimation complete; primary gender M1 complete. Remaining primary and sensitivity analyses and the final independent analytical-release audit are pending."
+		displayFolder: Dynamic text
+		lineageTag: fda855f2-6929-4d28-b07c-0180efa48ce5
+
+	measure 'Selected Provider Category Value' = VAR Metric = SELECTEDVALUE('DimMetric'[MetricKey]) RETURN IF(Metric IN {"PM006", "PM007", "PM008", "PM009"}, MAX('FactProviderMeasurement'[MetricValue]), BLANK())
+		formatString: #,##0
+		displayFolder: Provider
+		lineageTag: 7a90d086-c014-4b8d-b63e-798a4b3cb4e2
+
+	column Placeholder
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: e72b92c9-9eed-430d-b76e-88978643e832
+		summarizeBy: none
+		sourceColumn: Placeholder
+
+	partition 'Dashboard Measures' = m
+		mode: import
+		source = #table(type table [Placeholder = Int64.Type], {{1}})
+
+	annotation PBI_ResultType = Table
+

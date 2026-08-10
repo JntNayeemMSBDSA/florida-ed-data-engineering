@@ -1,0 +1,21 @@
+AnalyticalStatusKey,StageKey,ModelSpecKey,ComponentName,ComponentStatus,StatusOrder,IndependentAuditStatus,NextAction,StatusAsOf,SourceArtifactKey,DisclosureClass
+A001,S01,,Phase 1 database construction,COMPLETE,1,PASS,Immutable release available,2026-08-09,SRC_PAUSE,PUBLIC_SAFE_PROJECT_METADATA
+A002,S01,,Phase 1 independent validation,COMPLETE,1,PASS,No further Phase 1 work required unless a controlled correction is approved,2026-08-09,SRC_PAUSE,PUBLIC_SAFE_PROJECT_METADATA
+A003,S02,,Provider master v2,COMPLETE,1,PASS,Use v2 for all physician-dependent work,2026-08-09,SRC_PAUSE,PUBLIC_SAFE_PROJECT_METADATA
+A004,S02,,Race measurement gate,COMPLETE,1,PASS,Retain probability-weighted and multiple-imputation sensitivities,2026-08-09,SRC_PAUSE,PUBLIC_SAFE_PROJECT_METADATA
+A005,S02,,Gender measurement gate,COMPLETE,1,PASS,Retain recorded-source conflict sensitivity,2026-08-09,SRC_PAUSE,PUBLIC_SAFE_PROJECT_METADATA
+A006,S02,,Primary 2010-2024 cohort,COMPLETE,1,PASS,Use rebuilt cohort from immutable Phase 1 facts,2026-08-09,SRC_PAUSE,PUBLIC_SAFE_PROJECT_METADATA
+A007,S03,,Historical 2005-2008 cohort,COMPLETE,1,PASS,Keep separate and use comparable variables only,2026-08-09,SRC_PAUSE,PUBLIC_SAFE_PROJECT_METADATA
+A008,S03,,Historical analyses,COMPLETE,1,PASS,Findings remain undisclosed in the public dashboard,2026-08-09,SRC_PAUSE,PUBLIC_SAFE_PROJECT_METADATA
+A009,S04,MS1,Primary race M1 estimation,COMPLETE,1,PENDING,Bind to final family-level audit before interpretation,2026-08-09,SRC_PAUSE,PUBLIC_SAFE_PROJECT_METADATA
+A010,S04,MS2,Primary race M2 estimation,COMPLETE,1,PENDING,Bind to final family-level audit before interpretation,2026-08-09,SRC_PAUSE,PUBLIC_SAFE_PROJECT_METADATA
+A011,S04,MS3,Primary race M3 estimation,COMPLETE,1,PENDING,Bind to final family-level audit before interpretation,2026-08-09,SRC_PAUSE,PUBLIC_SAFE_PROJECT_METADATA
+A012,S04,MS1,Primary gender M1 estimation,COMPLETE,1,PENDING,Continue from the verified pause checkpoint,2026-08-09,SRC_PAUSE,PUBLIC_SAFE_PROJECT_METADATA
+A013,S04,MS2,Primary gender M2 estimation,PENDING,3,PENDING,Restart gender M2 from its beginning after hash validation,2026-08-09,SRC_PAUSE,PUBLIC_SAFE_PROJECT_METADATA
+A014,S04,MS3,Primary gender M3 estimation,PENDING,3,PENDING,Run only after gender M2 commits and passes its checkpoint,2026-08-09,SRC_PAUSE,PUBLIC_SAFE_PROJECT_METADATA
+A015,S04,,Outcome-specific models and sensitivities,PENDING,3,PENDING,Use complete eligible outcome-specific samples,2026-08-09,SRC_PAUSE,PUBLIC_SAFE_PROJECT_METADATA
+A016,S04,,"Directional gender, race, and intersectional dyads",PENDING,3,PENDING,Plans and implementation gates exist; fitted-result audits remain,2026-08-09,SRC_PAUSE,PUBLIC_SAFE_PROJECT_METADATA
+A017,S04,,Corrected primary AMI/Greenwood extension,PENDING,3,PENDING,ED-only observational extension; never call an inpatient replication,2026-08-09,SRC_PAUSE,PUBLIC_SAFE_PROJECT_METADATA
+A018,S04,,Multiplicity procedures,PENDING,3,PENDING,Apply only after all eligible result families are complete,2026-08-09,SRC_PAUSE,PUBLIC_SAFE_PROJECT_METADATA
+A019,S05,,Final independent analytical-release audit,PENDING,3,PENDING,Required before analytical release can pass,2026-08-09,SRC_PAUSE,PUBLIC_SAFE_PROJECT_METADATA
+A020,S05,,Report and public-release production,DEFERRED,4,NOT_APPLICABLE,Deferred by user; this dashboard preparation is a separate portfolio layer,2026-08-09,SRC_PAUSE,PUBLIC_SAFE_PROJECT_METADATA

@@ -1,0 +1,111 @@
+table FactAnalyticalStatus
+	lineageTag: d881f236-cafa-46b5-a865-8579ac63c5c7
+
+	column AnalyticalStatusKey
+		dataType: string
+		isHidden
+		lineageTag: 0707ff4c-c3f1-4e18-845a-fdf8f6dee84e
+		summarizeBy: none
+		sourceColumn: AnalyticalStatusKey
+
+	column StageKey
+		dataType: string
+		isHidden
+		lineageTag: 53cec3a7-a75b-410c-9474-9e3bf3e9226f
+		summarizeBy: none
+		sourceColumn: StageKey
+
+	column ModelSpecKey
+		dataType: string
+		isHidden
+		lineageTag: b70ccc95-0a30-444e-8174-2657dc647bbc
+		summarizeBy: none
+		sourceColumn: ModelSpecKey
+
+	column ComponentName
+		dataType: string
+		lineageTag: 1ef6f52b-7c3a-45d2-9330-240275a58295
+		summarizeBy: none
+		sourceColumn: ComponentName
+
+	column ComponentStatus
+		dataType: string
+		lineageTag: 6ff5dfc9-6b53-40c7-8cb7-f5ca6fd10e76
+		summarizeBy: none
+		sourceColumn: ComponentStatus
+		sortByColumn: StatusOrder
+
+	column StatusOrder
+		dataType: int64
+		isHidden
+		formatString: #,##0
+		lineageTag: 98552723-dd4a-4d43-80e4-f21e5e259b66
+		summarizeBy: none
+		sourceColumn: StatusOrder
+
+	column IndependentAuditStatus
+		dataType: string
+		lineageTag: 1ddad579-fc6f-4c05-afe0-7ea3effb215d
+		summarizeBy: none
+		sourceColumn: IndependentAuditStatus
+
+	column NextAction
+		dataType: string
+		lineageTag: 728ebb08-e10d-44d7-b53f-c4fa32a34998
+		summarizeBy: none
+		sourceColumn: NextAction
+
+	column StatusAsOf
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: fce90376-cedb-4eab-aa3e-f25e78ee4f70
+		summarizeBy: none
+		sourceColumn: StatusAsOf
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column SourceArtifactKey
+		dataType: string
+		isHidden
+		lineageTag: 00f27b73-e0dc-4c19-a8d9-ee89e6bc1a5e
+		summarizeBy: none
+		sourceColumn: SourceArtifactKey
+
+	column DisclosureClass
+		dataType: string
+		isHidden
+		lineageTag: 0d5ac78d-da58-44c2-9680-6f495d20b88b
+		summarizeBy: none
+		sourceColumn: DisclosureClass
+
+	partition FactAnalyticalStatus = m
+		mode: import
+		source =
+				let
+				    Source = #table(type table [AnalyticalStatusKey = text, StageKey = text, ModelSpecKey = text, ComponentName = text, ComponentStatus = text, StatusOrder = Int64.Type, IndependentAuditStatus = text, NextAction = text, StatusAsOf = date, SourceArtifactKey = text, DisclosureClass = text], {
+				        {"A001", "S01", null, "Phase 1 database construction", "COMPLETE", 1, "PASS", "Immutable release available", #date(2026, 8, 9), "SRC_PAUSE", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"A002", "S01", null, "Phase 1 independent validation", "COMPLETE", 1, "PASS", "No further Phase 1 work required unless a controlled correction is approved", #date(2026, 8, 9), "SRC_PAUSE", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"A003", "S02", null, "Provider master v2", "COMPLETE", 1, "PASS", "Use v2 for all physician-dependent work", #date(2026, 8, 9), "SRC_PAUSE", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"A004", "S02", null, "Race measurement gate", "COMPLETE", 1, "PASS", "Retain probability-weighted and multiple-imputation sensitivities", #date(2026, 8, 9), "SRC_PAUSE", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"A005", "S02", null, "Gender measurement gate", "COMPLETE", 1, "PASS", "Retain recorded-source conflict sensitivity", #date(2026, 8, 9), "SRC_PAUSE", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"A006", "S02", null, "Primary 2010-2024 cohort", "COMPLETE", 1, "PASS", "Use rebuilt cohort from immutable Phase 1 facts", #date(2026, 8, 9), "SRC_PAUSE", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"A007", "S03", null, "Historical 2005-2008 cohort", "COMPLETE", 1, "PASS", "Keep separate and use comparable variables only", #date(2026, 8, 9), "SRC_PAUSE", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"A008", "S03", null, "Historical analyses", "COMPLETE", 1, "PASS", "Findings remain undisclosed in the public dashboard", #date(2026, 8, 9), "SRC_PAUSE", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"A009", "S04", "MS1", "Primary race M1 estimation", "COMPLETE", 1, "PENDING", "Bind to final family-level audit before interpretation", #date(2026, 8, 9), "SRC_PAUSE", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"A010", "S04", "MS2", "Primary race M2 estimation", "COMPLETE", 1, "PENDING", "Bind to final family-level audit before interpretation", #date(2026, 8, 9), "SRC_PAUSE", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"A011", "S04", "MS3", "Primary race M3 estimation", "COMPLETE", 1, "PENDING", "Bind to final family-level audit before interpretation", #date(2026, 8, 9), "SRC_PAUSE", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"A012", "S04", "MS1", "Primary gender M1 estimation", "COMPLETE", 1, "PENDING", "Continue from the verified pause checkpoint", #date(2026, 8, 9), "SRC_PAUSE", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"A013", "S04", "MS2", "Primary gender M2 estimation", "PENDING", 3, "PENDING", "Restart gender M2 from its beginning after hash validation", #date(2026, 8, 9), "SRC_PAUSE", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"A014", "S04", "MS3", "Primary gender M3 estimation", "PENDING", 3, "PENDING", "Run only after gender M2 commits and passes its checkpoint", #date(2026, 8, 9), "SRC_PAUSE", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"A015", "S04", null, "Outcome-specific models and sensitivities", "PENDING", 3, "PENDING", "Use complete eligible outcome-specific samples", #date(2026, 8, 9), "SRC_PAUSE", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"A016", "S04", null, "Directional gender, race, and intersectional dyads", "PENDING", 3, "PENDING", "Plans and implementation gates exist; fitted-result audits remain", #date(2026, 8, 9), "SRC_PAUSE", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"A017", "S04", null, "Corrected primary AMI/Greenwood extension", "PENDING", 3, "PENDING", "ED-only observational extension; never call an inpatient replication", #date(2026, 8, 9), "SRC_PAUSE", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"A018", "S04", null, "Multiplicity procedures", "PENDING", 3, "PENDING", "Apply only after all eligible result families are complete", #date(2026, 8, 9), "SRC_PAUSE", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"A019", "S05", null, "Final independent analytical-release audit", "PENDING", 3, "PENDING", "Required before analytical release can pass", #date(2026, 8, 9), "SRC_PAUSE", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"A020", "S05", null, "Report and public-release production", "DEFERRED", 4, "NOT_APPLICABLE", "Deferred by user; this dashboard preparation is a separate portfolio layer", #date(2026, 8, 9), "SRC_PAUSE", "PUBLIC_SAFE_PROJECT_METADATA"}
+				    })
+				in
+				    Source
+
+	annotation PBI_ResultType = Table
+

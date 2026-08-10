@@ -1,0 +1,4 @@
+ModelSpecKey,ModelLabel,ModelOrder,PlainLanguageDefinition,FixedEffectsSummary,ClusteringSummary,DisclosureClass
+MS1,M1 - Patient adjusted,1,Adjusts for measured patient characteristics and the frozen baseline covariates.,Baseline specification,Two-way physician and facility clustering where specified,PUBLIC_SAFE_PROJECT_METADATA
+MS2,M2 - Facility/time/clinical adjusted,2,Adds facility-year-quarter and clinical fixed effects to compare more similar settings and clinical groups.,Facility-year-quarter and clinical fixed effects,Two-way physician and facility clustering,PUBLIC_SAFE_PROJECT_METADATA
+MS3,M3 - Physician fixed effects,3,Adds physician fixed effects while retaining the frozen facility/time/clinical structure.,Physician plus facility-year-quarter and clinical fixed effects,Two-way physician and facility clustering,PUBLIC_SAFE_PROJECT_METADATA

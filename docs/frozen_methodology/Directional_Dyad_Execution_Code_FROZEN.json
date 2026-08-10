@@ -1,0 +1,137 @@
+{
+  "status": "FROZEN_ESTIMATE_BLIND_PASS",
+  "execution_version": "directional_execution_code_v1_20260726",
+  "frozen_utc": "2026-07-27T07:46:10.143974+00:00",
+  "purpose": "Bind the storage-safe outcome-specific matrix, audit, estimation, multiplicity, and compaction implementation to the already frozen scientific directional-dyad specification before real-data fit.",
+  "scientific_design_changed": false,
+  "implementation_refinement": "Outcome-specific sequential matrices and post-audit compaction implement the frozen storage/restart contract without changing samples, cells, covariates, fixed effects, estimands, clustering, or multiplicity families.",
+  "parent_implementation": {
+    "path": "documentation/Directional_Dyad_Model_Implementation_FROZEN.json",
+    "sha256": "8d2b6bf51b19a7292ffe3f9a38c70b7cf2b87595a2d128f64c49a357d11236df"
+  },
+  "parent_implementation_gate": {
+    "path": "qa/directional_model_implementation_pre_estimation_gate.json",
+    "sha256": "aa74edf1ce780b43ff1f7401b9f11c8bd8b7fc1e6fcfc8930506aaf72fec1b83"
+  },
+  "definition_tests": {
+    "path": "qa/directional_model_definition_tests.json",
+    "sha256": "ad8e0e4e45a7aa7ef3971d9b622752466c50edaa6531f582e08e737ca456c2a5",
+    "checks_passed": 12,
+    "checks_total": 12
+  },
+  "inference_engine_tests": {
+    "path": "qa/directional_inference_engine_tests.json",
+    "sha256": "4e7cfa238435265afbad0b605f52d6aa3aeeeb4eefc4a2d3c1eaced0507ed33d",
+    "checks_passed": 10,
+    "checks_total": 10
+  },
+  "measurement_sensitivity_tests": {
+    "path": "qa/directional_measurement_sensitivity_tests.json",
+    "sha256": "edd16fbea6c544d7bb59c01518185ded70c2939c14ff6f3502c7b78e67c4fe05",
+    "checks_passed": 8,
+    "checks_total": 8
+  },
+  "code_inventory": [
+    {
+      "path": "scripts/08_estimate_primary_models.py",
+      "bytes": 39148,
+      "sha256": "fe6a21ca466dd58919b9e13e6b3ec511dbaf175fbf54f29d5ae38bbb3e6bc8c9"
+    },
+    {
+      "path": "scripts/39_build_directional_outcome_matrix.py",
+      "bytes": 36898,
+      "sha256": "af269c6578bdfe5bd0fb534a2e202dd0c9bc7b50a615400074c14b72ea8fcfeb"
+    },
+    {
+      "path": "scripts/40_independent_directional_matrix_audit.py",
+      "bytes": 34866,
+      "sha256": "f87ff674d7cf418ce075fd4eb45ecf87ac874cdbc9c229a9017f0b6920a541c6"
+    },
+    {
+      "path": "scripts/41_estimate_directional_models.py",
+      "bytes": 29213,
+      "sha256": "2f9d01ccef9a460f7b60ad0ef8923a72be77684a55413792f21df0b73ef25f49"
+    },
+    {
+      "path": "scripts/42_independent_directional_result_audit.py",
+      "bytes": 23752,
+      "sha256": "ff130de4a04ae3f31c4423136c84a5e5c5dd3b99ebba3f8e8e593d17c7fe3244"
+    },
+    {
+      "path": "scripts/42b_directional_inference_engine_tests.py",
+      "bytes": 10910,
+      "sha256": "80f24153c52d12050948844ead0743de87bd19624d1baec35a8eb009dbef09b5"
+    },
+    {
+      "path": "scripts/46b_directional_measurement_sensitivity_tests.py",
+      "bytes": 14574,
+      "sha256": "2cf028a9706f5b6057680cf99bea5b2024e36d8a0ee25fa7064f910e2eeb3870"
+    },
+    {
+      "path": "scripts/47_estimate_directional_measurement_sensitivities.py",
+      "bytes": 51876,
+      "sha256": "904b686f624b3c2b6934b8f8c0bb65ef58e02654573d3afb18b1f653006356ec"
+    },
+    {
+      "path": "scripts/48_independent_directional_measurement_sensitivity_audit.py",
+      "bytes": 29038,
+      "sha256": "8f23705154aef6986dd6efe71da8d228baf28210cb34dede44b7c22ac0ac8086"
+    },
+    {
+      "path": "scripts/48b_aggregate_directional_measurement_sensitivity_audits.py",
+      "bytes": 4367,
+      "sha256": "73499eb183500367348a9dbb354c9cde704e3c1cecca489550eae6588281ceed"
+    },
+    {
+      "path": "scripts/43_apply_directional_multiplicity.py",
+      "bytes": 10559,
+      "sha256": "f3a491edf52f7ec16dd92c4df5ca5bf868efab575c5259f213b6d1379fabe7b1"
+    },
+    {
+      "path": "scripts/43b_independent_directional_family_audit.py",
+      "bytes": 11018,
+      "sha256": "c06b7fca0a05bf4e2e2b66a1330b765102768b5152e652a947d151546a9c5ac5"
+    },
+    {
+      "path": "scripts/44_compact_directional_intermediates.py",
+      "bytes": 6997,
+      "sha256": "a0d913ca380456c61d2faaa1a0500e8ae4880204e81e2066e7c756a3b7c9e78a"
+    },
+    {
+      "path": "scripts/RUN_DIRECTIONAL_DYADS_SAFE.ps1",
+      "bytes": 10880,
+      "sha256": "5a396d32817aeae3c8e69bdd6a253af151f0bf4b40b755e7a28e5b6115e89d75"
+    }
+  ],
+  "execution_sequence": [
+    "build outcome-specific matrix",
+    "independent file/source/support/rank audit",
+    "estimate U0/M2/M3 without printing values",
+    "independent beta/covariance/prediction/contrast/bootstrap audit",
+    "for the two primary outcomes, estimate and independently audit five-class prior, threshold, and 20-NPI-imputation race measurement sensitivities before compaction",
+    "compact only after PASS",
+    "aggregate all 99 result sets",
+    "independently recompute frozen BH families"
+  ],
+  "expected_complete_grid": {
+    "families": 3,
+    "outcomes": 33,
+    "audited_result_sets": 99,
+    "gender_cells": 4,
+    "race_cells": 25,
+    "intersectional_cells": 100,
+    "gender_contrasts": 6,
+    "race_contrasts": 68,
+    "intersectional_contrasts": 359,
+    "measurement_sensitivity_result_sets": 4,
+    "measurement_sensitivity_direct_modes_per_set": 9,
+    "measurement_sensitivity_imputations_per_prior": 20,
+    "measurement_sensitivity_priors": 2
+  },
+  "real_directional_result_files_at_freeze": 0,
+  "real_directional_values_read": false,
+  "result_interpretation_authorized": false,
+  "language_rule": "Association language only. Physician race remains probabilistic, algorithm-inferred, not self-reported, and not BISG.",
+  "source_release_modified": false,
+  "phase2_cohort_modified": false
+}

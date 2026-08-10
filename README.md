@@ -1,76 +1,100 @@
 # Florida Emergency Department Data Engineering and Concordance Research
 
-This repository documents a production data-engineering build that standardized **148,686,146 Florida emergency-department encounter records into 76 validated quarterly partitions** covering **2005–2008 and 2010–2024**. Phase 1 is complete and independently validated. The broader research analysis is ongoing: Phase 2 measurement, cohort construction, historical analyses, and specifications are complete, while primary-period estimation and final analytical audits remain in progress. [Phase 1 build evidence](evidence/phase1_build_summary.json) · [validation evidence](evidence/phase1_validation_summary.json) · [current status](evidence/current_project_status.json)
+This repository is the public-safe, source-controlled handoff for a production Florida Emergency Department data-engineering and research-analytics project. It documents how **148,686,146 encounter records** were standardized into **76 validated quarterly partitions** spanning **2005–2008 and 2010–2024**, how provider and facility measurement was strengthened, and how the frozen physician–patient concordance analysis was implemented.
 
-No real encounter or provider-level data are included here. The repository contains sanitized production code, aggregate QA evidence, methodology notes, and a deterministic synthetic demonstration. No incomplete effect estimates are reported.
+Current status: **Phase 1 is complete and independently validated. Phase 2 measurement, cohort construction, historical analyses, and primary race M1–M3 estimation are complete; primary gender M1 is complete. Remaining primary and sensitivity analyses and the final independent analytical-release audit are pending.** No incomplete effect estimates are reported.
 
-## What was built
+The repository contains no purchased encounter files, row-level records, patient identifiers, provider identifiers, facility identifiers, model matrices, coefficient tables, or unpublished numerical concordance results.
 
-Phase 1 converts five source-schema families into a single encounter fact with **342 standardized fields**, one generated production visit key per released encounter, and linked diagnosis, procedure, CCS/CCSR, Elixhauser, physician, facility, QA, documentation, and summary artifacts. The source years exclude **2009 and 2025 by instruction**, and the raw files were not modified. [Build evidence](evidence/phase1_build_summary.json)
+## Start here
 
-The five layouts were not handled as one loose union. Each quarter is assigned to an approved family—**2005–2008; 2010–2015 Q3; 2015 Q4–2017; 2018–2022; or 2023–2024**—then checked against the expected columns before transformation. That boundary matters because the pipeline also enforces ICD-9-CM through 2015 Q3 and ICD-10-CM beginning in 2015 Q4. [Build evidence](evidence/phase1_build_summary.json) · [validation evidence](evidence/phase1_validation_summary.json)
+| Goal | Open |
+|---|---|
+| Understand what is complete and what remains | [PROJECT_STATUS.md](PROJECT_STATUS.md) |
+| Navigate the repository | [docs/REPOSITORY_NAVIGATION.md](docs/REPOSITORY_NAVIGATION.md) |
+| Understand and resume the analytical pipeline | [docs/HANDOFF_AND_RESUMPTION_GUIDE.md](docs/HANDOFF_AND_RESUMPTION_GUIDE.md) |
+| Review the research methods | [METHODOLOGY.md](METHODOLOGY.md) and [docs/frozen_methodology/Statistical_Analysis_Plan.md](docs/frozen_methodology/Statistical_Analysis_Plan.md) |
+| Open the Power BI dashboard | [dashboard/README.md](dashboard/README.md) |
+| Run the fictional demonstration | [synthetic_demo/README.md](synthetic_demo/README.md) |
+| Review privacy and disclosure limits | [DATA_ACCESS_AND_PRIVACY.md](DATA_ACCESS_AND_PRIVACY.md) |
+| Verify source provenance | [SOURCE_PROVENANCE.csv](SOURCE_PROVENANCE.csv) and [REPOSITORY_INVENTORY.csv](REPOSITORY_INVENTORY.csv) |
 
-Clinical processing retains normalized diagnosis and procedure occurrences, mapping provenance, source slots, and era-appropriate code systems. ICD-9-CM diagnoses and procedures use CCS mappings; ICD-10-CM diagnoses use CCSR; ICD-10-PCS and CPT/HCPCS procedures use their appropriate reference families. Elixhauser indicators are built from secondary diagnoses with separate ICD-era logic. Visit enhancements cover decoded demographics, payer, disposition, timing, charges, procedure counts, and explicitly labeled proxies. Measures that cannot be supported—true triage, same-facility admission, and reliable revisits—remain structurally unavailable rather than being inferred.
+## What Phase 1 built
 
-Provider and facility work is kept separate from encounter standardization. The provider master records practitioner roles, direct or historical license-based linkage, experience, taxonomy/specialty, affiliations, and source provenance. Facility outputs preserve identifier and name histories and add current CMS, geography, rurality, composition, and charge summaries with clear temporal limits.
+Phase 1 converts five materially different source layouts into one canonical encounter fact containing **342 standardized fields**, plus diagnosis, procedure, clinical-grouping, comorbidity, provider, and facility artifacts. Each quarter is assigned to one approved schema family before transformation:
 
-## Phase 2: completed foundations, unfinished estimation
+1. 2005–2008
+2. 2010–2015 Q3
+3. 2015 Q4–2017
+4. 2018–2022
+5. 2023–2024
 
-Provider master v2 contains **1,813,546 unique NPIs** and covers the complete ED-observed NPI universe. Entity and clinician rules distinguish MD/DO physicians, nurse practitioners, physician assistants, other individuals, and organizations; no organizational NPI is classified as an MD/DO. [Provider evidence](evidence/provider_v2_summary.json)
+Years **2009 and 2025** are excluded by project instruction. The raw source directories remain immutable. Source-to-fact row reconciliation, generated encounter-key uniqueness, year exclusions, schema conformance, bridge integrity, physician-master uniqueness, facility uniqueness, and final-release structure were independently checked. See [evidence/phase1_build_summary.json](evidence/phase1_build_summary.json) and [evidence/phase1_validation_summary.json](evidence/phase1_validation_summary.json).
 
-Physician race/ethnicity is an **algorithm-inferred full-name probability**, not self-reported identity. The primary method uses official `wru` **v2.0.0** name likelihoods with a **2020 AAMC Florida physician prior**; the national prior is a required sensitivity. It does not use residential geography, is not BISG, and does not treat a practice address as a residence. Physician gender in the primary measure uses recorded NPPES/CMS administrative categories, with the limitations of those current-source fields stated directly. [Provider measurement evidence](evidence/provider_v2_summary.json)
+Clinical processing retains source slots and code provenance. ICD-9-CM diagnoses and procedures use era-appropriate CCS resources; ICD-10-CM diagnoses use CCSR; ICD-10-PCS and CPT/HCPCS procedures use their corresponding references. Elixhauser indicators are derived with separate ICD-era rules and external-cause fields are excluded from comorbidity assignment. Unsupported concepts are not fabricated: true triage, reliable revisit measurement, and same-facility admission remain explicitly unavailable where source semantics do not support them.
 
-The corrected primary cohort was rebuilt from the immutable Phase 1 facts and passed validation for **60 quarterly partitions and 119,543,044 rows**. The separate historical cohort reconciles **16 partitions and 23,304,846 rows** for 2005–2008; its analyses passed an independent audit and are not pooled silently with the primary period. [Primary cohort evidence](evidence/phase2_cohort_summary.json) · [historical evidence](evidence/historical_validation_summary.json)
+## What Phase 2 built
 
-The primary race estimator is still running. Primary gender, outcome-specific, directional-dyad, corrected primary AMI, multiplicity, and final-release audits remain pending unless a later terminal PASS is recorded. See [PROJECT_STATUS.md](PROJECT_STATUS.md) for the controlled status table.
+Provider master v2 contains **1,813,546 unique NPIs** and covers the complete emergency-department-observed NPI universe. The entity rules keep MD/DO physicians separate from nurse practitioners, physician assistants, other individual clinicians, and organizational NPIs. No organizational NPI is classified as an MD/DO physician.
 
-## Development path
+Physician race/ethnicity is an algorithm-inferred full-name probability vector. The primary construction uses official `wru` **2.0.0** name likelihoods and a **2020** Florida physician prior; a national prior is retained for sensitivity analysis. Residential geography is not used, the method is not BISG, and the output is not self-reported identity. Physician gender uses recorded NPPES/CMS administrative categories in the primary measure and is labeled with its limitations. See [evidence/provider_v2_summary.json](evidence/provider_v2_summary.json).
 
-The work began with an approximately **0.5% exploratory sample containing 743,767 encounter rows**. That prototype was used to develop early decoding, provider/facility enrichment, and reporting concepts for faculty and a physician collaborator. It informed the production redesign, but it did not necessarily use every final definition. The original sample, its results, and uncorrected notebooks are not included, and the public demonstration does not reconstruct it. [Status and development evidence](evidence/current_project_status.json) · [design history](docs/prototype_to_production.md)
+The corrected primary cohort reconciles **60 quarterly partitions and 119,543,044 rows** to the immutable Phase 1 facts. The separate historical cohort reconciles **16 partitions and 23,304,846 rows** for 2005–2008. The two periods are not silently pooled. Historical analyses passed their independent audit, but their numerical findings are not disclosed here.
 
-## Architecture
+The primary race M1–M3 computations and primary gender M1 computation are checkpointed. Primary gender M2 must restart from its beginning after hash validation. Gender M3, outcome-specific models, corrected primary AMI, directional dyads, measurement sensitivities, multiplicity, and the final independent analytical-release audit remain pending. A completed model file is not treated as a released finding until its required audit passes.
 
-```mermaid
-flowchart LR
-    A["Quarterly Florida ED source files\nprivate"] --> B["Schema-family validation\nand source audit"]
-    B --> C["Canonical encounter fact\nand occurrence bridges"]
-    D["Approved clinical, provider,\nfacility, and geography references"] --> C
-    C --> E["Phase 1 QA and\nindependent release validation"]
-    E --> F["Provider master v2 and\nmeasurement gates"]
-    F --> G["Primary 2010–2024 cohort"]
-    F --> H["Separate 2005–2008\nhistorical cohort"]
-    G --> I["Primary estimation and\nfinal audits: in progress"]
-    H --> J["Historical analyses and\nindependent audit: complete"]
-```
+## Power BI dashboard
 
-The fuller architecture and control points are in [docs/architecture.md](docs/architecture.md).
+The seven-page dashboard is a public-safe project-status and engineering portfolio, not a results dashboard. It includes:
 
-## Run the synthetic demonstration
+- executive scope and current status;
+- quarterly coverage and five-schema standardization;
+- clinical decoding and visit-level enhancement coverage;
+- provider and facility measurement;
+- cohort and analytical design;
+- validation, reconciliation, and fictional reproducibility evidence;
+- completion, safe-pause, and handoff controls.
 
-The commands below use only the Python standard library for the demo; `pytest` is listed for the test suite.
+Open [dashboard/powerbi_project/Florida_ED_Project_Portfolio_Dashboard.pbip](dashboard/powerbi_project/Florida_ED_Project_Portfolio_Dashboard.pbip) in Power BI Desktop. Its 15-table semantic model uses embedded public-safe metadata, 8 relationships, 34 measures, 7 pages, and 76 visuals. Static checks passed **17/17**, and all seven pages passed Power BI Desktop render review. See [dashboard/dashboard_qa/POWER_BI_DESKTOP_RENDER_QA.json](dashboard/dashboard_qa/POWER_BI_DESKTOP_RENDER_QA.json).
 
-```bash
+## Reproducible code
+
+`src/phase1/` contains the validated Phase 1 source snapshots selected for the original portfolio. `src/phase2_full/` contains all **108** Phase 2 Python and PowerShell source files present at the handoff, including measurement, cohort, estimator, sensitivity, directional-dyad, multiplicity, recovery, reporting, and independent-audit stages. These are source snapshots only; restricted inputs and numerical outputs are not included.
+
+The project began with an approximately **0.5% exploratory sample containing 743,767 rows**. That prototype helped develop early decoding and enrichment concepts, but it is not presented as the production pipeline and is not reconstructed here.
+
+To run the fictional demonstration and repository checks:
+
+```powershell
 python synthetic_demo/generate_synthetic_data.py
 python synthetic_demo/run_demo_pipeline.py
 python -m pytest -q
 python scripts/validate_public_repository.py
+python scripts/validate_release_repository.py
 ```
 
-Generated inputs and outputs are ignored by Git. Expected aggregate outputs are committed under `synthetic_demo/expected_outputs/` so that a clean run can be compared byte for byte. The demo is deliberately smaller and simpler than production and does not estimate any concordance association.
+The fictional demonstration contains 800 generated rows and is deterministic. It does not estimate physician–patient concordance.
 
-## Repository map
+## Repository architecture
 
-| Path | Purpose |
-|---|---|
-| `src/phase1/` | Sanitized production copies for preparation, partition construction, provider/facility enhancement, and release validation |
-| `src/phase2/` | Sanitized provider-v2, cohort, model-matrix, HDFE, historical, linkage, multiplicity, and directional-definition code |
-| `synthetic_demo/` | Fictional inputs, standardization pipeline, and expected aggregate outputs |
-| `evidence/` | Whitelisted aggregate claims with source filenames, SHA-256 hashes, and extraction timestamps |
-| `docs/` | Architecture, development history, and validation summary |
-| `tests/` | Reproducibility, public-safety, and documented-claim checks |
-| `scripts/` | Evidence builder and independent repository validator |
-| `configs/` | Synthetic configuration and a path-free production template |
+```mermaid
+flowchart LR
+    A["Purchased quarterly ED files\nnot included"] --> B["Schema-family audit\nand canonical crosswalk"]
+    B --> C["Encounter fact and\noccurrence bridges"]
+    D["Clinical, provider, facility,\nand geography references"] --> C
+    C --> E["Phase 1 reconciliation\nand independent validation"]
+    E --> F["Provider master v2\nand measurement gates"]
+    F --> G["Primary 2010–2024 cohort"]
+    F --> H["Separate 2005–2008 cohort"]
+    G --> I["Frozen primary, sensitivity,\ndirectional, and audit sequence"]
+    H --> J["Compatible historical analyses"]
+    E --> K["Public-safe dashboard\nand synthetic demonstration"]
+```
 
 ## Interpretation boundary
 
-The analytical models are observational and are designed to estimate associations under specified adjustment and fixed-effect structures. This repository does not make causal claims, redistribute underlying data, or disclose unfinished coefficients, confidence intervals, p-values, q-values, or treatment-outcome conclusions. Data-access and disclosure rules are summarized in [DATA_ACCESS_AND_PRIVACY.md](DATA_ACCESS_AND_PRIVACY.md); code provenance is recorded in [REPOSITORY_INVENTORY.csv](REPOSITORY_INVENTORY.csv).
+This is an observational research workflow. The repository documents engineering, measurement, specifications, validation, and computational status. It does not authorize treatment-outcome conclusions, disclose unfinished numerical results, or redistribute the underlying data. Use the controlled status and frozen specifications rather than inferring completion from the presence of a script or output filename.
+
+## Publication state
+
+This full repository is prepared as a separate local Git project. It does not modify the earlier public portfolio, has no Git remote, and must not be pushed until the owner reviews the local `READY_TO_PUBLISH` checkpoint and gives final approval.

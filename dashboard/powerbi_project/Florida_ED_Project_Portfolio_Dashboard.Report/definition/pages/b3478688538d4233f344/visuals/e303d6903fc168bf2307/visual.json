@@ -1,0 +1,109 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "e303d6903fc168bf2307",
+  "position": {
+    "x": 590,
+    "y": 416,
+    "z": 0,
+    "height": 194,
+    "width": 666,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimSchemaFamily"
+                    }
+                  },
+                  "Property": "SchemaFamilyLabel"
+                }
+              },
+              "queryRef": "DimSchemaFamily.SchemaFamilyLabel",
+              "nativeQueryRef": "SchemaFamilyLabel"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimSchemaFamily"
+                    }
+                  },
+                  "Property": "StartPeriod"
+                }
+              },
+              "queryRef": "DimSchemaFamily.StartPeriod",
+              "nativeQueryRef": "StartPeriod"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimSchemaFamily"
+                    }
+                  },
+                  "Property": "EndPeriod"
+                }
+              },
+              "queryRef": "DimSchemaFamily.EndPeriod",
+              "nativeQueryRef": "EndPeriod"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimSchemaFamily"
+                    }
+                  },
+                  "Property": "QuarterCount"
+                }
+              },
+              "queryRef": "DimSchemaFamily.QuarterCount",
+              "nativeQueryRef": "QuarterCount"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimSchemaFamily"
+                    }
+                  },
+                  "Property": "DiagnosisEra"
+                }
+              },
+              "queryRef": "DimSchemaFamily.DiagnosisEra",
+              "nativeQueryRef": "DiagnosisEra"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Schema-family boundaries'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

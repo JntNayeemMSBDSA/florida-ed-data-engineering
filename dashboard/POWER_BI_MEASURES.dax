@@ -1,0 +1,199 @@
+// DAX001 | Folder: Executive KPIs
+// Maximum allowlisted value for M001
+Total Validated Encounters =
+CALCULATE(MAX('FactProjectCoverage'[MetricValue]), 'FactProjectCoverage'[MetricKey] = "M001")
+// Format: #,##0
+
+// DAX002 | Folder: Executive KPIs
+// Maximum allowlisted value for M002
+Completed Quarterly Partitions =
+CALCULATE(MAX('FactProjectCoverage'[MetricValue]), 'FactProjectCoverage'[MetricKey] = "M002")
+// Format: 0
+
+// DAX003 | Folder: Executive KPIs
+// Distinct included years
+Covered Years =
+CALCULATE(DISTINCTCOUNT('DimPeriod'[Year]), 'DimPeriod'[AvailableFlag] = 1)
+// Format: 0
+
+// DAX004 | Folder: Executive KPIs
+// Maximum allowlisted value for M004
+Standardized Encounter Fields =
+CALCULATE(MAX('FactProjectCoverage'[MetricValue]), 'FactProjectCoverage'[MetricKey] = "M004")
+// Format: 0
+
+// DAX005 | Folder: Executive KPIs
+// Maximum allowlisted value for M005
+Schema Families =
+CALCULATE(MAX('FactProjectCoverage'[MetricValue]), 'FactProjectCoverage'[MetricKey] = "M005")
+// Format: 0
+
+// DAX006 | Folder: Coverage
+// Maximum allowlisted value for M014
+Expected In-Scope Quarters =
+CALCULATE(MAX('FactProjectCoverage'[MetricValue]), 'FactProjectCoverage'[MetricKey] = "M014")
+// Format: 0
+
+// DAX007 | Folder: Coverage
+// Completed quarterly partitions divided by expected in-scope quarters
+Phase 1 Completion % =
+DIVIDE([Completed Quarterly Partitions], [Expected In-Scope Quarters])
+// Format: 0.0%
+
+// DAX008 | Folder: Coverage
+// Count available quarter rows with PASS reconciliation
+Reconciled Available Quarters =
+CALCULATE(COUNTROWS('FactPartitionStatus'), 'FactPartitionStatus'[AvailableFlag] = 1, 'FactPartitionStatus'[ReconciliationStatus] = "PASS")
+// Format: 0
+
+// DAX009 | Folder: Coverage
+// Reconciled available quarters divided by available quarters
+Partition Reconciliation % =
+DIVIDE([Reconciled Available Quarters], CALCULATE(COUNTROWS('FactPartitionStatus'), 'FactPartitionStatus'[AvailableFlag] = 1))
+// Format: 0.0%
+
+// DAX010 | Folder: Coverage
+// Count of excluded quarter rows
+Excluded Quarter Count =
+CALCULATE(COUNTROWS('FactPartitionStatus'), 'FactPartitionStatus'[PartitionStatus] = "EXCLUDED")
+// Format: 0
+
+// DAX011 | Folder: Cohorts
+// Maximum allowlisted value for M008
+Primary Cohort Rows =
+CALCULATE(MAX('FactProjectCoverage'[MetricValue]), 'FactProjectCoverage'[MetricKey] = "M008")
+// Format: #,##0
+
+// DAX012 | Folder: Cohorts
+// Maximum allowlisted value for M010
+Historical Cohort Rows =
+CALCULATE(MAX('FactProjectCoverage'[MetricValue]), 'FactProjectCoverage'[MetricKey] = "M010")
+// Format: #,##0
+
+// DAX013 | Folder: Provider
+// Maximum allowlisted value for PM001
+Provider Master V2 NPIs =
+CALCULATE(MAX('FactProviderMeasurement'[MetricValue]), 'FactProviderMeasurement'[MetricKey] = "PM001")
+// Format: #,##0
+
+// DAX014 | Folder: Provider
+// Maximum allowlisted value for PM002
+ED-Observed NPIs =
+CALCULATE(MAX('FactProviderMeasurement'[MetricValue]), 'FactProviderMeasurement'[MetricKey] = "PM002")
+// Format: #,##0
+
+// DAX015 | Folder: Provider
+// Maximum allowlisted value for PM004
+Newly Added ED-Observed NPIs =
+CALCULATE(MAX('FactProviderMeasurement'[MetricValue]), 'FactProviderMeasurement'[MetricKey] = "PM004")
+// Format: #,##0
+
+// DAX016 | Folder: Provider
+// Newly added ED-observed NPIs divided by ED-observed NPIs
+Provider Coverage Gain % =
+DIVIDE([Newly Added ED-Observed NPIs], [ED-Observed NPIs])
+// Format: 0.0%
+
+// DAX017 | Folder: Provider
+// Maximum allowlisted value for PM007
+ED-Observed MD/DO NPIs =
+CALCULATE(MAX('FactProviderMeasurement'[MetricValue]), 'FactProviderMeasurement'[MetricKey] = "PM007")
+// Format: #,##0
+
+// DAX018 | Folder: Provider
+// Maximum allowlisted value for PM010
+Organizational NPIs Classified as Physicians =
+CALCULATE(MAX('FactProviderMeasurement'[MetricValue]), 'FactProviderMeasurement'[MetricKey] = "PM010")
+// Format: 0
+
+// DAX033 | Folder: Provider
+// Maximum allowlisted value for M006
+Facility Dimension Rows =
+CALCULATE(MAX('FactProjectCoverage'[MetricValue]), 'FactProjectCoverage'[MetricKey] = "M006")
+// Format: #,##0
+
+// DAX019 | Folder: Enhancements
+// Number of enhancement rows
+Enhancement Count =
+COUNTROWS('FactEnhancementCoverage')
+// Format: 0
+
+// DAX020 | Folder: Enhancements
+// Count implemented and primary-only implemented enhancements
+Implemented Enhancements =
+CALCULATE(COUNTROWS('FactEnhancementCoverage'), 'FactEnhancementCoverage'[ImplementationStatus] IN {"IMPLEMENTED", "IMPLEMENTED_PRIMARY_ONLY"})
+// Format: 0
+
+// DAX021 | Folder: Enhancements
+// Count proxy-only enhancements
+Proxy-Only Enhancements =
+CALCULATE(COUNTROWS('FactEnhancementCoverage'), 'FactEnhancementCoverage'[ImplementationStatus] = "PROXY_ONLY")
+// Format: 0
+
+// DAX022 | Folder: Enhancements
+// Count structurally unavailable requested measures
+Structurally Unavailable Measures =
+CALCULATE(COUNTROWS('FactEnhancementCoverage'), 'FactEnhancementCoverage'[ImplementationStatus] = "STRUCTURALLY_UNAVAILABLE")
+// Format: 0
+
+// DAX023 | Folder: Validation
+// Number of high-value validation controls
+Validation Controls =
+COUNTROWS('FactValidationStatus')
+// Format: 0
+
+// DAX024 | Folder: Validation
+// Count controls with PASS
+Passed Validation Controls =
+CALCULATE(COUNTROWS('FactValidationStatus'), 'FactValidationStatus'[ValidationStatus] = "PASS")
+// Format: 0
+
+// DAX025 | Folder: Validation
+// PASS controls divided by controls excluding the pause-state row
+Validation Pass % =
+DIVIDE([Passed Validation Controls], CALCULATE(COUNTROWS('FactValidationStatus'), 'FactValidationStatus'[ValidationStatus] <> "PAUSED_VERIFIED"))
+// Format: 0.0%
+
+// DAX026 | Folder: Status
+// Count components labeled COMPLETE
+Completed Components =
+CALCULATE(COUNTROWS('FactAnalyticalStatus'), 'FactAnalyticalStatus'[ComponentStatus] = "COMPLETE")
+// Format: 0
+
+// DAX027 | Folder: Status
+// Count components labeled PENDING
+Pending Components =
+CALCULATE(COUNTROWS('FactAnalyticalStatus'), 'FactAnalyticalStatus'[ComponentStatus] = "PENDING")
+// Format: 0
+
+// DAX028 | Folder: Status
+// Count components labeled DEFERRED
+Deferred Components =
+CALCULATE(COUNTROWS('FactAnalyticalStatus'), 'FactAnalyticalStatus'[ComponentStatus] = "DEFERRED")
+// Format: 0
+
+// DAX029 | Folder: Synthetic
+// Sum synthetic input rows in schema reconciliation section
+Synthetic Input Rows =
+CALCULATE(SUM('FactSyntheticDemonstration'[MetricValue]), 'FactSyntheticDemonstration'[DemoSection] = "Schema reconciliation", 'FactSyntheticDemonstration'[MetricName] = "Input rows")
+// Format: #,##0
+
+// DAX030 | Folder: Synthetic
+// Sum synthetic output rows in schema reconciliation section
+Synthetic Output Rows =
+CALCULATE(SUM('FactSyntheticDemonstration'[MetricValue]), 'FactSyntheticDemonstration'[DemoSection] = "Schema reconciliation", 'FactSyntheticDemonstration'[MetricName] = "Output rows")
+// Format: #,##0
+
+// DAX031 | Folder: Dynamic text
+// Dynamic selected-period label
+Selected Period Label =
+VAR MinYear = MIN('DimPeriod'[Year])
+VAR MaxYear = MAX('DimPeriod'[Year])
+RETURN IF(NOT ISFILTERED('DimPeriod'[Year]) && NOT ISFILTERED('DimPeriod'[PeriodGroup]), "All project periods", IF(MinYear = MaxYear, FORMAT(MinYear, "0"), FORMAT(MinYear, "0") & "-" & FORMAT(MaxYear, "0")))
+// Format: General
+
+// DAX032 | Folder: Dynamic text
+// Controlled current-status statement
+Dashboard Overall Status =
+"Phase 1 complete and independently validated. Phase 2 measurement, cohort construction, historical analyses, and primary race M1-M3 estimation complete; primary gender M1 complete. Remaining primary and sensitivity analyses and the final independent analytical-release audit are pending."
+// Format: General

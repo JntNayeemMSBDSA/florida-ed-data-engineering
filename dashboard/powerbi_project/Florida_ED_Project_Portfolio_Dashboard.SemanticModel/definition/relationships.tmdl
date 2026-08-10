@@ -1,0 +1,32 @@
+relationship rel_period_partition
+	fromColumn: FactPartitionStatus.PeriodKey
+	toColumn: DimPeriod.PeriodKey
+
+relationship rel_schema_partition
+	fromColumn: FactPartitionStatus.SchemaFamilyKey
+	toColumn: DimSchemaFamily.SchemaFamilyKey
+
+relationship rel_stage_validation
+	fromColumn: FactValidationStatus.StageKey
+	toColumn: DimProjectStage.StageKey
+
+relationship rel_stage_analytical
+	fromColumn: FactAnalyticalStatus.StageKey
+	toColumn: DimProjectStage.StageKey
+
+relationship rel_metric_project
+	fromColumn: FactProjectCoverage.MetricKey
+	toColumn: DimMetric.MetricKey
+
+relationship rel_metric_provider
+	fromColumn: FactProviderMeasurement.MetricKey
+	toColumn: DimMetric.MetricKey
+
+relationship rel_clinical_enhancement
+	fromColumn: FactEnhancementCoverage.ClinicalDomainKey
+	toColumn: DimClinicalDomain.ClinicalDomainKey
+
+relationship rel_model_analytical
+	fromColumn: FactAnalyticalStatus.ModelSpecKey
+	toColumn: DimModelSpec.ModelSpecKey
+

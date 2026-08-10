@@ -1,28 +1,35 @@
 # Project status
 
-Status snapshot: **2026-08-06 (America/New_York)**. The machine-readable status and non-substantive primary-race progress metadata are in [evidence/current_project_status.json](evidence/current_project_status.json).
+Status snapshot: **2026-08-10 (America/New_York)**.
 
-| Component | Status | Basis |
+Overall research status: **IN PROGRESS**. Phase 1 is complete and independently validated. Phase 2 has substantial completed and checkpointed work, but the analytical release has not passed its final independent audit.
+
+| Component | Controlled status | Meaning |
 |---|---|---|
-| Phase 1 database construction | COMPLETE | Full release manifest and hard QA passed |
-| Phase 1 independent validation | COMPLETE | Independent release status PASS |
-| Provider master v2 | COMPLETE | Unique NPI and ED-universe coverage gates passed |
-| Primary Phase 2 cohort | COMPLETE | All provider-v2 quarterly partitions validated and reconciled |
-| Historical cohort | COMPLETE | All historical partitions reconciled to immutable Phase 1 facts |
-| Historical analyses | COMPLETE | Independent historical-results audit passed; no findings are disclosed here |
-| Primary race models | IN PROGRESS | Current demeaning checkpoint is incomplete; no terminal analytical PASS |
-| Primary gender models | PENDING | Required audited completion not present |
-| Outcome-specific models | PENDING | Required audited completion not present |
-| Directional dyad models | PENDING | Plan and implementation gates passed; fitted-model audit is not complete |
-| Corrected primary AMI | PENDING | Cohort-definition gate passed; corrected primary analysis and audit remain incomplete |
-| Multiplicity | PENDING | Final eligible result families are not complete |
-| Final analytical audit | PENDING | No terminal PASS evidence |
-| Final research report | PENDING | Depends on completed audited analyses |
+| Phase 1 database construction | COMPLETE | 148,686,146 rows, 76 quarterly partitions, and 342 standardized fields built |
+| Phase 1 independent validation | COMPLETE | Required release, reconciliation, and immutability controls passed at the checkpoint |
+| Provider master v2 | COMPLETE | Complete ED-observed NPI universe and entity/clinician controls passed |
+| Race and gender measurement gates | COMPLETE | Definitions, provenance, alternatives, and limitations frozen |
+| Primary 2010–2024 cohort | COMPLETE | 60 provider-v2 partitions and 119,543,044 rows reconciled |
+| Historical 2005–2008 cohort | COMPLETE | 16 partitions and 23,304,846 rows separately reconciled |
+| Historical compatible analyses | COMPLETE | Independent historical audit passed; findings are not published here |
+| Primary race M1–M3 computation | COMPLETE, AUDIT PENDING | Computational outputs are checkpointed; release-level audit remains pending |
+| Primary gender M1 computation | COMPLETE, AUDIT PENDING | Computational output is checkpointed; release-level audit remains pending |
+| Primary gender M2 | RESTART REQUIRED | Initialization was not committed; restart after validating checkpoint hashes |
+| Primary gender M3 | PENDING | Follows gender M2 |
+| Outcome-specific and cohort-definition models | PENDING | Frozen specifications exist; required execution/audits remain |
+| Corrected primary AMI/Greenwood | PENDING | Kept separate under its corrected frozen definition |
+| Directional gender, race, and intersectional dyads | PENDING | Design and code gates exist; fitted/audited families remain |
+| Measurement sensitivities and multiple imputation | PENDING | Florida/national priors, thresholds, hard labels, and MI remain required |
+| Multiplicity | PENDING | Applies only after all eligible families are complete |
+| Final Phase 1 immutability audit | PENDING FOR FINAL RELEASE | Must be rerun before analytical release |
+| Final independent analytical-release audit | PENDING | No terminal analytical PASS exists |
+| Final research reports | DEFERRED | Not required for this local public-safe code/dashboard checkpoint |
 
-Only the labels `COMPLETE`, `IN PROGRESS`, `PENDING`, and `DEFERRED` are used. A written model file is not enough for completion; the required independent audit must also pass.
+Safe public statement:
 
-Current portfolio statement:
+> Phase 1 complete and independently validated. Phase 2 measurement, cohort construction, historical analyses, and primary race M1–M3 estimation complete; primary gender M1 complete. Remaining primary and sensitivity analyses and the final independent analytical-release audit are pending.
 
-> Phase 1 complete and independently validated; Phase 2 measurement, cohort construction, historical analyses, and analytical specifications complete; primary 2010–2024 estimation and final analytical audits in progress.
+The completed computations above are not interpreted as released scientific findings. This repository contains no numerical concordance estimates.
 
-The directional plan and implementation gates are complete, but the directional models themselves are not labeled complete. The same distinction applies to the corrected primary AMI definition: its validation gate is not a substitute for audited final estimates.
+The authoritative restart record is [docs/frozen_methodology/USER_AUTHORIZED_HANDOFF_PAUSE_20260809T211227Z.md](docs/frozen_methodology/USER_AUTHORIZED_HANDOFF_PAUSE_20260809T211227Z.md). The navigation and resumption sequence is summarized in [docs/HANDOFF_AND_RESUMPTION_GUIDE.md](docs/HANDOFF_AND_RESUMPTION_GUIDE.md).

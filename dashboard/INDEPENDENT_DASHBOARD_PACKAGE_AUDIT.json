@@ -1,0 +1,316 @@
+{
+  "audit_id": "independent_power_bi_dashboard_package_audit_v1",
+  "overall_status": "PASS",
+  "checks_passed": 33,
+  "checks_total": 33,
+  "failed_check_ids": [],
+  "checks": [
+    {
+      "check_id": "table_DimPeriod",
+      "passed": true,
+      "evidence": {
+        "exists": true,
+        "rows": 84,
+        "expected_rows": 84,
+        "key_unique": true
+      }
+    },
+    {
+      "check_id": "table_DimSchemaFamily",
+      "passed": true,
+      "evidence": {
+        "exists": true,
+        "rows": 5,
+        "expected_rows": 5,
+        "key_unique": true
+      }
+    },
+    {
+      "check_id": "table_DimProjectStage",
+      "passed": true,
+      "evidence": {
+        "exists": true,
+        "rows": 5,
+        "expected_rows": 5,
+        "key_unique": true
+      }
+    },
+    {
+      "check_id": "table_DimMetric",
+      "passed": true,
+      "evidence": {
+        "exists": true,
+        "rows": 25,
+        "expected_rows": 25,
+        "key_unique": true
+      }
+    },
+    {
+      "check_id": "table_DimClinicalDomain",
+      "passed": true,
+      "evidence": {
+        "exists": true,
+        "rows": 9,
+        "expected_rows": 9,
+        "key_unique": true
+      }
+    },
+    {
+      "check_id": "table_DimCodingMap",
+      "passed": true,
+      "evidence": {
+        "exists": true,
+        "rows": 6,
+        "expected_rows": 6,
+        "key_unique": true
+      }
+    },
+    {
+      "check_id": "table_DimModelSpec",
+      "passed": true,
+      "evidence": {
+        "exists": true,
+        "rows": 3,
+        "expected_rows": 3,
+        "key_unique": true
+      }
+    },
+    {
+      "check_id": "table_FactProjectCoverage",
+      "passed": true,
+      "evidence": {
+        "exists": true,
+        "rows": 14,
+        "expected_rows": 14,
+        "key_unique": true
+      }
+    },
+    {
+      "check_id": "table_FactPartitionStatus",
+      "passed": true,
+      "evidence": {
+        "exists": true,
+        "rows": 84,
+        "expected_rows": 84,
+        "key_unique": true
+      }
+    },
+    {
+      "check_id": "table_FactEnhancementCoverage",
+      "passed": true,
+      "evidence": {
+        "exists": true,
+        "rows": 20,
+        "expected_rows": 20,
+        "key_unique": true
+      }
+    },
+    {
+      "check_id": "table_FactProviderMeasurement",
+      "passed": true,
+      "evidence": {
+        "exists": true,
+        "rows": 11,
+        "expected_rows": 11,
+        "key_unique": true
+      }
+    },
+    {
+      "check_id": "table_FactValidationStatus",
+      "passed": true,
+      "evidence": {
+        "exists": true,
+        "rows": 20,
+        "expected_rows": 20,
+        "key_unique": true
+      }
+    },
+    {
+      "check_id": "table_FactAnalyticalStatus",
+      "passed": true,
+      "evidence": {
+        "exists": true,
+        "rows": 20,
+        "expected_rows": 20,
+        "key_unique": true
+      }
+    },
+    {
+      "check_id": "table_FactSyntheticDemonstration",
+      "passed": true,
+      "evidence": {
+        "exists": true,
+        "rows": 13,
+        "expected_rows": 13,
+        "key_unique": true
+      }
+    },
+    {
+      "check_id": "relationship_integrity",
+      "passed": true,
+      "evidence": {
+        "relationships": 8,
+        "orphan_rows": 0
+      }
+    },
+    {
+      "check_id": "project_metric_reconciliation",
+      "passed": true,
+      "evidence": {
+        "checked_metrics": 14
+      }
+    },
+    {
+      "check_id": "provider_metric_reconciliation",
+      "passed": true,
+      "evidence": {
+        "checked_metrics": 6
+      }
+    },
+    {
+      "check_id": "period_scope",
+      "passed": true,
+      "evidence": {
+        "available": 76,
+        "excluded": 8
+      }
+    },
+    {
+      "check_id": "analytical_status_vocabulary",
+      "passed": true,
+      "evidence": {
+        "rows": 20
+      }
+    },
+    {
+      "check_id": "pause_status_alignment",
+      "passed": true,
+      "evidence": {
+        "completed_estimation_items": [
+          "Primary gender M1 estimation",
+          "Primary race M1 estimation",
+          "Primary race M2 estimation",
+          "Primary race M3 estimation"
+        ],
+        "gender_m2_pending": true
+      }
+    },
+    {
+      "check_id": "synthetic_label_and_reconciliation",
+      "passed": true,
+      "evidence": {
+        "input_rows": 800,
+        "output_rows": 800
+      }
+    },
+    {
+      "check_id": "dax_dictionary_alignment",
+      "passed": true,
+      "evidence": {
+        "dax_measures": 33,
+        "dictionary_measures": 33
+      }
+    },
+    {
+      "check_id": "visual_contract",
+      "passed": true,
+      "evidence": {
+        "pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "visuals": 63,
+        "unique_ids": 63,
+        "all_in_bounds": true
+      }
+    },
+    {
+      "check_id": "excel_import_structure",
+      "passed": true,
+      "evidence": {
+        "sheets": 1,
+        "named_tables": 14,
+        "external_links": false
+      }
+    },
+    {
+      "check_id": "manifest_coverage_and_hashes",
+      "passed": true,
+      "evidence": {
+        "listed": 33,
+        "actual_core": 33,
+        "missing": [],
+        "stale": [],
+        "hash_failures": []
+      }
+    },
+    {
+      "check_id": "manifest_root_checksum",
+      "passed": true,
+      "evidence": {
+        "matches": true
+      }
+    },
+    {
+      "check_id": "no_filesystem_links",
+      "passed": true,
+      "evidence": {
+        "links": []
+      }
+    },
+    {
+      "check_id": "no_private_paths",
+      "passed": true,
+      "evidence": {
+        "hits": []
+      }
+    },
+    {
+      "check_id": "no_email_addresses",
+      "passed": true,
+      "evidence": {
+        "hits": []
+      }
+    },
+    {
+      "check_id": "no_identifier_or_result_columns",
+      "passed": true,
+      "evidence": {
+        "prohibited_columns": [],
+        "ten_digit_values": []
+      }
+    },
+    {
+      "check_id": "embedded_audits_pass",
+      "passed": true,
+      "evidence": {
+        "disclosure": "PASS",
+        "preparation": "PASS"
+      }
+    },
+    {
+      "check_id": "source_hash_immutability",
+      "passed": true,
+      "evidence": {
+        "checked_sources": 18,
+        "failures": []
+      }
+    },
+    {
+      "check_id": "controlled_status_statement",
+      "passed": true,
+      "evidence": {
+        "readme": true,
+        "dax": true
+      }
+    }
+  ],
+  "scope": "Public-safe dashboard preparation package; no encounter rows or numerical concordance estimates inspected",
+  "phase1_or_phase2_modified": false,
+  "publication_authorized": false
+}

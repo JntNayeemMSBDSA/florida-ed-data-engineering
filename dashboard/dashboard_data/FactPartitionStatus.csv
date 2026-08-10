@@ -1,0 +1,85 @@
+PartitionKey,PeriodKey,SchemaFamilyKey,PartitionStatus,ReconciliationStatus,AvailableFlag,ExclusionReason,DiagnosisCodeEra,LengthOfStayAvailability,SourceClass,DisclosureClass
+PT20051,20051,SF1,COMPLETE,PASS,1,,ICD-9-CM,Day-level LOS only,Project metadata; no encounter rows,PUBLIC_SAFE_PROJECT_METADATA
+PT20052,20052,SF1,COMPLETE,PASS,1,,ICD-9-CM,Day-level LOS only,Project metadata; no encounter rows,PUBLIC_SAFE_PROJECT_METADATA
+PT20053,20053,SF1,COMPLETE,PASS,1,,ICD-9-CM,Day-level LOS only,Project metadata; no encounter rows,PUBLIC_SAFE_PROJECT_METADATA
+PT20054,20054,SF1,COMPLETE,PASS,1,,ICD-9-CM,Day-level LOS only,Project metadata; no encounter rows,PUBLIC_SAFE_PROJECT_METADATA
+PT20061,20061,SF1,COMPLETE,PASS,1,,ICD-9-CM,Day-level LOS only,Project metadata; no encounter rows,PUBLIC_SAFE_PROJECT_METADATA
+PT20062,20062,SF1,COMPLETE,PASS,1,,ICD-9-CM,Day-level LOS only,Project metadata; no encounter rows,PUBLIC_SAFE_PROJECT_METADATA
+PT20063,20063,SF1,COMPLETE,PASS,1,,ICD-9-CM,Day-level LOS only,Project metadata; no encounter rows,PUBLIC_SAFE_PROJECT_METADATA
+PT20064,20064,SF1,COMPLETE,PASS,1,,ICD-9-CM,Day-level LOS only,Project metadata; no encounter rows,PUBLIC_SAFE_PROJECT_METADATA
+PT20071,20071,SF1,COMPLETE,PASS,1,,ICD-9-CM,Day-level LOS only,Project metadata; no encounter rows,PUBLIC_SAFE_PROJECT_METADATA
+PT20072,20072,SF1,COMPLETE,PASS,1,,ICD-9-CM,Day-level LOS only,Project metadata; no encounter rows,PUBLIC_SAFE_PROJECT_METADATA
+PT20073,20073,SF1,COMPLETE,PASS,1,,ICD-9-CM,Day-level LOS only,Project metadata; no encounter rows,PUBLIC_SAFE_PROJECT_METADATA
+PT20074,20074,SF1,COMPLETE,PASS,1,,ICD-9-CM,Day-level LOS only,Project metadata; no encounter rows,PUBLIC_SAFE_PROJECT_METADATA
+PT20081,20081,SF1,COMPLETE,PASS,1,,ICD-9-CM,Day-level LOS only,Project metadata; no encounter rows,PUBLIC_SAFE_PROJECT_METADATA
+PT20082,20082,SF1,COMPLETE,PASS,1,,ICD-9-CM,Day-level LOS only,Project metadata; no encounter rows,PUBLIC_SAFE_PROJECT_METADATA
+PT20083,20083,SF1,COMPLETE,PASS,1,,ICD-9-CM,Day-level LOS only,Project metadata; no encounter rows,PUBLIC_SAFE_PROJECT_METADATA
+PT20084,20084,SF1,COMPLETE,PASS,1,,ICD-9-CM,Day-level LOS only,Project metadata; no encounter rows,PUBLIC_SAFE_PROJECT_METADATA
+PT20091,20091,,EXCLUDED,NOT_APPLICABLE,0,Year excluded by project instruction,Not processed,Not processed,Project metadata; no encounter rows,PUBLIC_SAFE_PROJECT_METADATA
+PT20092,20092,,EXCLUDED,NOT_APPLICABLE,0,Year excluded by project instruction,Not processed,Not processed,Project metadata; no encounter rows,PUBLIC_SAFE_PROJECT_METADATA
+PT20093,20093,,EXCLUDED,NOT_APPLICABLE,0,Year excluded by project instruction,Not processed,Not processed,Project metadata; no encounter rows,PUBLIC_SAFE_PROJECT_METADATA
+PT20094,20094,,EXCLUDED,NOT_APPLICABLE,0,Year excluded by project instruction,Not processed,Not processed,Project metadata; no encounter rows,PUBLIC_SAFE_PROJECT_METADATA
+PT20101,20101,SF2,COMPLETE,PASS,1,,ICD-9-CM,Clock-derived hourly LOS eligible in Phase 2,Project metadata; no encounter rows,PUBLIC_SAFE_PROJECT_METADATA
+PT20102,20102,SF2,COMPLETE,PASS,1,,ICD-9-CM,Clock-derived hourly LOS eligible in Phase 2,Project metadata; no encounter rows,PUBLIC_SAFE_PROJECT_METADATA
+PT20103,20103,SF2,COMPLETE,PASS,1,,ICD-9-CM,Clock-derived hourly LOS eligible in Phase 2,Project metadata; no encounter rows,PUBLIC_SAFE_PROJECT_METADATA
+PT20104,20104,SF2,COMPLETE,PASS,1,,ICD-9-CM,Clock-derived hourly LOS eligible in Phase 2,Project metadata; no encounter rows,PUBLIC_SAFE_PROJECT_METADATA
+PT20111,20111,SF2,COMPLETE,PASS,1,,ICD-9-CM,Clock-derived hourly LOS eligible in Phase 2,Project metadata; no encounter rows,PUBLIC_SAFE_PROJECT_METADATA
+PT20112,20112,SF2,COMPLETE,PASS,1,,ICD-9-CM,Clock-derived hourly LOS eligible in Phase 2,Project metadata; no encounter rows,PUBLIC_SAFE_PROJECT_METADATA
+PT20113,20113,SF2,COMPLETE,PASS,1,,ICD-9-CM,Clock-derived hourly LOS eligible in Phase 2,Project metadata; no encounter rows,PUBLIC_SAFE_PROJECT_METADATA
+PT20114,20114,SF2,COMPLETE,PASS,1,,ICD-9-CM,Clock-derived hourly LOS eligible in Phase 2,Project metadata; no encounter rows,PUBLIC_SAFE_PROJECT_METADATA
+PT20121,20121,SF2,COMPLETE,PASS,1,,ICD-9-CM,Clock-derived hourly LOS eligible in Phase 2,Project metadata; no encounter rows,PUBLIC_SAFE_PROJECT_METADATA
+PT20122,20122,SF2,COMPLETE,PASS,1,,ICD-9-CM,Clock-derived hourly LOS eligible in Phase 2,Project metadata; no encounter rows,PUBLIC_SAFE_PROJECT_METADATA
+PT20123,20123,SF2,COMPLETE,PASS,1,,ICD-9-CM,Clock-derived hourly LOS eligible in Phase 2,Project metadata; no encounter rows,PUBLIC_SAFE_PROJECT_METADATA
+PT20124,20124,SF2,COMPLETE,PASS,1,,ICD-9-CM,Clock-derived hourly LOS eligible in Phase 2,Project metadata; no encounter rows,PUBLIC_SAFE_PROJECT_METADATA
+PT20131,20131,SF2,COMPLETE,PASS,1,,ICD-9-CM,Clock-derived hourly LOS eligible in Phase 2,Project metadata; no encounter rows,PUBLIC_SAFE_PROJECT_METADATA
+PT20132,20132,SF2,COMPLETE,PASS,1,,ICD-9-CM,Clock-derived hourly LOS eligible in Phase 2,Project metadata; no encounter rows,PUBLIC_SAFE_PROJECT_METADATA
+PT20133,20133,SF2,COMPLETE,PASS,1,,ICD-9-CM,Clock-derived hourly LOS eligible in Phase 2,Project metadata; no encounter rows,PUBLIC_SAFE_PROJECT_METADATA
+PT20134,20134,SF2,COMPLETE,PASS,1,,ICD-9-CM,Clock-derived hourly LOS eligible in Phase 2,Project metadata; no encounter rows,PUBLIC_SAFE_PROJECT_METADATA
+PT20141,20141,SF2,COMPLETE,PASS,1,,ICD-9-CM,Clock-derived hourly LOS eligible in Phase 2,Project metadata; no encounter rows,PUBLIC_SAFE_PROJECT_METADATA
+PT20142,20142,SF2,COMPLETE,PASS,1,,ICD-9-CM,Clock-derived hourly LOS eligible in Phase 2,Project metadata; no encounter rows,PUBLIC_SAFE_PROJECT_METADATA
+PT20143,20143,SF2,COMPLETE,PASS,1,,ICD-9-CM,Clock-derived hourly LOS eligible in Phase 2,Project metadata; no encounter rows,PUBLIC_SAFE_PROJECT_METADATA
+PT20144,20144,SF2,COMPLETE,PASS,1,,ICD-9-CM,Clock-derived hourly LOS eligible in Phase 2,Project metadata; no encounter rows,PUBLIC_SAFE_PROJECT_METADATA
+PT20151,20151,SF2,COMPLETE,PASS,1,,ICD-9-CM,Clock-derived hourly LOS eligible in Phase 2,Project metadata; no encounter rows,PUBLIC_SAFE_PROJECT_METADATA
+PT20152,20152,SF2,COMPLETE,PASS,1,,ICD-9-CM,Clock-derived hourly LOS eligible in Phase 2,Project metadata; no encounter rows,PUBLIC_SAFE_PROJECT_METADATA
+PT20153,20153,SF2,COMPLETE,PASS,1,,ICD-9-CM,Clock-derived hourly LOS eligible in Phase 2,Project metadata; no encounter rows,PUBLIC_SAFE_PROJECT_METADATA
+PT20154,20154,SF3,COMPLETE,PASS,1,,ICD-10-CM,Clock-derived hourly LOS eligible in Phase 2,Project metadata; no encounter rows,PUBLIC_SAFE_PROJECT_METADATA
+PT20161,20161,SF3,COMPLETE,PASS,1,,ICD-10-CM,Clock-derived hourly LOS eligible in Phase 2,Project metadata; no encounter rows,PUBLIC_SAFE_PROJECT_METADATA
+PT20162,20162,SF3,COMPLETE,PASS,1,,ICD-10-CM,Clock-derived hourly LOS eligible in Phase 2,Project metadata; no encounter rows,PUBLIC_SAFE_PROJECT_METADATA
+PT20163,20163,SF3,COMPLETE,PASS,1,,ICD-10-CM,Clock-derived hourly LOS eligible in Phase 2,Project metadata; no encounter rows,PUBLIC_SAFE_PROJECT_METADATA
+PT20164,20164,SF3,COMPLETE,PASS,1,,ICD-10-CM,Clock-derived hourly LOS eligible in Phase 2,Project metadata; no encounter rows,PUBLIC_SAFE_PROJECT_METADATA
+PT20171,20171,SF3,COMPLETE,PASS,1,,ICD-10-CM,Clock-derived hourly LOS eligible in Phase 2,Project metadata; no encounter rows,PUBLIC_SAFE_PROJECT_METADATA
+PT20172,20172,SF3,COMPLETE,PASS,1,,ICD-10-CM,Clock-derived hourly LOS eligible in Phase 2,Project metadata; no encounter rows,PUBLIC_SAFE_PROJECT_METADATA
+PT20173,20173,SF3,COMPLETE,PASS,1,,ICD-10-CM,Clock-derived hourly LOS eligible in Phase 2,Project metadata; no encounter rows,PUBLIC_SAFE_PROJECT_METADATA
+PT20174,20174,SF3,COMPLETE,PASS,1,,ICD-10-CM,Clock-derived hourly LOS eligible in Phase 2,Project metadata; no encounter rows,PUBLIC_SAFE_PROJECT_METADATA
+PT20181,20181,SF4,COMPLETE,PASS,1,,ICD-10-CM,Clock-derived hourly LOS eligible in Phase 2,Project metadata; no encounter rows,PUBLIC_SAFE_PROJECT_METADATA
+PT20182,20182,SF4,COMPLETE,PASS,1,,ICD-10-CM,Clock-derived hourly LOS eligible in Phase 2,Project metadata; no encounter rows,PUBLIC_SAFE_PROJECT_METADATA
+PT20183,20183,SF4,COMPLETE,PASS,1,,ICD-10-CM,Clock-derived hourly LOS eligible in Phase 2,Project metadata; no encounter rows,PUBLIC_SAFE_PROJECT_METADATA
+PT20184,20184,SF4,COMPLETE,PASS,1,,ICD-10-CM,Clock-derived hourly LOS eligible in Phase 2,Project metadata; no encounter rows,PUBLIC_SAFE_PROJECT_METADATA
+PT20191,20191,SF4,COMPLETE,PASS,1,,ICD-10-CM,Clock-derived hourly LOS eligible in Phase 2,Project metadata; no encounter rows,PUBLIC_SAFE_PROJECT_METADATA
+PT20192,20192,SF4,COMPLETE,PASS,1,,ICD-10-CM,Clock-derived hourly LOS eligible in Phase 2,Project metadata; no encounter rows,PUBLIC_SAFE_PROJECT_METADATA
+PT20193,20193,SF4,COMPLETE,PASS,1,,ICD-10-CM,Clock-derived hourly LOS eligible in Phase 2,Project metadata; no encounter rows,PUBLIC_SAFE_PROJECT_METADATA
+PT20194,20194,SF4,COMPLETE,PASS,1,,ICD-10-CM,Clock-derived hourly LOS eligible in Phase 2,Project metadata; no encounter rows,PUBLIC_SAFE_PROJECT_METADATA
+PT20201,20201,SF4,COMPLETE,PASS,1,,ICD-10-CM,Clock-derived hourly LOS eligible in Phase 2,Project metadata; no encounter rows,PUBLIC_SAFE_PROJECT_METADATA
+PT20202,20202,SF4,COMPLETE,PASS,1,,ICD-10-CM,Clock-derived hourly LOS eligible in Phase 2,Project metadata; no encounter rows,PUBLIC_SAFE_PROJECT_METADATA
+PT20203,20203,SF4,COMPLETE,PASS,1,,ICD-10-CM,Clock-derived hourly LOS eligible in Phase 2,Project metadata; no encounter rows,PUBLIC_SAFE_PROJECT_METADATA
+PT20204,20204,SF4,COMPLETE,PASS,1,,ICD-10-CM,Clock-derived hourly LOS eligible in Phase 2,Project metadata; no encounter rows,PUBLIC_SAFE_PROJECT_METADATA
+PT20211,20211,SF4,COMPLETE,PASS,1,,ICD-10-CM,Clock-derived hourly LOS eligible in Phase 2,Project metadata; no encounter rows,PUBLIC_SAFE_PROJECT_METADATA
+PT20212,20212,SF4,COMPLETE,PASS,1,,ICD-10-CM,Clock-derived hourly LOS eligible in Phase 2,Project metadata; no encounter rows,PUBLIC_SAFE_PROJECT_METADATA
+PT20213,20213,SF4,COMPLETE,PASS,1,,ICD-10-CM,Clock-derived hourly LOS eligible in Phase 2,Project metadata; no encounter rows,PUBLIC_SAFE_PROJECT_METADATA
+PT20214,20214,SF4,COMPLETE,PASS,1,,ICD-10-CM,Clock-derived hourly LOS eligible in Phase 2,Project metadata; no encounter rows,PUBLIC_SAFE_PROJECT_METADATA
+PT20221,20221,SF4,COMPLETE,PASS,1,,ICD-10-CM,Clock-derived hourly LOS eligible in Phase 2,Project metadata; no encounter rows,PUBLIC_SAFE_PROJECT_METADATA
+PT20222,20222,SF4,COMPLETE,PASS,1,,ICD-10-CM,Clock-derived hourly LOS eligible in Phase 2,Project metadata; no encounter rows,PUBLIC_SAFE_PROJECT_METADATA
+PT20223,20223,SF4,COMPLETE,PASS,1,,ICD-10-CM,Clock-derived hourly LOS eligible in Phase 2,Project metadata; no encounter rows,PUBLIC_SAFE_PROJECT_METADATA
+PT20224,20224,SF4,COMPLETE,PASS,1,,ICD-10-CM,Clock-derived hourly LOS eligible in Phase 2,Project metadata; no encounter rows,PUBLIC_SAFE_PROJECT_METADATA
+PT20231,20231,SF5,COMPLETE,PASS,1,,ICD-10-CM,Clock-derived hourly LOS eligible in Phase 2,Project metadata; no encounter rows,PUBLIC_SAFE_PROJECT_METADATA
+PT20232,20232,SF5,COMPLETE,PASS,1,,ICD-10-CM,Clock-derived hourly LOS eligible in Phase 2,Project metadata; no encounter rows,PUBLIC_SAFE_PROJECT_METADATA
+PT20233,20233,SF5,COMPLETE,PASS,1,,ICD-10-CM,Clock-derived hourly LOS eligible in Phase 2,Project metadata; no encounter rows,PUBLIC_SAFE_PROJECT_METADATA
+PT20234,20234,SF5,COMPLETE,PASS,1,,ICD-10-CM,Clock-derived hourly LOS eligible in Phase 2,Project metadata; no encounter rows,PUBLIC_SAFE_PROJECT_METADATA
+PT20241,20241,SF5,COMPLETE,PASS,1,,ICD-10-CM,Clock-derived hourly LOS eligible in Phase 2,Project metadata; no encounter rows,PUBLIC_SAFE_PROJECT_METADATA
+PT20242,20242,SF5,COMPLETE,PASS,1,,ICD-10-CM,Clock-derived hourly LOS eligible in Phase 2,Project metadata; no encounter rows,PUBLIC_SAFE_PROJECT_METADATA
+PT20243,20243,SF5,COMPLETE,PASS,1,,ICD-10-CM,Clock-derived hourly LOS eligible in Phase 2,Project metadata; no encounter rows,PUBLIC_SAFE_PROJECT_METADATA
+PT20244,20244,SF5,COMPLETE,PASS,1,,ICD-10-CM,Clock-derived hourly LOS eligible in Phase 2,Project metadata; no encounter rows,PUBLIC_SAFE_PROJECT_METADATA
+PT20251,20251,,EXCLUDED,NOT_APPLICABLE,0,Year excluded by project instruction,Not processed,Not processed,Project metadata; no encounter rows,PUBLIC_SAFE_PROJECT_METADATA
+PT20252,20252,,EXCLUDED,NOT_APPLICABLE,0,Year excluded by project instruction,Not processed,Not processed,Project metadata; no encounter rows,PUBLIC_SAFE_PROJECT_METADATA
+PT20253,20253,,EXCLUDED,NOT_APPLICABLE,0,Year excluded by project instruction,Not processed,Not processed,Project metadata; no encounter rows,PUBLIC_SAFE_PROJECT_METADATA
+PT20254,20254,,EXCLUDED,NOT_APPLICABLE,0,Year excluded by project instruction,Not processed,Not processed,Project metadata; no encounter rows,PUBLIC_SAFE_PROJECT_METADATA

@@ -1,0 +1,6 @@
+StageKey,StageName,StageOrder,StagePurpose,DisclosureClass
+S01,Phase 1 data engineering,1,"Standardize, decode, enhance, reconcile, and validate encounter data",PUBLIC_SAFE_PROJECT_METADATA
+S02,Phase 2 measurement and cohorts,2,"Correct provider coverage, define measurements, and rebuild cohorts",PUBLIC_SAFE_PROJECT_METADATA
+S03,Historical analyses,3,Analyze 2005-2008 separately using comparable variables,PUBLIC_SAFE_PROJECT_METADATA
+S04,Primary analyses,4,Estimate 2010-2024 association models and sensitivities,PUBLIC_SAFE_PROJECT_METADATA
+S05,Release and handoff,5,"Independent audit, reporting, documentation, and controlled sharing",PUBLIC_SAFE_PROJECT_METADATA

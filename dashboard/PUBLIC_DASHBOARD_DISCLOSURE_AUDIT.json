@@ -1,0 +1,65 @@
+{
+  "created_utc": "2026-08-10T20:48:54.080Z",
+  "overall_status": "PASS",
+  "intended_surface": "Public GitHub portfolio Power BI dashboard",
+  "checks": {
+    "direct_patient_identifiers": {
+      "status": "PASS",
+      "evidence": "No patient identifier columns or row-level encounter data"
+    },
+    "provider_identifiers": {
+      "status": "PASS",
+      "evidence": "No NPI values, names, or provider-level rows; only allowlisted aggregate counts"
+    },
+    "facility_identifiers": {
+      "status": "PASS",
+      "evidence": "No facility IDs, names, addresses, or facility-level rows"
+    },
+    "granular_dates_or_geography": {
+      "status": "PASS",
+      "evidence": "Quarter/year project coverage only; no encounter date or granular geography"
+    },
+    "private_filesystem_paths": {
+      "status": "PASS",
+      "evidence": "Dashboard-facing outputs use relative logical paths only"
+    },
+    "credentials_or_private_urls": {
+      "status": "PASS",
+      "evidence": "No credential, token, email, or private URL fields"
+    },
+    "row_level_research_data": {
+      "status": "PASS",
+      "evidence": "Tables contain project metadata and fictional aggregate demonstration values only"
+    },
+    "unapproved_analytical_estimates": {
+      "status": "PASS",
+      "evidence": "No coefficients, confidence intervals, p-values, q-values, or result tables"
+    },
+    "unsupported_completion_claims": {
+      "status": "PASS",
+      "evidence": "Phase 1 completion is separated from unfinished Phase 2 and final audit"
+    },
+    "synthetic_data_labeling": {
+      "status": "PASS",
+      "evidence": "Every synthetic row has SyntheticFlag=true and SYNTHETIC_PUBLIC_SAFE classification"
+    },
+    "race_measurement_language": {
+      "status": "PASS",
+      "evidence": "Full-name probabilistic proxy; no geography; not BISG; not self-reported"
+    },
+    "causal_language": {
+      "status": "PASS",
+      "evidence": "Dashboard is explicitly observational and association-focused"
+    }
+  },
+  "excluded_by_design": [
+    "Raw or processed Florida encounter rows",
+    "Patient identifiers",
+    "Provider names and NPIs",
+    "Facility identifiers and names",
+    "Purchased source files",
+    "Model matrices",
+    "Numerical concordance results",
+    "Confidence intervals and p/q-values"
+  ]
+}

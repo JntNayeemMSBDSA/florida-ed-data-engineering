@@ -1,0 +1,73 @@
+table DimSchemaFamily
+	lineageTag: 93e8d148-c259-46ff-8879-52081eb50540
+
+	column SchemaFamilyKey
+		dataType: string
+		isHidden
+		lineageTag: c9012dc2-dbac-47a2-a2e5-1373d2411631
+		summarizeBy: none
+		sourceColumn: SchemaFamilyKey
+
+	column SchemaFamilyLabel
+		dataType: string
+		lineageTag: 2b6546ad-86b5-462d-b89a-c3abd5af6346
+		summarizeBy: none
+		sourceColumn: SchemaFamilyLabel
+		sortByColumn: DisplayOrder
+
+	column StartPeriod
+		dataType: string
+		lineageTag: 10bdf5be-a4ad-49a0-9865-8fe2a15a8e5d
+		summarizeBy: none
+		sourceColumn: StartPeriod
+
+	column EndPeriod
+		dataType: string
+		lineageTag: cbc2bf3b-1206-46b2-8ea3-218187a9d795
+		summarizeBy: none
+		sourceColumn: EndPeriod
+
+	column QuarterCount
+		dataType: int64
+		formatString: #,##0
+		lineageTag: 67618897-c833-4665-9abf-a670360d40d9
+		summarizeBy: none
+		sourceColumn: QuarterCount
+
+	column DiagnosisEra
+		dataType: string
+		lineageTag: 4d34c686-e322-4777-80f3-6d927a7c60b1
+		summarizeBy: none
+		sourceColumn: DiagnosisEra
+
+	column DisplayOrder
+		dataType: int64
+		isHidden
+		formatString: #,##0
+		lineageTag: 10f5531b-cbe0-453f-b5a5-ba19e1b833fe
+		summarizeBy: none
+		sourceColumn: DisplayOrder
+
+	column DisclosureClass
+		dataType: string
+		isHidden
+		lineageTag: 47cbbc07-67d0-46f0-b60d-be1f75588f29
+		summarizeBy: none
+		sourceColumn: DisclosureClass
+
+	partition DimSchemaFamily = m
+		mode: import
+		source =
+				let
+				    Source = #table(type table [SchemaFamilyKey = text, SchemaFamilyLabel = text, StartPeriod = text, EndPeriod = text, QuarterCount = Int64.Type, DiagnosisEra = text, DisplayOrder = Int64.Type, DisclosureClass = text], {
+				        {"SF1", "2005-2008", "2005 Q1", "2008 Q4", 16, "ICD-9-CM", 1, "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"SF2", "2010-2015 Q3", "2010 Q1", "2015 Q3", 23, "ICD-9-CM", 2, "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"SF3", "2015 Q4-2017", "2015 Q4", "2017 Q4", 9, "ICD-10-CM", 3, "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"SF4", "2018-2022", "2018 Q1", "2022 Q4", 20, "ICD-10-CM", 4, "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"SF5", "2023-2024", "2023 Q1", "2024 Q4", 8, "ICD-10-CM", 5, "PUBLIC_SAFE_PROJECT_METADATA"}
+				    })
+				in
+				    Source
+
+	annotation PBI_ResultType = Table
+

@@ -1,9 +1,25 @@
 # Contributions
 
-Nayeem developed and executed the data-engineering and analytical workflow under faculty research direction. This included source auditing, schema reconciliation, production database construction, clinical and provider/facility enrichment, QA design, provider measurement revisions, cohort rebuilding, estimator implementation, validation tooling, and preparation of reproducible documentation.
+I led the end-to-end development of this Florida Emergency Department data-engineering and analytical project under faculty research guidance.
 
-Faculty collaborators defined or refined the research questions and analytical priorities. A physician collaborator provided clinical and presentation feedback during the exploratory prototype. Those contributions are not represented as Nayeem’s sole scientific authorship, and the portfolio does not attribute collaborators’ ideas to the implementation work.
+My responsibilities included:
 
-AI-assisted coding and review tools were used as development aids for code drafting, checking, documentation, and repository sanitization. Automated work is described as automated. The relevant professional claim is the ability to explain the design, trace decisions to evidence, validate the implementation, diagnose failures, and maintain the submitted code.
+- Translating the research objectives into a production data architecture and analytical workflow
+- Auditing the raw quarterly files, data dictionaries, historical layouts, and external reference sources
+- Designing the five-schema standardization strategy
+- Defining the clinical decoding, provider classification, facility enhancement, and visit-level measurement rules
+- Establishing the provider-v2 measurement corrections and the physician race and gender measurement framework
+- Defining validation requirements, reconciliation rules, fail-closed gates, and acceptance criteria
+- Operating and recovering the large-scale pipeline across 148.7 million encounter records
+- Investigating linkage, convergence, measurement, and data-quality failures
+- Reviewing the implementation against source documentation and frozen analytical specifications
+- Verifying aggregate claims, provenance, source hashes, and independent audit outputs
+- Preparing and validating this sanitized public repository
 
-The repository excludes private correspondence and unnecessary personal information. It also separates exploratory development history from the validated production release and from ongoing research analysis.
+Prof. Basuroy and three other faculty collaborators established and refined the broader research questions and provided methodological guidance. A physician collaborator provided domain feedback during the earlier exploratory-sample stage.
+
+## Development tools
+
+I used AI-assisted development tools to accelerate selected implementation, code review, testing, debugging, documentation, and repository-sanitization tasks. I retained responsibility for the research design, source selection, measurement definitions, analytical specifications, validation standards, execution decisions, interpretation boundaries, and approval of the submitted work.
+
+AI tools did not independently determine the research questions, approve methodological decisions, or authorize scientific conclusions. Every public claim in this repository is tied to documented evidence and validation artifacts.

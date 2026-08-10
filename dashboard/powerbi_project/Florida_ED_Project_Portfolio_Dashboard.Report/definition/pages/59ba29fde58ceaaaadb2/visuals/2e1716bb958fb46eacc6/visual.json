@@ -1,0 +1,95 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "2e1716bb958fb46eacc6",
+  "position": {
+    "x": 490,
+    "y": 184,
+    "z": 0,
+    "height": 204,
+    "width": 766,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimCodingMap"
+                    }
+                  },
+                  "Property": "SourceCodeSystem"
+                }
+              },
+              "queryRef": "DimCodingMap.SourceCodeSystem",
+              "nativeQueryRef": "SourceCodeSystem"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimCodingMap"
+                    }
+                  },
+                  "Property": "ApplicablePeriod"
+                }
+              },
+              "queryRef": "DimCodingMap.ApplicablePeriod",
+              "nativeQueryRef": "ApplicablePeriod"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimCodingMap"
+                    }
+                  },
+                  "Property": "TargetGrouping"
+                }
+              },
+              "queryRef": "DimCodingMap.TargetGrouping",
+              "nativeQueryRef": "TargetGrouping"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimCodingMap"
+                    }
+                  },
+                  "Property": "Guardrail"
+                }
+              },
+              "queryRef": "DimCodingMap.Guardrail",
+              "nativeQueryRef": "Guardrail"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Coding and grouping map'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

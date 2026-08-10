@@ -1,0 +1,85 @@
+table FactSyntheticDemonstration
+	lineageTag: 5d869844-123c-4a09-ba82-3e71c3007412
+
+	column DemoMetricKey
+		dataType: string
+		isHidden
+		lineageTag: 412408ca-adb3-4643-8969-c8c66c6be57c
+		summarizeBy: none
+		sourceColumn: DemoMetricKey
+
+	column DemoSection
+		dataType: string
+		lineageTag: e3f8c5d5-00f0-4299-ae10-3a816781d0a8
+		summarizeBy: none
+		sourceColumn: DemoSection
+
+	column Category
+		dataType: string
+		lineageTag: 758e6a70-511a-4d9a-ad98-24ef25548105
+		summarizeBy: none
+		sourceColumn: Category
+
+	column MetricName
+		dataType: string
+		lineageTag: 8b8aeb24-59e3-4595-96e5-c79d85ed7322
+		summarizeBy: none
+		sourceColumn: MetricName
+
+	column MetricValue
+		dataType: int64
+		formatString: #,##0
+		lineageTag: 8739b12c-eaac-4f90-905a-a1b6853b605d
+		summarizeBy: none
+		sourceColumn: MetricValue
+
+	column DemoStatus
+		dataType: string
+		lineageTag: 3b240dcc-a9c6-4eb3-84a0-5b07151d2e56
+		summarizeBy: none
+		sourceColumn: DemoStatus
+
+	column SyntheticFlag
+		dataType: boolean
+		lineageTag: 403c0c8f-7c20-418e-8769-fa85c3edecc6
+		summarizeBy: none
+		sourceColumn: SyntheticFlag
+
+	column SourceArtifactKey
+		dataType: string
+		isHidden
+		lineageTag: e736606d-2aaf-4fbe-b65f-0d31bd3d895c
+		summarizeBy: none
+		sourceColumn: SourceArtifactKey
+
+	column DisclosureClass
+		dataType: string
+		isHidden
+		lineageTag: a84ddafe-a964-4dda-8fba-82b5230c2b30
+		summarizeBy: none
+		sourceColumn: DisclosureClass
+
+	partition FactSyntheticDemonstration = m
+		mode: import
+		source =
+				let
+				    Source = #table(type table [DemoMetricKey = text, DemoSection = text, Category = text, MetricName = text, MetricValue = Int64.Type, DemoStatus = text, SyntheticFlag = logical, SourceArtifactKey = text, DisclosureClass = text], {
+				        {"SD001", "Schema reconciliation", "schema_1_2005_2008", "Input rows", 160, "PASS", true, "SRC_SYNTHETIC_SCHEMA", "SYNTHETIC_PUBLIC_SAFE"},
+				        {"SD002", "Schema reconciliation", "schema_1_2005_2008", "Output rows", 160, "PASS", true, "SRC_SYNTHETIC_SCHEMA", "SYNTHETIC_PUBLIC_SAFE"},
+				        {"SD003", "Schema reconciliation", "schema_2_2010_2015q3", "Input rows", 160, "PASS", true, "SRC_SYNTHETIC_SCHEMA", "SYNTHETIC_PUBLIC_SAFE"},
+				        {"SD004", "Schema reconciliation", "schema_2_2010_2015q3", "Output rows", 160, "PASS", true, "SRC_SYNTHETIC_SCHEMA", "SYNTHETIC_PUBLIC_SAFE"},
+				        {"SD005", "Schema reconciliation", "schema_3_2015q4_2017", "Input rows", 160, "PASS", true, "SRC_SYNTHETIC_SCHEMA", "SYNTHETIC_PUBLIC_SAFE"},
+				        {"SD006", "Schema reconciliation", "schema_3_2015q4_2017", "Output rows", 160, "PASS", true, "SRC_SYNTHETIC_SCHEMA", "SYNTHETIC_PUBLIC_SAFE"},
+				        {"SD007", "Schema reconciliation", "schema_4_2018_2022", "Input rows", 160, "PASS", true, "SRC_SYNTHETIC_SCHEMA", "SYNTHETIC_PUBLIC_SAFE"},
+				        {"SD008", "Schema reconciliation", "schema_4_2018_2022", "Output rows", 160, "PASS", true, "SRC_SYNTHETIC_SCHEMA", "SYNTHETIC_PUBLIC_SAFE"},
+				        {"SD009", "Schema reconciliation", "schema_5_2023_2024", "Input rows", 160, "PASS", true, "SRC_SYNTHETIC_SCHEMA", "SYNTHETIC_PUBLIC_SAFE"},
+				        {"SD010", "Schema reconciliation", "schema_5_2023_2024", "Output rows", 160, "PASS", true, "SRC_SYNTHETIC_SCHEMA", "SYNTHETIC_PUBLIC_SAFE"},
+				        {"SD011", "Clinical category demonstration", "Acute myocardial infarction", "Synthetic rows", 260, "PASS", true, "SRC_SYNTHETIC_CATEGORY", "SYNTHETIC_PUBLIC_SAFE"},
+				        {"SD012", "Clinical category demonstration", "Chest pain", "Synthetic rows", 276, "PASS", true, "SRC_SYNTHETIC_CATEGORY", "SYNTHETIC_PUBLIC_SAFE"},
+				        {"SD013", "Clinical category demonstration", "Diabetes mellitus", "Synthetic rows", 264, "PASS", true, "SRC_SYNTHETIC_CATEGORY", "SYNTHETIC_PUBLIC_SAFE"}
+				    })
+				in
+				    Source
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,38 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "4e4cfe07739a011769cb",
+  "position": {
+    "x": 24,
+    "y": 386,
+    "z": 15,
+    "height": 216,
+    "width": 720,
+    "tabOrder": 15
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "MODEL FAMILY  |  STATUS  |  INDEPENDENT AUDIT  |  NEXT ACTION\nPrimary race M1 estimation  |  COMPLETE  |  PENDING  |  Bind to final family-level audit before interpretation\nPrimary race M2 estimation  |  COMPLETE  |  PENDING  |  Bind to final family-level audit before interpretation\nPrimary race M3 estimation  |  COMPLETE  |  PENDING  |  Bind to final family-level audit before interpretation\nPrimary gender M1 estimation  |  COMPLETE  |  PENDING  |  Continue from the verified pause checkpoint\nPrimary gender M2 estimation  |  PENDING  |  PENDING  |  Restart gender M2 from its beginning after hash validation\nPrimary gender M3 estimation  |  PENDING  |  PENDING  |  Run only after gender M2 commits and passes its checkpoint\nOutcome-specific models and sensitivities  |  PENDING  |  PENDING  |  Use complete eligible outcome-specific samples\nDirectional gender, race, and intersectional dyads  |  PENDING  |  PENDING  |  Plans and implementation gates exist; fitted-result audits remain\nCorrected primary AMI/Greenwood extension  |  PENDING  |  PENDING  |  ED-only observational extension; never call an inpatient replication\nMultiplicity procedures  |  PENDING  |  PENDING  |  Apply only after all eligible result families are complete",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI",
+                      "fontSize": "8pt",
+                      "color": "#1F2937"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

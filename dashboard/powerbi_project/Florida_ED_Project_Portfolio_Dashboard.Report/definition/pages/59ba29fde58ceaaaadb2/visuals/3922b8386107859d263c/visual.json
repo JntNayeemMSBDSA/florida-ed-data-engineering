@@ -1,0 +1,109 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "3922b8386107859d263c",
+  "position": {
+    "x": 24,
+    "y": 414,
+    "z": 0,
+    "height": 210,
+    "width": 1232,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimClinicalDomain"
+                    }
+                  },
+                  "Property": "ClinicalDomainName"
+                }
+              },
+              "queryRef": "DimClinicalDomain.ClinicalDomainName",
+              "nativeQueryRef": "ClinicalDomainName"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactEnhancementCoverage"
+                    }
+                  },
+                  "Property": "EnhancementName"
+                }
+              },
+              "queryRef": "FactEnhancementCoverage.EnhancementName",
+              "nativeQueryRef": "EnhancementName"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactEnhancementCoverage"
+                    }
+                  },
+                  "Property": "ImplementationStatus"
+                }
+              },
+              "queryRef": "FactEnhancementCoverage.ImplementationStatus",
+              "nativeQueryRef": "ImplementationStatus"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactEnhancementCoverage"
+                    }
+                  },
+                  "Property": "AvailabilityScope"
+                }
+              },
+              "queryRef": "FactEnhancementCoverage.AvailabilityScope",
+              "nativeQueryRef": "AvailabilityScope"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactEnhancementCoverage"
+                    }
+                  },
+                  "Property": "InterpretationGuardrail"
+                }
+              },
+              "queryRef": "FactEnhancementCoverage.InterpretationGuardrail",
+              "nativeQueryRef": "InterpretationGuardrail"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Enhancement availability and guardrails'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

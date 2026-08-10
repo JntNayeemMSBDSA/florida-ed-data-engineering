@@ -1,0 +1,23 @@
+domain,variable_or_outcome,historical_availability,cross_period_status,permitted_use,restriction
+encounter identity,visit_key and quarter,available,fully comparable,"reconciliation, fixed effects, trends",All 16 partitions must reconcile exactly to Phase 1.
+patient demographics,age_years and age bands,available,comparable with missingness checks,covariate and stratification,Do not infer values when age is missing.
+patient demographics,recorded patient sex,available,comparable administrative field,sex/gender concordance and covariate,Not a measure of patient gender identity.
+patient demographics,race/ethnicity,combined historical codes,partially comparable,separate code-3 versus code-4 historical sensitivity,Never pool with modern separate race and ethnicity fields; Hispanic historical codes are excluded from the Black/White contrast.
+provider linkage,attending NPI,license-derived NPI only,not linkage-equivalent,separate historical sensitivity after linkage audit,No direct source NPI in 2005-2008; only unique Florida-license crosswalk links are eligible.
+provider measurement,"MD/DO, clinician type, specialty",provider master v2 cross-sectional linkage,partially comparable,eligibility and sensitivity covariates,"Current registry attributes are not proof of historical activity, employment, specialty, or privilege."
+provider measurement,physician full-name race proxy,same provider-v2 method as primary era,"method-comparable, construct imperfect",probabilistic and threshold sensitivity analyses,Algorithm-inferred name probabilities without geography; not BISG and not self-identified race/ethnicity.
+provider measurement,physician recorded/inferred gender category,provider master v2,"method-comparable, temporal caveat",recorded patient sex-physician gender concordance,Not a measure of historical gender identity.
+clinical coding,diagnosis and clinical category,ICD-9-CM,conceptually but not code-identical,era-specific adjustment and separate sensitivity,Do not assume ICD-9 and ICD-10 category equivalence.
+clinical coding,Elixhauser condition flags,ICD-9-derived,partially comparable,era-specific risk adjustment,Use era-appropriate definitions and report version differences.
+AMI/Greenwood,AMI cohort,ICD-9-CM 410.X1 strict; 410.X0/X1 sensitivity,"conceptually comparable, code-era specific",separate historical ED-only Greenwood extension,Not an inpatient Greenwood replication.
+outcome,ED mortality,available,comparable ED disposition measure,binary outcome including historical AMI,Does not capture post-ED inpatient mortality.
+outcome,"routine discharge, transfer, hospice, left care",available,comparable after code validation,separate historical outcomes,Report outcome-specific nonmissingness and code semantics.
+outcome,same-facility inpatient admission,structurally unavailable in Phase 1 release,not available,none,Do not treat missing as no admission.
+outcome,length_of_stay_days,available at day granularity,partially comparable,historical day-level LOS outcome only,Do not relabel or convert it to clock-hour LOS.
+outcome,hourly LOS,structurally unavailable,not comparable,none,Must remain null; no 24-times-days imputation.
+outcome,procedure counts and treatment intensity,available,partially comparable,separate historical outcome and within-era comparisons,Coding opportunities and procedure systems differ by era.
+outcome,reported/component charges,available,comparable after inflation adjustment with caveats,nominal and CPI-adjusted historical outcome,Charges are not costs or payments; billing practices may change.
+utilization,7-day and 30-day revisit,structurally unavailable in Phase 1 release,not available,none,Do not impute or interpret missing as no revisit.
+severity,true triage level,structurally unavailable in Phase 1 release,not available,none,E/M proxies may be separately labeled but are not triage.
+operations,"arrival hour, weekend, off-hours",available with small source missingness,comparable after missingness checks,covariates and stratification,Arrival hour does not make hourly LOS available.
+facility,facility identifiers and fixed effects,available,comparable identifiers with facility-history caveats,"fixed effects, clustering, within-era trends",Contemporary facility/provider affiliations are not historical employment.

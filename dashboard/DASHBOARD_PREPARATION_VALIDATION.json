@@ -1,0 +1,592 @@
+{
+  "created_utc": "2026-08-10T20:48:54.082Z",
+  "overall_status": "PASS",
+  "source_inventory": {
+    "SRC_P1_MANIFEST": {
+      "logical_path": "outputs/florida_ed_full_build_20260724/build_manifest_final.json",
+      "sha256": "0ca547d9179d913c7b4af0668f06107383e86d75013a2ea1b5694736d55c218f",
+      "classification": "validated project metadata"
+    },
+    "SRC_P1_QA": {
+      "logical_path": "outputs/florida_ed_full_build_20260724/qa/qa_summary.json",
+      "sha256": "5b66d41517eb0ea47f5fef09ad66cd695a29cd79152d9ad35a4eef4a8753bf3b",
+      "classification": "validated aggregate QA"
+    },
+    "SRC_P1_INDEPENDENT": {
+      "logical_path": "outputs/florida_ed_full_build_20260724/qa/independent_release_validation.json",
+      "sha256": "758dd46559c0498433abf9ebba8f08a6e8f6085c6c60982bb4ecab58bfc0ad3e",
+      "classification": "independent aggregate validation"
+    },
+    "SRC_FACT_DICTIONARY": {
+      "logical_path": "outputs/florida_ed_full_build_20260724/documentation/fact_field_dictionary.csv",
+      "sha256": "6dc8fe59912703773c4fe6d305593469f5e91b26e2abcff6ad3b08bf64b81581",
+      "classification": "metadata dictionary"
+    },
+    "SRC_PAUSE": {
+      "logical_path": "outputs/florida_ed_concordance_analysis_20260726/qa/user_authorized_handoff_pause_20260809T211227Z.json",
+      "sha256": "08ddcfff230d6d8c3b6853de03fbc222648f640cc1ca0170b545e701eca8a320",
+      "classification": "verified project-status checkpoint"
+    },
+    "SRC_PROVIDER_PUBLIC": {
+      "logical_path": "public_portfolio/evidence/provider_v2_summary.json",
+      "sha256": "148ef0a0bd9a063c047b1705fdc527d30698a68a5ef668c2bb4c79e7316e3990",
+      "classification": "whitelisted public-safe aggregate evidence"
+    },
+    "SRC_COHORT_PUBLIC": {
+      "logical_path": "public_portfolio/evidence/phase2_cohort_summary.json",
+      "sha256": "dc9b7e2aa3d9eca598e2234e59ba2e06d7c1d751ee3adde4750412c74b0a502d",
+      "classification": "whitelisted public-safe aggregate evidence"
+    },
+    "SRC_HISTORICAL_PUBLIC": {
+      "logical_path": "public_portfolio/evidence/historical_validation_summary.json",
+      "sha256": "997c20a28713018b085f8788272c343b4d9cbab7f40eb874770bbcd7d563b168",
+      "classification": "whitelisted public-safe aggregate evidence"
+    },
+    "SRC_PROVIDER_QA": {
+      "logical_path": "outputs/florida_ed_concordance_analysis_20260726/qa/provider_master_v2_qa.json",
+      "sha256": "15e3e2548e9f5dcc1cb32ef15e13cea318801ec56909ad126a2a738c1bbed541",
+      "classification": "validated nondisclosive aggregate QA"
+    },
+    "SRC_RACE_QA": {
+      "logical_path": "outputs/florida_ed_concordance_analysis_20260726/qa/provider_race_proxy_v2_qa.json",
+      "sha256": "2c9d1a80519db33e80e05703db010f36df554149608ef174495c9b272868f9de",
+      "classification": "validated measurement metadata"
+    },
+    "SRC_GENDER_GATE": {
+      "logical_path": "outputs/florida_ed_concordance_analysis_20260726/qa/provider_gender_measurement_checkpoint.json",
+      "sha256": "aa973aabe29f03a0af667e84ed8415ee1be4116a9391956c7567e83145baacdf",
+      "classification": "estimate-blind measurement checkpoint"
+    },
+    "SRC_HISTORICAL_GATE": {
+      "logical_path": "outputs/florida_ed_concordance_analysis_20260726/qa/historical_provider_v2_pre_estimation_gate.json",
+      "sha256": "454fd433c1245294133a8eb7a29dfdc39d4843fbf21da117d49594cb2f97a12c",
+      "classification": "estimate-blind cohort checkpoint"
+    },
+    "SRC_HISTORICAL_AUDIT": {
+      "logical_path": "outputs/florida_ed_concordance_analysis_20260726/qa/independent_historical_results_audit.json",
+      "sha256": "ca5358a2823d684dd3a408ab231d04bce39c38c52d93ec4ef377cd332d7b8d55",
+      "classification": "independent aggregate audit metadata"
+    },
+    "SRC_SYNTHETIC_SCHEMA": {
+      "logical_path": "public_portfolio/synthetic_demo/expected_outputs/schema_reconciliation.csv",
+      "sha256": "60d699e7da0b36727ad9af78007540464e6ac703b888810df8b72d64dbc95aac",
+      "classification": "fictional synthetic demonstration"
+    },
+    "SRC_SYNTHETIC_CATEGORY": {
+      "logical_path": "public_portfolio/synthetic_demo/expected_outputs/category_summary.csv",
+      "sha256": "cb77fc848b0d32f98ea559ae6f7354976b44c0da451a2678ab29569afdc5db7a",
+      "classification": "fictional synthetic demonstration"
+    },
+    "SRC_SYNTHETIC_QA": {
+      "logical_path": "public_portfolio/synthetic_demo/expected_outputs/qa_summary.json",
+      "sha256": "9c0ef416b9fa6c77c580b286fe482eedb015ac85bb2ad91254a30cbe9153c80d",
+      "classification": "fictional synthetic demonstration QA"
+    },
+    "SRC_METHOD": {
+      "logical_path": "public_portfolio/METHODOLOGY.md",
+      "sha256": "e9c698c46a293e240b3d39d5f835eff86a0892ec05eabb955ae7cfc5e881b4d9",
+      "classification": "sanitized methodology"
+    },
+    "SRC_PRIVACY": {
+      "logical_path": "public_portfolio/DATA_ACCESS_AND_PRIVACY.md",
+      "sha256": "72c05ef683abf9cc792a0a22baf7cdf7a2d9bf6f609bcfcc401f80e440bcea0b",
+      "classification": "sanitized disclosure policy"
+    }
+  },
+  "required_file_validation": {
+    "status": "PASS",
+    "checks": [
+      {
+        "file": "00_READ_ME_FIRST.md",
+        "passed": true
+      },
+      {
+        "file": "POWER_BI_BUILD_CLICKBOOK.md",
+        "passed": true
+      },
+      {
+        "file": "DASHBOARD_BLUEPRINT.md",
+        "passed": true
+      },
+      {
+        "file": "POWER_BI_DATA_MODEL.md",
+        "passed": true
+      },
+      {
+        "file": "METRIC_AND_MEASURE_DICTIONARY.csv",
+        "passed": true
+      },
+      {
+        "file": "POWER_BI_MEASURES.dax",
+        "passed": true
+      },
+      {
+        "file": "POWER_QUERY_TRANSFORMATIONS.md",
+        "passed": true
+      },
+      {
+        "file": "powerbi_theme.json",
+        "passed": true
+      },
+      {
+        "file": "dashboard_data_dictionary.csv",
+        "passed": true
+      },
+      {
+        "file": "DASHBOARD_SOURCE_PROVENANCE.csv",
+        "passed": true
+      },
+      {
+        "file": "DASHBOARD_QA_CHECKLIST.md",
+        "passed": true
+      },
+      {
+        "file": "POWER_BI_FINAL_QA_PROMPT.txt",
+        "passed": true
+      },
+      {
+        "file": "PUBLIC_DASHBOARD_DISCLOSURE_AUDIT.json",
+        "passed": true
+      },
+      {
+        "file": "NEXT_STEPS_AFTER_DASHBOARD.md",
+        "passed": true
+      },
+      {
+        "file": "POWER_BI_VISUAL_SPECIFICATION.csv",
+        "passed": true
+      },
+      {
+        "file": "dashboard_data/POWER_BI_IMPORT.xlsx",
+        "passed": true
+      },
+      {
+        "file": "dashboard_data/DimPeriod.csv",
+        "passed": true
+      },
+      {
+        "file": "dashboard_data/DimSchemaFamily.csv",
+        "passed": true
+      },
+      {
+        "file": "dashboard_data/DimProjectStage.csv",
+        "passed": true
+      },
+      {
+        "file": "dashboard_data/DimMetric.csv",
+        "passed": true
+      },
+      {
+        "file": "dashboard_data/DimClinicalDomain.csv",
+        "passed": true
+      },
+      {
+        "file": "dashboard_data/DimCodingMap.csv",
+        "passed": true
+      },
+      {
+        "file": "dashboard_data/DimModelSpec.csv",
+        "passed": true
+      },
+      {
+        "file": "dashboard_data/FactProjectCoverage.csv",
+        "passed": true
+      },
+      {
+        "file": "dashboard_data/FactPartitionStatus.csv",
+        "passed": true
+      },
+      {
+        "file": "dashboard_data/FactEnhancementCoverage.csv",
+        "passed": true
+      },
+      {
+        "file": "dashboard_data/FactProviderMeasurement.csv",
+        "passed": true
+      },
+      {
+        "file": "dashboard_data/FactValidationStatus.csv",
+        "passed": true
+      },
+      {
+        "file": "dashboard_data/FactAnalyticalStatus.csv",
+        "passed": true
+      },
+      {
+        "file": "dashboard_data/FactSyntheticDemonstration.csv",
+        "passed": true
+      }
+    ]
+  },
+  "csv_artifact_tool_validation": {
+    "status": "PASS",
+    "tables": [
+      {
+        "Table": "DimPeriod",
+        "ArtifactToolParse": "PASS",
+        "Bytes": 6503,
+        "InspectAvailable": true
+      },
+      {
+        "Table": "DimSchemaFamily",
+        "ArtifactToolParse": "PASS",
+        "Bytes": 483,
+        "InspectAvailable": true
+      },
+      {
+        "Table": "DimProjectStage",
+        "ArtifactToolParse": "PASS",
+        "Bytes": 671,
+        "InspectAvailable": true
+      },
+      {
+        "Table": "DimMetric",
+        "ArtifactToolParse": "PASS",
+        "Bytes": 3385,
+        "InspectAvailable": true
+      },
+      {
+        "Table": "DimClinicalDomain",
+        "ArtifactToolParse": "PASS",
+        "Bytes": 552,
+        "InspectAvailable": true
+      },
+      {
+        "Table": "DimCodingMap",
+        "ArtifactToolParse": "PASS",
+        "Bytes": 855,
+        "InspectAvailable": true
+      },
+      {
+        "Table": "DimModelSpec",
+        "ArtifactToolParse": "PASS",
+        "Bytes": 863,
+        "InspectAvailable": true
+      },
+      {
+        "Table": "FactProjectCoverage",
+        "ArtifactToolParse": "PASS",
+        "Bytes": 1262,
+        "InspectAvailable": true
+      },
+      {
+        "Table": "FactPartitionStatus",
+        "ArtifactToolParse": "PASS",
+        "Bytes": 12869,
+        "InspectAvailable": true
+      },
+      {
+        "Table": "FactEnhancementCoverage",
+        "ArtifactToolParse": "PASS",
+        "Bytes": 4257,
+        "InspectAvailable": true
+      },
+      {
+        "Table": "FactProviderMeasurement",
+        "ArtifactToolParse": "PASS",
+        "Bytes": 1292,
+        "InspectAvailable": true
+      },
+      {
+        "Table": "FactValidationStatus",
+        "ArtifactToolParse": "PASS",
+        "Bytes": 2969,
+        "InspectAvailable": true
+      },
+      {
+        "Table": "FactAnalyticalStatus",
+        "ArtifactToolParse": "PASS",
+        "Bytes": 3434,
+        "InspectAvailable": true
+      },
+      {
+        "Table": "FactSyntheticDemonstration",
+        "ArtifactToolParse": "PASS",
+        "Bytes": 1673,
+        "InspectAvailable": true
+      }
+    ]
+  },
+  "schema_tests": {
+    "status": "PASS",
+    "table_count": 14,
+    "dictionary_rows": 111
+  },
+  "key_uniqueness_tests": {
+    "status": "PASS",
+    "checks": [
+      {
+        "table": "DimPeriod",
+        "primary_key": [
+          "PeriodKey"
+        ],
+        "rows": 84,
+        "unique": true
+      },
+      {
+        "table": "DimSchemaFamily",
+        "primary_key": [
+          "SchemaFamilyKey"
+        ],
+        "rows": 5,
+        "unique": true
+      },
+      {
+        "table": "DimProjectStage",
+        "primary_key": [
+          "StageKey"
+        ],
+        "rows": 5,
+        "unique": true
+      },
+      {
+        "table": "DimMetric",
+        "primary_key": [
+          "MetricKey"
+        ],
+        "rows": 25,
+        "unique": true
+      },
+      {
+        "table": "DimClinicalDomain",
+        "primary_key": [
+          "ClinicalDomainKey"
+        ],
+        "rows": 9,
+        "unique": true
+      },
+      {
+        "table": "DimCodingMap",
+        "primary_key": [
+          "CodingMapKey"
+        ],
+        "rows": 6,
+        "unique": true
+      },
+      {
+        "table": "DimModelSpec",
+        "primary_key": [
+          "ModelSpecKey"
+        ],
+        "rows": 3,
+        "unique": true
+      },
+      {
+        "table": "FactProjectCoverage",
+        "primary_key": [
+          "ProjectMetricKey"
+        ],
+        "rows": 14,
+        "unique": true
+      },
+      {
+        "table": "FactPartitionStatus",
+        "primary_key": [
+          "PartitionKey"
+        ],
+        "rows": 84,
+        "unique": true
+      },
+      {
+        "table": "FactEnhancementCoverage",
+        "primary_key": [
+          "EnhancementKey"
+        ],
+        "rows": 20,
+        "unique": true
+      },
+      {
+        "table": "FactProviderMeasurement",
+        "primary_key": [
+          "ProviderMetricKey"
+        ],
+        "rows": 11,
+        "unique": true
+      },
+      {
+        "table": "FactValidationStatus",
+        "primary_key": [
+          "ValidationKey"
+        ],
+        "rows": 20,
+        "unique": true
+      },
+      {
+        "table": "FactAnalyticalStatus",
+        "primary_key": [
+          "AnalyticalStatusKey"
+        ],
+        "rows": 20,
+        "unique": true
+      },
+      {
+        "table": "FactSyntheticDemonstration",
+        "primary_key": [
+          "DemoMetricKey"
+        ],
+        "rows": 13,
+        "unique": true
+      }
+    ]
+  },
+  "relationship_integrity": {
+    "status": "PASS",
+    "checks": [
+      {
+        "relationship": "DimPeriod.PeriodKey->FactPartitionStatus.PeriodKey",
+        "orphan_rows": 0,
+        "passed": true
+      },
+      {
+        "relationship": "DimSchemaFamily.SchemaFamilyKey->FactPartitionStatus.SchemaFamilyKey",
+        "orphan_rows": 0,
+        "passed": true
+      },
+      {
+        "relationship": "DimProjectStage.StageKey->FactValidationStatus.StageKey",
+        "orphan_rows": 0,
+        "passed": true
+      },
+      {
+        "relationship": "DimProjectStage.StageKey->FactAnalyticalStatus.StageKey",
+        "orphan_rows": 0,
+        "passed": true
+      },
+      {
+        "relationship": "DimMetric.MetricKey->FactProjectCoverage.MetricKey",
+        "orphan_rows": 0,
+        "passed": true
+      },
+      {
+        "relationship": "DimMetric.MetricKey->FactProviderMeasurement.MetricKey",
+        "orphan_rows": 0,
+        "passed": true
+      },
+      {
+        "relationship": "DimClinicalDomain.ClinicalDomainKey->FactEnhancementCoverage.ClinicalDomainKey",
+        "orphan_rows": 0,
+        "passed": true
+      },
+      {
+        "relationship": "DimModelSpec.ModelSpecKey->FactAnalyticalStatus.ModelSpecKey",
+        "orphan_rows": 0,
+        "passed": true
+      }
+    ]
+  },
+  "controlled_vocabulary_tests": {
+    "status": "PASS",
+    "component_statuses": [
+      "COMPLETE",
+      "IN PROGRESS",
+      "PENDING",
+      "DEFERRED"
+    ],
+    "validation_statuses": [
+      "PASS",
+      "PAUSED_VERIFIED"
+    ],
+    "enhancement_statuses": [
+      "IMPLEMENTED",
+      "IMPLEMENTED_PRIMARY_ONLY",
+      "PROXY_ONLY",
+      "STRUCTURALLY_UNAVAILABLE"
+    ]
+  },
+  "dax_dictionary_reconciliation": {
+    "status": "PASS",
+    "dax_measures": 33,
+    "dictionary_measures": 33
+  },
+  "source_dashboard_reconciliation": {
+    "status": "PASS",
+    "checks": [
+      {
+        "check": "Encounter count",
+        "observed": 148686146,
+        "expected": 148686146,
+        "passed": true
+      },
+      {
+        "check": "Completed quarters",
+        "observed": 76,
+        "expected": 76,
+        "passed": true
+      },
+      {
+        "check": "Covered years",
+        "observed": 19,
+        "expected": 19,
+        "passed": true
+      },
+      {
+        "check": "Fact fields",
+        "observed": 342,
+        "expected": 342,
+        "passed": true
+      },
+      {
+        "check": "Schema families",
+        "observed": 5,
+        "expected": 5,
+        "passed": true
+      },
+      {
+        "check": "Primary cohort rows",
+        "observed": 119543044,
+        "expected": 119543044,
+        "passed": true
+      },
+      {
+        "check": "Historical cohort rows",
+        "observed": 23304846,
+        "expected": 23304846,
+        "passed": true
+      },
+      {
+        "check": "Provider master NPIs",
+        "observed": 1813546,
+        "expected": 1813546,
+        "passed": true
+      },
+      {
+        "check": "Organization NPIs classified MD/DO",
+        "observed": 0,
+        "expected": 0,
+        "passed": true
+      },
+      {
+        "check": "Synthetic input rows",
+        "observed": 800,
+        "expected": 800,
+        "passed": true
+      },
+      {
+        "check": "Synthetic output rows",
+        "observed": 800,
+        "expected": 800,
+        "passed": true
+      }
+    ]
+  },
+  "disclosure_validation": {
+    "status": "PASS",
+    "audit_file": "PUBLIC_DASHBOARD_DISCLOSURE_AUDIT.json"
+  },
+  "excel_import_workbook": {
+    "status": "PASS",
+    "named_tables": 14,
+    "worksheet_count": 1,
+    "internal_visual_qa_ranges": [
+      "A1:N55",
+      "A163:N213",
+      "A321:N376"
+    ],
+    "temporary_qa_artifacts_removed": true
+  },
+  "scientific_status_guardrail": {
+    "status": "PASS",
+    "controlled_statement": "Phase 1 complete and independently validated. Phase 2 measurement, cohort construction, historical analyses, and primary race M1-M3 estimation complete; primary gender M1 complete. Remaining primary and sensitivity analyses and the final independent analytical-release audit are pending.",
+    "analytical_release_complete": false
+  }
+}

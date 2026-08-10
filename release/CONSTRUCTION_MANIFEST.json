@@ -1,0 +1,13 @@
+{
+  "status": "CONSTRUCTION_COMPLETE_PENDING_VALIDATION",
+  "staging_target": "Florida_ED_Full_Public_Release",
+  "existing_repository_modified_during_staging": false,
+  "deployment_target": "existing florida-ed-data-engineering repository after all gates pass",
+  "publication_authorized_by_user": true,
+  "publication_status": "READY_TO_PUBLISH_PENDING_PUSH",
+  "unpublished_estimates_inspected_or_copied": false,
+  "phase2_source_files": 108,
+  "dashboard_pages": 7,
+  "dashboard_static_checks": 17,
+  "provenance_rows": 356
+}

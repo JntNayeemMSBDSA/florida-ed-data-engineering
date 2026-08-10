@@ -1,0 +1,77 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "8088afa448cf31ea0483",
+  "position": {
+    "x": 24,
+    "y": 416,
+    "z": 0,
+    "height": 194,
+    "width": 550,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "clusteredBarChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimSchemaFamily"
+                    }
+                  },
+                  "Property": "SchemaFamilyLabel"
+                }
+              },
+              "queryRef": "DimSchemaFamily.SchemaFamilyLabel",
+              "nativeQueryRef": "SchemaFamilyLabel",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "DimSchemaFamily"
+                        }
+                      },
+                      "Property": "QuarterCount"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(DimSchemaFamily.QuarterCount)",
+              "nativeQueryRef": "Sum of QuarterCount"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Quarters by schema family'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

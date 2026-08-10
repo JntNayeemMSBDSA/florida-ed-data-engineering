@@ -1,0 +1,50 @@
+{
+  "status": "PASS",
+  "freeze_state": "FROZEN_PRE_FINAL_AUDIT_PASS",
+  "created_utc": "2026-07-27T08:57:08.7950482Z",
+  "freeze_id": "independent_phase1_immutability_audit_v1_20260727",
+  "timing": "Frozen while the protected common-primary estimator and downstream analytical supervisor remained active; the real 573-file checksum pass was not launched concurrently.",
+  "purpose": "Require a final read-only, file-by-file Phase 1 immutability proof before the analytical release may pass.",
+  "code_inventory": [
+    {
+      "role": "independent Phase 1 immutability audit",
+      "path": "scripts/55_independent_phase1_immutability_audit.py",
+      "sha256": "6e5cba69e5143d2b30259d6ff16d26e5cd9ecb902ca0f806b644b4d0bbe8bac7"
+    },
+    {
+      "role": "synthetic fail-closed tests",
+      "path": "scripts/55b_independent_phase1_immutability_audit_unit_tests.py",
+      "sha256": "36afb4e539b8b5904633a66a30be960881e9142aefb445dd07a9c656127d86ae"
+    }
+  ],
+  "synthetic_validation": {
+    "path": "qa/independent_phase1_immutability_audit_unit_tests.json",
+    "sha256": "3d2a9c3aca39d1409ea9f1e73f78811715c5cb8fb33eee9016907c240c9fc519",
+    "status": "PASS",
+    "tests_passed": 4,
+    "tests_total": 4,
+    "coverage": [
+      "clean release",
+      "content tampering",
+      "unexpected release file",
+      "frozen manifest hash mismatch"
+    ]
+  },
+  "frozen_phase1_roots": {
+    "file_manifest_path": "../florida_ed_full_build_20260724/documentation/file_manifest_sha256.csv",
+    "file_manifest_sha256": "291081595fb133f083cb86ba7c0b884562653fb2dc5e184332f6d79fa84ac0d5",
+    "file_manifest_rows": 573,
+    "build_manifest_path": "../florida_ed_full_build_20260724/build_manifest_final.json",
+    "build_manifest_sha256": "0ca547d9179d913c7b4af0668f06107383e86d75013a2ea1b5694736d55c218f"
+  },
+  "independent_pre_deferral_source_binding": {
+    "path": "audit_history/report_deferral_20260727T083046Z/r/ledgers/Report_Source_Manifest.json",
+    "sha256": "c161d53d5af6b6b6f90c3092834389e75baad2cdc0132c759260d95e27cb0f43",
+    "phase1_file_manifest_sha256": "291081595fb133f083cb86ba7c0b884562653fb2dc5e184332f6d79fa84ac0d5"
+  },
+  "real_release_files_hashed_at_freeze": false,
+  "required_future_action": "After all analytical model processes finish, hash all 573 manifest-listed Phase 1 files and require qa/final_phase1_immutability_audit.json status PASS.",
+  "phase1_write_operations_authorized": 0,
+  "source_release_modified": false,
+  "phase1_modified": false
+}

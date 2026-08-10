@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "completed_at": "2026-08-10T17:55:00-04:00",
+  "scope": "Power BI Desktop runtime load, refresh, seven-page visual inspection, and public-safety review",
+  "power_bi_desktop_version": "2.156.951.0 (July 2026)",
+  "project_format": "PBIP with PBIR report definition and TMDL semantic model",
+  "runtime_checks": {
+    "project_opened_without_definition_error": "PASS",
+    "embedded_public_safe_metadata_refresh": "PASS",
+    "all_seven_pages_rendered": "PASS",
+    "broken_visual_placeholders_after_refresh": 0,
+    "page_titles_visible": "PASS",
+    "kpi_values_and_labels_visible": "PASS",
+    "status_text_wrapped_without_ellipsis": "PASS",
+    "footer_and_privacy_disclosure_visible": "PASS",
+    "unpublished_concordance_estimates_inspected": false
+  },
+  "intentional_scroll_behavior": [
+    "Long metadata tables retain in-visual scrollbars instead of shrinking text below readable size.",
+    "The report is configured for Fit-to-page; screenshots were reviewed at 70 percent edit-mode zoom."
+  ],
+  "source_hashes": {
+    "Florida_ED_Project_Portfolio_Dashboard.pbip": "04EC1FAFFDAF486E4F8AB88F2C69822ED0886CEC20543A79F0F82CC7735814A1",
+    "POWER_BI_PROJECT_STATIC_VALIDATION.json": "74326683C1935645ED387CDFD9592816330243261F6DC69617B6F352EEA94479",
+    "POWER_BI_PROJECT_MANIFEST.json": "D207B88A385C53EBF2287D5286D94B35DE74723BA3C2FE09474022CC4F2D9B92"
+  },
+  "screenshots": [
+    {"file": "01_executive_overview.png", "sha256": "AE96DCCD06C23D0767BA235EA0855D7146DA2AD51021CE6BABAB4E56DF297C73"},
+    {"file": "02_coverage_standardization.png", "sha256": "6D073DB0045266D9187FE6B442CC253E8755EA69A04022BA9BE5B54947E06762"},
+    {"file": "03_clinical_visit.png", "sha256": "7C7ACAFEA7FF74CDE9E7007A9ECB8CF52F478AA661C9A0B88CE61F335B9BB09C"},
+    {"file": "04_provider_facility.png", "sha256": "36DCBB7ACF0515BF6D6A0C3B2B617CB0A46C6093502BABF32618217B4D0DF376"},
+    {"file": "05_cohort_design.png", "sha256": "B5655F759BEF8926A4464EC344AE04078D82CBD39F67739411464AF86A1FC779"},
+    {"file": "06_validation_reproducibility.png", "sha256": "1C6D38FF47C6A75234E85AA2DC3B2D22B9F38875450E7ADD606CD3F3D988F2F5"},
+    {"file": "07_completion_handoff.png", "sha256": "7CD9AC9B18ABDEAA24CD712CE51DD0169A6860D6F7B20752267C6CBEC481E866"}
+  ],
+  "known_boundary": "The dashboard reports validated project metadata, method definitions, synthetic demonstrations, and work status only. It contains no row-level encounter data, provider or facility identifiers, or numerical concordance estimates."
+}

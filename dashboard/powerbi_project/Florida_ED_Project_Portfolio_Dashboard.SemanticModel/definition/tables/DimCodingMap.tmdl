@@ -1,0 +1,66 @@
+table DimCodingMap
+	lineageTag: 99b37fb7-e4c1-458b-98a3-1308a7d1f627
+
+	column CodingMapKey
+		dataType: string
+		isHidden
+		lineageTag: 5585241f-e86d-411a-9753-e69cfa13dfc0
+		summarizeBy: none
+		sourceColumn: CodingMapKey
+
+	column SourceCodeSystem
+		dataType: string
+		lineageTag: 328a1293-be37-4377-9c79-408546707c87
+		summarizeBy: none
+		sourceColumn: SourceCodeSystem
+
+	column ApplicablePeriod
+		dataType: string
+		lineageTag: 4df920f5-5dc8-4d52-b752-3c20c348e1d8
+		summarizeBy: none
+		sourceColumn: ApplicablePeriod
+
+	column TargetGrouping
+		dataType: string
+		lineageTag: 8592fb84-9ff7-40af-b739-feff53e2f4e4
+		summarizeBy: none
+		sourceColumn: TargetGrouping
+
+	column Guardrail
+		dataType: string
+		lineageTag: 79d66ad7-286a-4530-b92d-7687d93444c6
+		summarizeBy: none
+		sourceColumn: Guardrail
+
+	column DisplayOrder
+		dataType: int64
+		isHidden
+		formatString: #,##0
+		lineageTag: 055edfc7-9665-4e3d-8b28-aa3f416aa139
+		summarizeBy: none
+		sourceColumn: DisplayOrder
+
+	column DisclosureClass
+		dataType: string
+		isHidden
+		lineageTag: 93a10c2e-ef23-41c5-aeaf-d2f3e5229594
+		summarizeBy: none
+		sourceColumn: DisclosureClass
+
+	partition DimCodingMap = m
+		mode: import
+		source =
+				let
+				    Source = #table(type table [CodingMapKey = text, SourceCodeSystem = text, ApplicablePeriod = text, TargetGrouping = text, Guardrail = text, DisplayOrder = Int64.Type, DisclosureClass = text], {
+				        {"CM01", "ICD-9-CM diagnosis", "2005-2015 Q3", "CCS", "Era-specific diagnosis grouping", 1, "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"CM02", "ICD-10-CM diagnosis", "2015 Q4-2024", "CCSR", "Era-specific diagnosis grouping", 2, "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"CM03", "ICD-9-CM procedure", "When reported", "CCS", "Procedure grouping", 3, "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"CM04", "ICD-10-PCS procedure", "When reported", "Procedure Classes Refined", "Procedure grouping", 4, "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"CM05", "CPT/HCPCS", "When reported", "CCS Services and Procedures plus permitted descriptions", "Current descriptions are reference aids, not historical codebooks", 5, "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"CM06", "Secondary diagnoses", "All supported eras", "Elixhauser, era-specific", "External-cause fields excluded from comorbidities", 6, "PUBLIC_SAFE_PROJECT_METADATA"}
+				    })
+				in
+				    Source
+
+	annotation PBI_ResultType = Table
+

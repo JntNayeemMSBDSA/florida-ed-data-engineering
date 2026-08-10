@@ -1,0 +1,265 @@
+project:
+  project_id: florida_ed_physician_patient_concordance_phase2
+  release_id: florida_ed_full_build_20260724
+  phase2_id: florida_ed_concordance_analysis_20260726
+  source_release_policy: immutable_read_only
+  primary_period: [2010, 2024]
+  historical_period: [2005, 2008]
+  excluded_years: [2009, 2025]
+  seed: 20260726
+  sap_status: frozen
+  sap_frozen_utc: 2026-07-26T04:55:16Z
+
+paths:
+  source_release: outputs/florida_ed_full_build_20260724
+  phase2_root: outputs/florida_ed_concordance_analysis_20260726
+  fact_glob: fact_ed_visits/visit_year=*/visit_quarter=*/ed_visits.parquet
+  diagnosis_bridge_glob: bridges/visit_diagnosis/visit_year=*/visit_quarter=*/visit_diagnosis.parquet
+  procedure_bridge_glob: bridges/visit_procedure/visit_year=*/visit_quarter=*/visit_procedure.parquet
+  physician_master: dimensions/physician_master.parquet
+  facility_master: dimensions/facility_master.parquet
+
+primary_race_cohort:
+  years: [2010, 2024]
+  physician_role: attending
+  physician_linkage_method: direct_validated_npi
+  require_physician_master_match: true
+  require_md_do: true
+  patient_race_values:
+    black: Black or African American
+    white: White
+  patient_ethnicity_value: Not Hispanic or Latino
+  physician_proxy_values:
+    black: Non-Hispanic Black
+    white: Non-Hispanic White
+  physician_proxy_main_threshold: 0.50
+  physician_proxy_sensitivity_thresholds: [0.50, 0.70, 0.80, 0.90]
+  physician_proxy_multiple_imputations: 20
+
+historical_race_cohort:
+  years: [2005, 2008]
+  analysis_status: separate_sensitivity_only
+  patient_definition: historical_combined_race_ethnicity_semantics
+  physician_linkage: unique_fl_license_crosswalk
+  pooling_rule: never_pool_without_explicit_era_interactions
+
+sex_gender_cohort:
+  years: [2010, 2024]
+  physician_role: attending
+  physician_linkage_method: direct_validated_npi
+  require_physician_master_match: true
+  require_md_do: true
+  patient_sex_values: [Female, Male]
+  physician_gender_values: [Female, Male]
+  physician_gender_primary_sources:
+    - NPPES
+    - NPPES February 2026 current snapshot
+    - CMS Doctors and Clinicians
+    - CMS Doctors and Clinicians June 2026 current snapshot
+  physician_gender_expanded_source_sensitivity:
+    - SSA first-name imputation (>=90% probability)
+  physician_gender_recorded_source_conflict_sensitivity:
+    exclude_nppes_cms_disagreements: true
+    estimator: exact_m2_subset_redemeaning
+  terminology: recorded_patient_sex_physician_gender_concordance
+
+exposures:
+  race_pairs:
+    - black_black
+    - black_white
+    - white_black
+    - white_white
+  race_primary_contrast: black_black - black_white - white_black + white_white
+  sex_gender_pairs:
+    - female_female
+    - female_male
+    - male_female
+    - male_male
+  sex_gender_primary_contrast: female_female - female_male - male_female + male_male
+
+outcomes:
+  primary:
+    - los_hours_clock_valid_0_168
+    - total_charge_reported_real_2024_cpi_u
+  resource_utilization:
+    - total_charge
+    - component_charge_sum
+    - pharmchgs
+    - medchgs
+    - labchgs
+    - radchgs
+    - cardiochgs
+    - oprmchgs
+    - aneschgs
+    - recovchgs
+    - erchgs
+    - traumachgs
+    - obserchgs
+    - gastrochgs
+    - lithochgs
+    - othchgs
+    - procedure_count_analysis
+    - any_procedure_flag
+    - high_procedure_flag
+    - evaluation_management_acuity_proxy
+  disposition:
+    - routine_discharge_flag
+    - transfer_flag
+    - hospice_flag
+    - mortality_flag
+    - left_discontinued_care_flag
+  structurally_unavailable:
+    - true_clinical_triage
+    - stable_patient_revisit_7d
+    - stable_patient_revisit_30d
+    - confirmed_same_facility_inpatient_admission
+
+los:
+  original_field: length_of_stay_days
+  derived_hours_formula: 24 * length_of_stay_days + discharge_hour - arrival_hour
+  valid_arrival_hours: [0, 23]
+  valid_discharge_hours: [0, 23]
+  invalid_discharge_code: 99
+  primary_range_hours: [0, 168]
+  sensitivity:
+    - all_nonnegative_untrimmed
+    - winsorized_within_year_quarter_p995
+    - restricted_0_72_hours
+
+charges:
+  economic_label: facility_reported_charges
+  primary_index:
+    series_id: CUUR0000SA0
+    label: CPI-U_all_items_not_seasonally_adjusted
+    reference_year: 2024
+    temporal_factor: quarter_mean
+  sensitivity_index:
+    series_id: CUUR0000SAM
+    label: CPI-U_medical_care_not_seasonally_adjusted
+  missing_component_rule: never_convert_missing_to_zero_without_dictionary_support
+  primary_outlier_rule: nonnegative_untrimmed
+  sensitivity_outlier_rules:
+    - winsorized_within_year_quarter_p995
+    - winsorized_within_year_quarter_p999
+    - positive_charge_ppml
+    - two_part_any_positive_and_positive_amount
+    - log1p_ols_descriptive_only
+
+covariates:
+  patient_visit:
+    - age_years_spline
+    - age_missing_flag
+    - recorded_patient_sex
+    - patient_race_ethnicity
+    - payer_group
+    - patient_zip_rurality_3level
+    - weekend_flag
+    - off_hours_flag
+    - arrival_hour_band
+    - elixhauser_condition_indicators
+    - elixhauser_condition_count
+  clinical:
+    - principal_clinical_category
+    - diagnosis_code_system
+  physician:
+    - ed_specialist_flag
+    - years_since_medical_school
+    - experience_missing_flag
+    - linkage_method
+  facility:
+    - off_site_ed_flag
+    - facility_rurality
+    - hospital_type
+    - hospital_ownership
+  contemporary_snapshot_not_historical_controls:
+    - current_cms_group_practice_affiliation
+    - current_fl_doh_hospital_privilege
+  excluded_from_primary_as_potential_mediators:
+    - procedures
+    - charge_components
+    - disposition
+    - evaluation_management_acuity_proxy
+
+models:
+  race:
+    unadjusted: saturated_four_cell_means
+    patient_adjusted: ols_or_lpm_with_patient_visit_covariates
+    fully_adjusted:
+      estimator: ols_or_lpm
+      fixed_effects:
+        - facility_by_year_quarter
+        - principal_clinical_category
+      clustering: [attending_npi, facility_ahca_id]
+    physician_fixed_effect:
+      estimator: ols_or_lpm
+      fixed_effects:
+        - attending_npi
+        - facility_by_year_quarter
+        - principal_clinical_category
+      clustering: [attending_npi, facility_ahca_id]
+  sex_gender:
+    mirror_race_specifications: true
+  binary_sensitivity: logistic_average_marginal_effects
+  count_sensitivity: poisson_and_negative_binomial_if_supported
+  skewed_continuous_sensitivity: ppml_and_two_part
+  inference:
+    alpha: 0.05
+    confidence_level: 0.95
+    sidedness: two_sided
+    small_cluster_sensitivity: wild_cluster_bootstrap_by_facility
+  full_data_policy: final_estimates_use_full_eligible_cohort
+  deterministic_sample_policy: prototypes_and_diagnostics_only
+
+multiple_testing:
+  primary_family:
+    outcomes:
+      - los_hours_clock_valid_0_168
+      - total_charge_reported_real_2024_cpi_u
+    adjustment: holm
+  secondary_families:
+    charge_components: benjamini_hochberg
+    procedure_decisions: benjamini_hochberg
+    disposition: benjamini_hochberg
+    heterogeneity: benjamini_hochberg
+    ami_extension: benjamini_hochberg
+
+heterogeneity:
+  confirmatory: []
+  secondary:
+    - symptom_sign_coded_vs_disease_coded_presentation
+    - payer_group
+    - ed_specialist_status
+    - patient_age_group
+    - patient_recorded_sex_or_race_as_applicable
+    - physician_experience
+    - clinical_severity_proxy
+    - diagnosis_coding_era
+    - facility_characteristics
+  exploratory:
+    - uninsured_payer_race_concordance_three_way_interaction
+    - race_by_sex_gender_intersection
+    - provisional_clinical_uncertainty_grouping
+    - provisional_guideline_permitted_decision_latitude
+
+ami:
+  setting: standalone_emergency_department_encounters
+  replication_claim: prohibited
+  interpretation_gate: counts_and_definition_must_pass_validation
+  icd9_strict_principal: 410.X1
+  icd9_sensitivities:
+    - any_listed_410.X1
+    - principal_410.X0_or_410.X1
+  icd10_primary_principal:
+    - I21.0-I21.4
+    - I21.9
+  icd10_sensitivities:
+    - add_I21.A1_and_I21.A9
+    - type_1_only
+    - I22_only_when_same_visit_I21_present
+  coding_transition: 2015Q4
+  type2_mi_discontinuity: 2017Q4
+
+disclosure:
+  public_small_cell_threshold: 11
+  physician_level_outputs: restricted
+  patient_reidentification: prohibited

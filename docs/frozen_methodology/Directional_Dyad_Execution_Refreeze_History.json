@@ -1,0 +1,85 @@
+{
+  "history_id": "directional_execution_refreeze_history_v1_20260727",
+  "created_utc": "2026-07-27T01:08:09.153585+00:00",
+  "purpose": "Preserve the exact known sequence of estimate-blind execution-code freezes after a required five-class race-measurement sensitivity gap and a shared HDFE numerical fallback correction were identified before any real directional result existed.",
+  "scientific_analysis_plan_changed": false,
+  "phase1_modified": false,
+  "phase2_cohort_modified": false,
+  "real_directional_result_files_at_every_freeze": 0,
+  "sequence": [
+    {
+      "sequence": 1,
+      "frozen_utc": "2026-07-27T00:34:51.430685+00:00",
+      "manifest_sha256": "c47b9739b62ad9556ac9d05da3277762f792fa4e37efb87f982e7142e1766bfe",
+      "code_files_frozen": 9,
+      "scope": "Storage-safe primary probability-weighted directional build, matrix audit, U0/M2/M3 estimation, result audit, multiplicity, and compaction.",
+      "supersession_reason": "Estimate-blind review found that the already frozen scientific plan required five-class hard-threshold, alternative-prior, and NPI-level multiple-imputation sensitivities that the nine-file execution sequence did not yet implement."
+    },
+    {
+      "sequence": 2,
+      "frozen_utc": null,
+      "timestamp_note": "The exact UTC value was not retained before this intermediate manifest was atomically superseded. Its hash and sequence were retained in the execution log.",
+      "manifest_sha256": "40a9a9132bec5590dca93810a84c6cf39f24cb70bb9e0766db3640b742df1063",
+      "code_files_frozen": 13,
+      "scope": "Added five-class Florida/national prior, four-threshold, and 20-NPI-imputation sensitivity execution and independent audit before matrix compaction.",
+      "supersession_reason": "The estimate-blind synthetic suite was strengthened with an end-to-end equivalence test of optimized replacement-cell demeaning versus a complete matrix refit, and binding/audit checks were tightened."
+    },
+    {
+      "sequence": 3,
+      "frozen_utc": "2026-07-27T01:08:09.153585+00:00",
+      "manifest_sha256": "2a9915d7fe87fb76b5e15b9c354d1ecadb038f61f5d06aaaf344897148448af3",
+      "code_files_frozen": 13,
+      "scope": "Final estimate-blind execution freeze including the strengthened eight-check synthetic suite, measurement sensitivities, independent target/MI/sample/support reconstruction, aggregation, and pre-audit compaction lock.",
+      "supersession_reason": "The shared HDFE engine subsequently encountered a documented strict nonconvergence during the non-directional common-primary race M2 model. Before the affected M2 result and before any directional result, the engine received a tested, fail-closed fallback that preserved the scientific specification. The engine was then added directly to the directional execution inventory."
+    },
+    {
+      "sequence": 4,
+      "frozen_utc": "2026-07-27T02:32:29.517292+00:00",
+      "manifest_sha256": "a9786152d117bacb5a08c1e32a5bc6f83ab5816d3b6c20e7ac0fc9dd91e6f34e",
+      "code_files_frozen": 14,
+      "scope": "Estimate-blind execution freeze after synthetic revalidation of the shared HDFE numerical fallback; directly binds the corrected shared engine plus all directional matrix, model, measurement-sensitivity, independent-audit, multiplicity, and compaction code.",
+      "timing": "After non-directional common-primary race M1 existed and the M2 strict demeaning failure was archived, but before the affected common-primary M2 result and before any real directional result file existed.",
+      "scientific_specification_changed": false,
+      "supersession_reason": "The independent primary-matrix audit was strengthened before invocation to verify the complete strict/fallback attempt grid and archived race-M2 retry provenance before compaction. That auditor is part of the parent directional implementation inventory, so the estimate-blind bindings were refreshed again.",
+      "current": false
+    },
+    {
+      "sequence": 5,
+      "frozen_utc": "2026-07-27T02:38:14.675547+00:00",
+      "manifest_sha256": "1f7e0fea126dbd6a6f40ffbf5b0a781f280bc1d24ad08d7fe64b18a028bbdd92",
+      "code_files_frozen": 14,
+      "parent_implementation_sha256": "b8266a35280b5a925d8a9ca20d3ab3df7037ae58f8ec8fddbbfd1d1eaa6c572a",
+      "scope": "Current estimate-blind execution freeze after adding a pre-compaction independent audit of every strict/fallback demeaning attempt and the archived common-primary race M2 retry provenance; all synthetic directional and numerical-audit tests passed.",
+      "timing": "While the common-primary race M2 retry was running, before its result audit or compaction and before any real directional result file existed.",
+      "scientific_specification_changed": false,
+      "supersession_reason": "The directional pre-estimation matrix auditor was strengthened to fail closed unless its own M2/M3 demeaning states contain complete, bound strict-before-fallback provenance. Four additional synthetic accept/reject cases increased the directional inference suite from 6/6 to 10/10.",
+      "current": false
+    },
+    {
+      "sequence": 6,
+      "frozen_utc": "2026-07-27T02:43:14.670948+00:00",
+      "manifest_sha256": "a82b00ec6dc2260e3f98d66adada6fc8dfc39794e86c23cd6b03a8a94c5b75a7",
+      "code_files_frozen": 14,
+      "parent_implementation_sha256": "b8266a35280b5a925d8a9ca20d3ab3df7037ae58f8ec8fddbbfd1d1eaa6c572a",
+      "scope": "Current estimate-blind execution freeze with fail-closed directional matrix auditing of the complete M2/M3 strict/fallback attempt grids and 10/10 synthetic inference/provenance tests, plus the previously frozen measurement-sensitivity and result-audit sequence.",
+      "timing": "While the non-directional common-primary race M2 retry was running, before its result audit or compaction and before any real directional result file existed.",
+      "scientific_specification_changed": false,
+      "current": false
+    },
+    {
+      "sequence": 7,
+      "frozen_utc": "2026-07-27T07:46:10.143974+00:00",
+      "manifest_sha256": "6b1476e04de00ae897e31e43df920ad8269d3b248a25a69ffa00a5a7035feae7",
+      "code_files_frozen": 14,
+      "parent_implementation_sha256": "8d2b6bf51b19a7292ffe3f9a38c70b7cf2b87595a2d128f64c49a357d11236df",
+      "scope": "Estimate-blind refresh after the non-directional multiplicity script was made schema-compatible with the already-audited historical AMI cohort_definition field. The directional cells, outcomes, estimands, covariates, fixed effects, clustering, measurement sensitivities, multiplicity families, and execution code are otherwise unchanged.",
+      "timing": "While common-primary race M2 was still running, before the affected primary-period multiplicity stage and before any real directional result file existed.",
+      "scientific_specification_changed": false,
+      "result_values_read_to_select_correction": false,
+      "archive_manifest": "audit_history/multiplicity_schema_alias_20260727T0736Z/ARCHIVE_MANIFEST.json",
+      "current": true
+    }
+  ],
+  "preservation_limitation": "The freeze utility atomically replaces the canonical manifest. The two superseded canonical JSON bodies were not copied before replacement. This history therefore preserves their exact known hashes, sequence, retained timestamp where available, file counts, and reasons; it does not claim to reproduce their full byte content.",
+  "timing_classification": "Implementation and validation corrections completed before any adjusted real-data directional result file existed. The numerical correction followed a non-directional common-primary M1 output and a failed M2 strict demeaning attempt, but preceded the affected M2 result. These corrections do not retroactively change the previously frozen scientific cells, contrasts, estimands, outcomes, covariates, fixed effects, clustering, or analysis tiers."
+}

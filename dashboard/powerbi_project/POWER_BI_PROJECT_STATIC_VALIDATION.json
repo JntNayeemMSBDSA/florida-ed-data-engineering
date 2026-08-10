@@ -1,0 +1,251 @@
+{
+  "overall_status": "PASS",
+  "scope": "Static PBIP/PBIR/TMDL validation before Power BI Desktop open; no unpublished analytical estimates inspected",
+  "checks_passed": 17,
+  "checks_total": 17,
+  "checks": [
+    {
+      "check": "pbip_exists",
+      "passed": true,
+      "evidence": "Florida_ED_Project_Portfolio_Dashboard.pbip"
+    },
+    {
+      "check": "all_report_json_parses",
+      "passed": true,
+      "evidence": []
+    },
+    {
+      "check": "semantic_table_inventory",
+      "passed": true,
+      "evidence": {
+        "actual": [
+          "Dashboard Measures",
+          "DimClinicalDomain",
+          "DimCodingMap",
+          "DimMetric",
+          "DimModelSpec",
+          "DimPeriod",
+          "DimProjectStage",
+          "DimSchemaFamily",
+          "FactAnalyticalStatus",
+          "FactEnhancementCoverage",
+          "FactPartitionStatus",
+          "FactProjectCoverage",
+          "FactProviderMeasurement",
+          "FactSyntheticDemonstration",
+          "FactValidationStatus"
+        ],
+        "expected": [
+          "Dashboard Measures",
+          "DimClinicalDomain",
+          "DimCodingMap",
+          "DimMetric",
+          "DimModelSpec",
+          "DimPeriod",
+          "DimProjectStage",
+          "DimSchemaFamily",
+          "FactAnalyticalStatus",
+          "FactEnhancementCoverage",
+          "FactPartitionStatus",
+          "FactProjectCoverage",
+          "FactProviderMeasurement",
+          "FactSyntheticDemonstration",
+          "FactValidationStatus"
+        ]
+      }
+    },
+    {
+      "check": "source_row_counts",
+      "passed": true,
+      "evidence": {
+        "DimPeriod": {
+          "observed": 84,
+          "expected": 84,
+          "passed": true
+        },
+        "DimSchemaFamily": {
+          "observed": 5,
+          "expected": 5,
+          "passed": true
+        },
+        "DimProjectStage": {
+          "observed": 5,
+          "expected": 5,
+          "passed": true
+        },
+        "DimMetric": {
+          "observed": 25,
+          "expected": 25,
+          "passed": true
+        },
+        "DimClinicalDomain": {
+          "observed": 9,
+          "expected": 9,
+          "passed": true
+        },
+        "DimCodingMap": {
+          "observed": 6,
+          "expected": 6,
+          "passed": true
+        },
+        "DimModelSpec": {
+          "observed": 3,
+          "expected": 3,
+          "passed": true
+        },
+        "FactProjectCoverage": {
+          "observed": 14,
+          "expected": 14,
+          "passed": true
+        },
+        "FactPartitionStatus": {
+          "observed": 84,
+          "expected": 84,
+          "passed": true
+        },
+        "FactEnhancementCoverage": {
+          "observed": 20,
+          "expected": 20,
+          "passed": true
+        },
+        "FactProviderMeasurement": {
+          "observed": 11,
+          "expected": 11,
+          "passed": true
+        },
+        "FactValidationStatus": {
+          "observed": 20,
+          "expected": 20,
+          "passed": true
+        },
+        "FactAnalyticalStatus": {
+          "observed": 20,
+          "expected": 20,
+          "passed": true
+        },
+        "FactSyntheticDemonstration": {
+          "observed": 13,
+          "expected": 13,
+          "passed": true
+        }
+      }
+    },
+    {
+      "check": "measure_count",
+      "passed": true,
+      "evidence": {
+        "observed": 34,
+        "expected": 34,
+        "documented": 33,
+        "supplemental_visual_only": 1
+      }
+    },
+    {
+      "check": "relationship_count",
+      "passed": true,
+      "evidence": 8
+    },
+    {
+      "check": "single_direction_relationships",
+      "passed": true,
+      "evidence": "Default single-direction behavior retained"
+    },
+    {
+      "check": "power_query_primitive_type_syntax",
+      "passed": true,
+      "evidence": {
+        "invalid_tokens": [],
+        "requirement": "Primitive fields inside type table use text, date, or logical without a second type keyword"
+      }
+    },
+    {
+      "check": "page_order_and_names",
+      "passed": true,
+      "evidence": [
+        "Executive Overview",
+        "Coverage & Standardization",
+        "Clinical & Visit Enhancements",
+        "Provider & Facility Measurement",
+        "Cohort & Analytical Design",
+        "Validation & Reproducibility",
+        "Completion & Handoff"
+      ]
+    },
+    {
+      "check": "visual_inventory",
+      "passed": true,
+      "evidence": {
+        "observed": 76,
+        "expected": 76,
+        "contract_visuals": 63,
+        "supplemental_page_subtitles_and_footers": 13
+      }
+    },
+    {
+      "check": "visual_bounds",
+      "passed": true,
+      "evidence": []
+    },
+    {
+      "check": "footer_on_every_page",
+      "passed": true,
+      "evidence": 7
+    },
+    {
+      "check": "privacy_and_unrelated_content_scan",
+      "passed": true,
+      "evidence": {
+        "prohibited_pattern_01": false,
+        "prohibited_pattern_02": false,
+        "prohibited_pattern_03": false,
+        "prohibited_pattern_04": false,
+        "prohibited_pattern_05": false,
+        "prohibited_pattern_06": false,
+        "prohibited_pattern_07": false,
+        "prohibited_pattern_08": false,
+        "prohibited_pattern_09": false,
+        "prohibited_pattern_10": false,
+        "prohibited_pattern_11": false,
+        "prohibited_pattern_12": false
+      }
+    },
+    {
+      "check": "no_external_file_sources",
+      "passed": true,
+      "evidence": "All dashboard data is embedded public-safe metadata"
+    },
+    {
+      "check": "no_causal_claim",
+      "passed": true,
+      "evidence": "Association language retained; negated causal-language disclosures are allowed"
+    },
+    {
+      "check": "scientific_guardrail_language",
+      "passed": true,
+      "evidence": {
+        "not BISG": true,
+        "not self-reported": true,
+        "never silently pooled": true,
+        "Phase 1 must remain immutable": true,
+        "observational associations": true
+      }
+    },
+    {
+      "check": "desktop_render_qa_capture_set",
+      "passed": true,
+      "evidence": {
+        "images": [
+          "01_executive_overview.png",
+          "02_coverage_standardization.png",
+          "03_clinical_visit.png",
+          "04_provider_facility.png",
+          "05_cohort_design.png",
+          "06_validation_reproducibility.png",
+          "07_completion_handoff.png"
+        ],
+        "unique_hashes": 7
+      }
+    }
+  ],
+  "manifest": "POWER_BI_PROJECT_MANIFEST.json"
+}

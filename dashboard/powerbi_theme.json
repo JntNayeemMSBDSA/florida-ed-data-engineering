@@ -1,0 +1,42 @@
+{
+  "name": "Florida ED Research Portfolio",
+  "dataColors": [
+    "#1F4E79",
+    "#C69214",
+    "#6B7280",
+    "#7A5195",
+    "#B45309",
+    "#2F6B5F"
+  ],
+  "background": "#F7F9FC",
+  "foreground": "#1F2937",
+  "tableAccent": "#1F4E79",
+  "good": "#2F6B5F",
+  "neutral": "#C69214",
+  "bad": "#B45309",
+  "maximum": "#1F4E79",
+  "center": "#C69214",
+  "minimum": "#E5E7EB",
+  "textClasses": {
+    "callout": {
+      "fontFace": "Segoe UI Semibold",
+      "fontSize": 28,
+      "color": "#1F2937"
+    },
+    "title": {
+      "fontFace": "Segoe UI Semibold",
+      "fontSize": 14,
+      "color": "#1F2937"
+    },
+    "header": {
+      "fontFace": "Segoe UI Semibold",
+      "fontSize": 12,
+      "color": "#1F2937"
+    },
+    "label": {
+      "fontFace": "Segoe UI",
+      "fontSize": 10,
+      "color": "#374151"
+    }
+  }
+}

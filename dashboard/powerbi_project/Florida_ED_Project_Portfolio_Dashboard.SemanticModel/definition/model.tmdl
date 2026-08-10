@@ -1,0 +1,34 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	discourageImplicitMeasures
+	sourceQueryCulture: en-US
+	valueFilterBehavior: independent
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 0
+
+annotation PBI_QueryOrder = ["DimPeriod", "DimSchemaFamily", "DimProjectStage", "DimMetric", "DimClinicalDomain", "DimCodingMap", "DimModelSpec", "FactProjectCoverage", "FactPartitionStatus", "FactEnhancementCoverage", "FactProviderMeasurement", "FactValidationStatus", "FactAnalyticalStatus", "FactSyntheticDemonstration", "Dashboard Measures"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table DimPeriod
+ref table DimSchemaFamily
+ref table DimProjectStage
+ref table DimMetric
+ref table DimClinicalDomain
+ref table DimCodingMap
+ref table DimModelSpec
+ref table FactProjectCoverage
+ref table FactPartitionStatus
+ref table FactEnhancementCoverage
+ref table FactProviderMeasurement
+ref table FactValidationStatus
+ref table FactAnalyticalStatus
+ref table FactSyntheticDemonstration
+ref table 'Dashboard Measures'
+
+ref cultureInfo en-US
+

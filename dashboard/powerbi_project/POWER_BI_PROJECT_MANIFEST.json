@@ -1,0 +1,570 @@
+{
+  "project": "Florida_ED_Project_Portfolio_Dashboard",
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 45,
+      "sha256": "0a8a5e0126dd3f6c4dbf71310c778fc7953089f4d279ccbd2e932b26a1147adb"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.pbip",
+      "bytes": 304,
+      "sha256": "ec04a1f6b0618fdd0b84dac6f23e5989a3e2ecb28e876c424d8d064abd4e1e77"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.Report/.platform",
+      "bytes": 322,
+      "sha256": "322a92d65bd238d03cdc5f44fc78d0ef353fa49daee5b176f6f4eebd462a7c6f"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.Report/definition/pages/0f8d62cc0491e15bf8b6/page.json",
+      "bytes": 255,
+      "sha256": "a07ef4699dfc4691eada95a6a14c0712b07740fc3d3a3f620657e0a39c46aa2d"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.Report/definition/pages/0f8d62cc0491e15bf8b6/visuals/23be0f7d5715647f6a3f/visual.json",
+      "bytes": 2409,
+      "sha256": "865cdbd23baadf2d9df4ee091ad9554cc357f09c6b7f2cb7396695254bd25f25"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.Report/definition/pages/0f8d62cc0491e15bf8b6/visuals/478799bc137e99443578/visual.json",
+      "bytes": 2407,
+      "sha256": "bb036c4d73240ad706ebd0510f11391d50daf54f76d1d480ebf4d9ee1793c541"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.Report/definition/pages/0f8d62cc0491e15bf8b6/visuals/4e31f6a405387a2f5719/visual.json",
+      "bytes": 2363,
+      "sha256": "52c22d3b69aebeafb71533e1a3d933e885b6955d5aba56a831f61b5b88f65624"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.Report/definition/pages/0f8d62cc0491e15bf8b6/visuals/51d84db7827278c6188d/visual.json",
+      "bytes": 2834,
+      "sha256": "e5e6443fad5d0ff11a4a7e6304ced348bf7258538777538d610a972f7976f8fe"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.Report/definition/pages/0f8d62cc0491e15bf8b6/visuals/54626afcddc432399df6/visual.json",
+      "bytes": 2413,
+      "sha256": "1d2fc75c40ce6f354f5d45f7eb82876c0351f5add7430e60fa89c6368951cc64"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.Report/definition/pages/0f8d62cc0491e15bf8b6/visuals/68ce54623d9ff244e629/visual.json",
+      "bytes": 1214,
+      "sha256": "fe852431938fc2ef03ead94c59f16d205b0e3875664ad6ecf6d1ebea703eafbf"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.Report/definition/pages/0f8d62cc0491e15bf8b6/visuals/ad212b843ae46733ee91/visual.json",
+      "bytes": 1021,
+      "sha256": "fd3abd146ea8a25ea5eb569cb1bf75a60b58c65b8e942fb17ee7a7f802ec7074"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.Report/definition/pages/0f8d62cc0491e15bf8b6/visuals/b2e43578278eaaa90796/visual.json",
+      "bytes": 975,
+      "sha256": "83e1738b5a5513df50085377179b813577491117d6929220fbadcdab2fbf1f31"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.Report/definition/pages/0f8d62cc0491e15bf8b6/visuals/c739a5bd98d037c85664/visual.json",
+      "bytes": 1016,
+      "sha256": "abc79226564e167d453f79ffccb8f540823a6991a7c7b35ccd0e0afdf8ac19e2"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.Report/definition/pages/0f8d62cc0491e15bf8b6/visuals/cb8e6b195ca7c8a6608e/visual.json",
+      "bytes": 915,
+      "sha256": "a033f3128233f97165bdd02fb768b0c5f88183b0a9c32b75a80c32ab373c42f5"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.Report/definition/pages/0f8d62cc0491e15bf8b6/visuals/fe82216076d7e5cc562e/visual.json",
+      "bytes": 1040,
+      "sha256": "08b3971ae9fedf5d8e6394cb8abf93d131067fab410e51306a136d507161219f"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.Report/definition/pages/2a2d34b4561b0326f943/page.json",
+      "bytes": 265,
+      "sha256": "e79dfbcfbfc6c1cc95ab18608b47672eaae1ace89d003579893fc7cb5460347c"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.Report/definition/pages/2a2d34b4561b0326f943/visuals/03cb6d76a41fb6c280cf/visual.json",
+      "bytes": 942,
+      "sha256": "11d93520bc1d7c0d11d7a1e6290ee23f207672d6b62e2b425f6cec16193bc41c"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.Report/definition/pages/2a2d34b4561b0326f943/visuals/138d608daa1649a7374b/visual.json",
+      "bytes": 2387,
+      "sha256": "49a0aad6b5a932a513b3f7c543ee8c62cd8ba1d04de5e1d640d841c63d5bb898"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.Report/definition/pages/2a2d34b4561b0326f943/visuals/34f3247a62b15c83ac6e/visual.json",
+      "bytes": 2378,
+      "sha256": "a0a9e07e2578b68323090fd047f3b1d18773437cb18e9be45bc598ad939d8afe"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.Report/definition/pages/2a2d34b4561b0326f943/visuals/50425f49aa073eaadb85/visual.json",
+      "bytes": 2383,
+      "sha256": "4a5bd20f2ad6483de917d77b4dccf93e996bc85abb6fa7408e191eb6fb602e47"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.Report/definition/pages/2a2d34b4561b0326f943/visuals/5ae416b0135822ecb1c3/visual.json",
+      "bytes": 973,
+      "sha256": "649f4e5c4082a534c4d6035a3218b92ecdd390ebf8a5481b89be181f765b899a"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.Report/definition/pages/2a2d34b4561b0326f943/visuals/70ed0cb929c083f930c2/visual.json",
+      "bytes": 2374,
+      "sha256": "534e03281e7fe7bf22968c0a95f261ab032f46bf619f82e7d0df85a888170972"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.Report/definition/pages/2a2d34b4561b0326f943/visuals/8ac201c2bb394edd1968/visual.json",
+      "bytes": 1021,
+      "sha256": "1261b4f9d3ace43b0821e11a2e86d03509594c8abc4300a32e4a52052cf48032"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.Report/definition/pages/2a2d34b4561b0326f943/visuals/bb5ddcb6b9f0d38e90bb/visual.json",
+      "bytes": 1935,
+      "sha256": "f4476357bcf22a619cad8a536a5dde0ac52934279db2449e20331e31d02ab11d"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.Report/definition/pages/2a2d34b4561b0326f943/visuals/cf6c7ef9b29e18f4492c/visual.json",
+      "bytes": 2554,
+      "sha256": "731a1b4e24a42f6acad922643e9350b8f56939d46a63fb7bde43b87b2f089fdc"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.Report/definition/pages/2a2d34b4561b0326f943/visuals/e11b08143154ecbc7ed7/visual.json",
+      "bytes": 2275,
+      "sha256": "4b7c97c85c5746db3f88c3835d3b1b167ecde72642a7c0b5672a29d3ba317fc6"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.Report/definition/pages/2dd2909198a585650653/page.json",
+      "bytes": 263,
+      "sha256": "28c4b7bad4f9bf15fdfc08579907998e13c19038c1fa3b6e92d90868f0ec2fad"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.Report/definition/pages/2dd2909198a585650653/visuals/35f5f829443b2af934de/visual.json",
+      "bytes": 2391,
+      "sha256": "ffb3f535829effe88f073d2421509921a2ec91d298ae3053098bc0d0153593f2"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.Report/definition/pages/2dd2909198a585650653/visuals/4e4cfe07739a011769cb/visual.json",
+      "bytes": 2104,
+      "sha256": "8d16bf32842003f12db70467b368802fa0d793b21daa9746d4677b4e22baf822"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.Report/definition/pages/2dd2909198a585650653/visuals/4fc92016056a053cb2ab/visual.json",
+      "bytes": 936,
+      "sha256": "1805399f9532877290559097526e614f14c0c822d46b01ab95355362b0f7f503"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.Report/definition/pages/2dd2909198a585650653/visuals/502eb9ec7352504136a8/visual.json",
+      "bytes": 2539,
+      "sha256": "a681c5b8ea44ca6caf34b6abbe60295eba7de281325554f44f042981b419caa4"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.Report/definition/pages/2dd2909198a585650653/visuals/6dd8851145d954e069a6/visual.json",
+      "bytes": 1055,
+      "sha256": "6b1b1f7d3aee4f6202138837cfa60229e65156189e2db9faebccae59792d9da6"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.Report/definition/pages/2dd2909198a585650653/visuals/7736f455e1fbf8374f98/visual.json",
+      "bytes": 1211,
+      "sha256": "e0fd3802a4dd148e7fa994bda1113e13b699a612e883aca986c9153a8f5a47ca"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.Report/definition/pages/2dd2909198a585650653/visuals/7b7b7c92e75f2422f3f9/visual.json",
+      "bytes": 951,
+      "sha256": "2e6e1fbf65347aec23b187be8d9f8990c5eb06c15c4d1549441ffcf7701dfe9b"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.Report/definition/pages/2dd2909198a585650653/visuals/8ad7c04dc8ad1ca0b676/visual.json",
+      "bytes": 2378,
+      "sha256": "135b9b57ed689cc76764a4bef086a9d29e9bb877f47c4bc99bdfce3e4509a65b"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.Report/definition/pages/2dd2909198a585650653/visuals/c767ddd4b8d3d6809e2e/visual.json",
+      "bytes": 1021,
+      "sha256": "ac61143e24dd21701ce982fd759d2cc6ec051197afb0ad0602316b27af1e579c"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.Report/definition/pages/4178831803d96b200eeb/page.json",
+      "bytes": 257,
+      "sha256": "3632432669ff0396762c697ec4562df92c6d78930829b6df0159f0026fd6c6e3"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.Report/definition/pages/4178831803d96b200eeb/visuals/05d9742a0e4c3dfbe70c/visual.json",
+      "bytes": 930,
+      "sha256": "3579c2d8e1f7041dd747bc80064d735776bc77d2e86c4cbd44dc8cc860bb25b2"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.Report/definition/pages/4178831803d96b200eeb/visuals/2abea3eaed195e112a91/visual.json",
+      "bytes": 2375,
+      "sha256": "fba1b5e214e3730f75ec8b9cb7b327679ff6dda8ca2caa771f6da165ce84f89f"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.Report/definition/pages/4178831803d96b200eeb/visuals/2c3d556e219dfa8b971b/visual.json",
+      "bytes": 1106,
+      "sha256": "fc096a1c3fa3499b94a4fbb851c61b02a8810ee71f4097b3078c3456d7174691"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.Report/definition/pages/4178831803d96b200eeb/visuals/563eb1f9c8871a947dbd/visual.json",
+      "bytes": 1078,
+      "sha256": "5ed39f107ba6abdd8ad9e3d0d0ee7c37e010133ae3ccfe19f5c339fe4ed78d4c"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.Report/definition/pages/4178831803d96b200eeb/visuals/577c916a5640e9e35a62/visual.json",
+      "bytes": 2379,
+      "sha256": "ae73da1bbc18e9f6561d99381ce5e817da02e1eabb9b924579cd0aaf8d6d1f30"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.Report/definition/pages/4178831803d96b200eeb/visuals/6ab5c0292e5a6db5c547/visual.json",
+      "bytes": 1213,
+      "sha256": "da9a792772b990286230895b84abdfc6c1bfd02e673c3e8a3b601c2b58ef3c30"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.Report/definition/pages/4178831803d96b200eeb/visuals/80b1728f1ae1a3493502/visual.json",
+      "bytes": 1021,
+      "sha256": "7a5bc3449ed794d0128cabf31a64391babd23283acdf3d6a32db9a98b380e1af"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.Report/definition/pages/4178831803d96b200eeb/visuals/89a4a9d7fd59d748d82d/visual.json",
+      "bytes": 2990,
+      "sha256": "8decc6fc0ee1f0b8fd73f9728157845fe212b70e60c56cbd715ba2be229a0a67"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.Report/definition/pages/4178831803d96b200eeb/visuals/98e0192d1899181b37f9/visual.json",
+      "bytes": 973,
+      "sha256": "33ba591bcc2c390f60c515656cfd5b1b4bf94d8e7cb432b625e8540fc6a957a3"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.Report/definition/pages/4178831803d96b200eeb/visuals/cd3adabf028085ec06c4/visual.json",
+      "bytes": 2382,
+      "sha256": "e8ccb78c0085cf87b5bb928bfb41e6d98b6efdb6ac3bfe4a7ea9f58b5e8729a3"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.Report/definition/pages/4178831803d96b200eeb/visuals/de45fa9e106c0765967b/visual.json",
+      "bytes": 1978,
+      "sha256": "67375299b1904305d7a46563878a1bbc21c982ea4d14f12b2be1b933ee116b0d"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.Report/definition/pages/59ba29fde58ceaaaadb2/page.json",
+      "bytes": 266,
+      "sha256": "9ea0f194e8a1cc8abe638af9959a562ef11ea9a73b9933af719f902723e19df2"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.Report/definition/pages/59ba29fde58ceaaaadb2/visuals/2e1716bb958fb46eacc6/visual.json",
+      "bytes": 2495,
+      "sha256": "a4e2f24cf13fa69be110601a80aa0edfa59d70e8112dac785c38eabcdcc92e7b"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.Report/definition/pages/59ba29fde58ceaaaadb2/visuals/3922b8386107859d263c/visual.json",
+      "bytes": 3110,
+      "sha256": "e673d4739366ae670cbe193aebb24c048b7e50f327b0d99104bcb473dcb8c7ab"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.Report/definition/pages/59ba29fde58ceaaaadb2/visuals/407a924985c17a9a71e3/visual.json",
+      "bytes": 2376,
+      "sha256": "eda653a69adff2626cfaa440952727d67ba2562f61a118ddeaf7bb0d22527dcb"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.Report/definition/pages/59ba29fde58ceaaaadb2/visuals/57a00268327da34d0d02/visual.json",
+      "bytes": 2007,
+      "sha256": "d4da1138a8171dfadc967cdde6cf4f04f154d3103b924cdc9bc05681184d16ea"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.Report/definition/pages/59ba29fde58ceaaaadb2/visuals/640e5925027aca10714e/visual.json",
+      "bytes": 2385,
+      "sha256": "4a28a4e97483dc3132f343b59e68433f6e36514de006bd62e89e1a24a9925442"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.Report/definition/pages/59ba29fde58ceaaaadb2/visuals/759d3ef533874296e1db/visual.json",
+      "bytes": 2382,
+      "sha256": "8d793550f82bc5ea05689e83f8af897e6206a81629a585d194f385fff7ac7738"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.Report/definition/pages/59ba29fde58ceaaaadb2/visuals/c6bdf3560488624d0cd5/visual.json",
+      "bytes": 2426,
+      "sha256": "ac1db12d5fdb31f6bca19ba46e15be9a42e4d9273a9070481b20d37002f234c6"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.Report/definition/pages/59ba29fde58ceaaaadb2/visuals/dc4efa8ce097279ba1ad/visual.json",
+      "bytes": 1021,
+      "sha256": "a21c3589707d3cf918eb1f574801ca5965a062237c7cbf4fc9dd3593a5d32786"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.Report/definition/pages/59ba29fde58ceaaaadb2/visuals/eb2434cfe5bb76c87895/visual.json",
+      "bytes": 941,
+      "sha256": "f7e8ece01ef7a9c97d6001a74907fceac894db0972f627a30cf858f26a613053"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.Report/definition/pages/59ba29fde58ceaaaadb2/visuals/f35aa9fa912c9391b2eb/visual.json",
+      "bytes": 976,
+      "sha256": "8afd85df13aa649d13b9b285b5234c367079c265aa86f04f17c8c7d6b0e9949f"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.Report/definition/pages/6a13fbbc053d65c95308/page.json",
+      "bytes": 268,
+      "sha256": "3618513a0b8c3504dcdbd52750c523da0110aa34103797e617d818f04d0b7e95"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.Report/definition/pages/6a13fbbc053d65c95308/visuals/41bdd04d1384bc0c9277/visual.json",
+      "bytes": 2367,
+      "sha256": "cc305d30cb846dd3f8a5e7663d7a651227828f322847a576c2b5118888ca3f77"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.Report/definition/pages/6a13fbbc053d65c95308/visuals/456d624d877a918d4cda/visual.json",
+      "bytes": 1843,
+      "sha256": "2db0bb3c4633665ea16dde3b77ced6c59f2530faa4bd9c0ee0b7bc51cb0cd1f3"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.Report/definition/pages/6a13fbbc053d65c95308/visuals/6d0ddfea57802e00c6e3/visual.json",
+      "bytes": 955,
+      "sha256": "b74e4a3a5260760074586358fa1b0d031ba8b4919fe5b5bda7303bb21396afdf"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.Report/definition/pages/6a13fbbc053d65c95308/visuals/7952179dc194b4c439f2/visual.json",
+      "bytes": 1122,
+      "sha256": "cbfa2aac969886a3f7d355ceaf193a5a44a0d4593482e621e60a5fac97c44d76"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.Report/definition/pages/6a13fbbc053d65c95308/visuals/94f1c79a9ef05dd02966/visual.json",
+      "bytes": 1021,
+      "sha256": "f6baa44f1f09daeb8eb5a7bec67bf4c22094cc864f5f75122bbef3d901d47245"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.Report/definition/pages/6a13fbbc053d65c95308/visuals/abaa3d90631cec174df3/visual.json",
+      "bytes": 2394,
+      "sha256": "700cce391d2c48f67e0ceb0f7b47caddf1c57b52925cfd570a110757e9596cd7"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.Report/definition/pages/6a13fbbc053d65c95308/visuals/c02761a885d758cecaca/visual.json",
+      "bytes": 2467,
+      "sha256": "4200e6cb94f947556aaac75a9e90cc10586a885f001e72823c6bfbd27a290076"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.Report/definition/pages/6a13fbbc053d65c95308/visuals/c5a7a5e45b23431bd906/visual.json",
+      "bytes": 1090,
+      "sha256": "e5317d30b8a0a8c2c8b2db3e5b5ecf621809602e12a4d64d7c8d3940c94d19e6"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.Report/definition/pages/6a13fbbc053d65c95308/visuals/c65d7051e93195810639/visual.json",
+      "bytes": 928,
+      "sha256": "5ea3000c798693bfc8681470bf0d98c59a300c8c7f190a9ada85b13b8b848913"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.Report/definition/pages/6a13fbbc053d65c95308/visuals/d03fb0a5949e24bdad85/visual.json",
+      "bytes": 2390,
+      "sha256": "bde257d4dfddcc318c89a7625bc98b50a7a66bb7ba414c94dafdeef9f7ee6f97"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.Report/definition/pages/6a13fbbc053d65c95308/visuals/dc6fae60eaf6384ec280/visual.json",
+      "bytes": 1098,
+      "sha256": "51feef13ad6142d699530ab605b97897b78fb7ee36d963d6392a6945818e3b3a"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.Report/definition/pages/6a13fbbc053d65c95308/visuals/e1fcee4f888189b3237d/visual.json",
+      "bytes": 2543,
+      "sha256": "62778e20b4a2c28f31c20caa28e230466f3e0329a18d0d012d95582ff221be4f"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.Report/definition/pages/6a13fbbc053d65c95308/visuals/f957046d037390ef1ebb/visual.json",
+      "bytes": 2403,
+      "sha256": "fd85f5d71846992bacd52bdf72ee35fdf80f47677ee0c2efc31d53a112a67a3c"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.Report/definition/pages/b3478688538d4233f344/page.json",
+      "bytes": 263,
+      "sha256": "c190cef57b09192aa87b35c4e01dd028c6b3054ffa96fc463fa8806db8997358"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.Report/definition/pages/b3478688538d4233f344/visuals/34cb1487a2ca3e4c098a/visual.json",
+      "bytes": 2418,
+      "sha256": "eb371c07c4ba64973ee72bea90f430c4d55794e852365319247673d38f83ed53"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.Report/definition/pages/b3478688538d4233f344/visuals/46dc0f5fd2f14464d5d0/visual.json",
+      "bytes": 2386,
+      "sha256": "c767433278a7c3f0d2b50d1f03ce0f7759d0970540060a921dd95945537c9614"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.Report/definition/pages/b3478688538d4233f344/visuals/716f6ff29ece2b60815a/visual.json",
+      "bytes": 1908,
+      "sha256": "bffeb3836f1b7a5ee977af4fed26aa4236a764596aaac6b1978963b7545dc695"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.Report/definition/pages/b3478688538d4233f344/visuals/7c6fc0a58de1df5cce8d/visual.json",
+      "bytes": 1452,
+      "sha256": "f0abab8112a424d9543313b326b19736c5d3fdeb6b61684b73cbd6e92beb07f0"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.Report/definition/pages/b3478688538d4233f344/visuals/8088afa448cf31ea0483/visual.json",
+      "bytes": 1944,
+      "sha256": "f3969155cc28cf033adf1f3d3f79866eb73c5ac04d98154a36538184783c0c9b"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.Report/definition/pages/b3478688538d4233f344/visuals/8b2c5353c1db2b3221db/visual.json",
+      "bytes": 2411,
+      "sha256": "f9d8d3e3af692f596d0dc129f6f0e1831e9216dcdc2d02528ef344c14b74bd61"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.Report/definition/pages/b3478688538d4233f344/visuals/9001a7c62f11267028f7/visual.json",
+      "bytes": 1021,
+      "sha256": "4f2c4466ec48695f22b67e0f9649bcb749a481e3e20a44080dbb7cbfc9a369cf"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.Report/definition/pages/b3478688538d4233f344/visuals/d0d6bb7b73aefc634824/visual.json",
+      "bytes": 945,
+      "sha256": "f5e8d2e1ea10342179508a67621f55865ad188969c785484809e53da30ca46b4"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.Report/definition/pages/b3478688538d4233f344/visuals/e199db484f6a17842892/visual.json",
+      "bytes": 940,
+      "sha256": "3ea68ec8e7ee7a3ef46e052ce4d2ba4a62aa45af27e87572b6cfd10d173d6da1"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.Report/definition/pages/b3478688538d4233f344/visuals/e303d6903fc168bf2307/visual.json",
+      "bytes": 2931,
+      "sha256": "efa3064eac299fd1e84e17450fe14ad6a2dde9db2156fd2dddd8ae56818f8409"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.Report/definition/pages/b3478688538d4233f344/visuals/e7aa037314191de4d20c/visual.json",
+      "bytes": 1480,
+      "sha256": "fab1825012577783910f18bc2ccb265c91d1c50832bda4c2827a7dd7103ea61c"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.Report/definition/pages/b3478688538d4233f344/visuals/eed34d87b66600b5263c/visual.json",
+      "bytes": 2395,
+      "sha256": "d2c0b575d2e451f50b904758d04d427160e6de33cab27dd1ea319ce38966cceb"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.Report/definition/pages/pages.json",
+      "bytes": 386,
+      "sha256": "8f09759c57211c8fad024f28c278cacf36e78bf9036817bbc2017fba80c1d626"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.Report/definition/report.json",
+      "bytes": 1556,
+      "sha256": "e31b017d389cf7151c1330f1df8dc1fbe40545de0f5f41c7908ba7ae0b9fd3a7"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.Report/definition/version.json",
+      "bytes": 149,
+      "sha256": "32bc72b8e7996a054f96e655c8dd8fda82e5f502532610b45bc21a18cffe30b6"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.Report/definition.pbir",
+      "bytes": 264,
+      "sha256": "43b55657fd4512ace08055052bd14e516b58630c26060aef11aa03480adb8c20"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.Report/StaticResources/RegisteredResources/FloridaEDResearchPortfolio.json",
+      "bytes": 824,
+      "sha256": "c4e5e8b56bd15d84c9e243a75ff69d97e26caf9a7b15a58645a717dc7f606d2b"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.Report/StaticResources/SharedResources/BaseThemes/CY26SU07.json",
+      "bytes": 19872,
+      "sha256": "2d871c8bd3e64e816bdba193b6745e5d88d7e148d4d176475e0144512d1243c6"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.SemanticModel/.platform",
+      "bytes": 329,
+      "sha256": "162b14de38146e7f79af008b2f915137589d5225260831cad62a8328c0f8fc6a"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.SemanticModel/definition/cultures/en-US.tmdl",
+      "bytes": 19,
+      "sha256": "2d91633247210a26aab1dd2293621640797b1ac959f8d2ea4214fb0e0fd7a6d9"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.SemanticModel/definition/database.tmdl",
+      "bytes": 36,
+      "sha256": "05e6e4d3963c40921d429c883e83714a9dd42aeadbb8470e671a6b38dbb34872"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.SemanticModel/definition/model.tmdl",
+      "bytes": 1108,
+      "sha256": "43ab0b2357890c4092d8a713650b9c4e90fa370f8cbefaf7bc3746a32ea891b2"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.SemanticModel/definition/relationships.tmdl",
+      "bytes": 943,
+      "sha256": "9e63501efdae8815bf1e7221333e442094ea4458f3151d7b4cc6a35e5d5120a5"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.SemanticModel/definition/tables/Dashboard Measures.tmdl",
+      "bytes": 8934,
+      "sha256": "180556d0ef9e8f51377bc842364718918613cd0d1a9f5197648e73f525aa9389"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.SemanticModel/definition/tables/DimClinicalDomain.tmdl",
+      "bytes": 1731,
+      "sha256": "cb08bce2c67e4e1db30c653350fbf77cdca0c1e29762cc6c138ed567579c94ba"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.SemanticModel/definition/tables/DimCodingMap.tmdl",
+      "bytes": 2412,
+      "sha256": "a71d6620952d616330e2700e359e8fa076af7c2d05af9af88c423c03525d2452"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.SemanticModel/definition/tables/DimMetric.tmdl",
+      "bytes": 5765,
+      "sha256": "71102dddbfd15c479dfe2b328af17fb0cb4351c0dac8c0d4a179e125e742a9da"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.SemanticModel/definition/tables/DimModelSpec.tmdl",
+      "bytes": 2376,
+      "sha256": "1a7c50c580dc02a88967c984f1eda559cb64e827d344229c9b982346e2240d1b"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.SemanticModel/definition/tables/DimPeriod.tmdl",
+      "bytes": 10887,
+      "sha256": "69696e195c7f7db6c8a8ca0606f8ac00b136ad31f3bf693660c6fa9f149a796a"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.SemanticModel/definition/tables/DimProjectStage.tmdl",
+      "bytes": 1866,
+      "sha256": "a2b64ff60d605b0532221db49c9e2e0721a85fa90eddf86f15fe974b42b1ba80"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.SemanticModel/definition/tables/DimSchemaFamily.tmdl",
+      "bytes": 2221,
+      "sha256": "13509944493f4d66708eba95f28363f4c238f751661db851473ce99d6c575bc8"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.SemanticModel/definition/tables/FactAnalyticalStatus.tmdl",
+      "bytes": 6593,
+      "sha256": "6e77cac15441310a188f43337c8a74952a07e394fd5da671bce2c1a096d53e87"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.SemanticModel/definition/tables/FactEnhancementCoverage.tmdl",
+      "bytes": 7038,
+      "sha256": "32887c5f189e323efb75ff07e1d6eede22a70c4edf8be4f6925d540f1fc474ff"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.SemanticModel/definition/tables/FactPartitionStatus.tmdl",
+      "bytes": 18717,
+      "sha256": "106d5449d50c563643bca2239f1e0911c6b30c23787ff5e01de6a3cfa87fe6fd"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.SemanticModel/definition/tables/FactProjectCoverage.tmdl",
+      "bytes": 3257,
+      "sha256": "f7a436081e78674278b1e7c49769785bb24685b28c05010e105b4df81cd33146"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.SemanticModel/definition/tables/FactProviderMeasurement.tmdl",
+      "bytes": 3057,
+      "sha256": "0629fa05a0c9721d44a1bdadd6b8225833849367a2c8b5fcd70f700392090533"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.SemanticModel/definition/tables/FactSyntheticDemonstration.tmdl",
+      "bytes": 3827,
+      "sha256": "040087ec54260f1bcbef886272b536ac765f5e6ebf0ad2e9dc169b305611b797"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.SemanticModel/definition/tables/FactValidationStatus.tmdl",
+      "bytes": 5262,
+      "sha256": "d317012e5c950e79e682f5cee10f14942a58f835d5f7326cf89b6faa0ac5903e"
+    },
+    {
+      "path": "Florida_ED_Project_Portfolio_Dashboard.SemanticModel/definition.pbism",
+      "bytes": 166,
+      "sha256": "e761066d848bfaec8496b03ec887aa0a158a8c14a2b359240fc43ca46bb54fcf"
+    }
+  ]
+}

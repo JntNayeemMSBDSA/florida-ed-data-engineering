@@ -1,0 +1,89 @@
+table FactValidationStatus
+	lineageTag: 0f1588f3-2105-4ba5-b6bf-2b6282f88db1
+
+	column ValidationKey
+		dataType: string
+		isHidden
+		lineageTag: d5b29d24-8080-4339-9824-f22ed58b4ca0
+		summarizeBy: none
+		sourceColumn: ValidationKey
+
+	column StageKey
+		dataType: string
+		isHidden
+		lineageTag: 0237cde8-a7a8-4bd5-bd1f-234578d7c473
+		summarizeBy: none
+		sourceColumn: StageKey
+
+	column ValidationCheck
+		dataType: string
+		lineageTag: bc1a79c0-e632-4f59-bbe8-f5e2856195ff
+		summarizeBy: none
+		sourceColumn: ValidationCheck
+		sortByColumn: CheckOrder
+
+	column ValidationStatus
+		dataType: string
+		lineageTag: 9a9c6227-1fb8-41ec-b7da-581bb6d39ab6
+		summarizeBy: none
+		sourceColumn: ValidationStatus
+
+	column EvidenceSummary
+		dataType: string
+		lineageTag: efa05240-2204-43c2-b88a-243a29cb34f6
+		summarizeBy: none
+		sourceColumn: EvidenceSummary
+
+	column CheckOrder
+		dataType: int64
+		isHidden
+		formatString: #,##0
+		lineageTag: d34de6a0-cdb7-46d1-baed-de2dc018667a
+		summarizeBy: none
+		sourceColumn: CheckOrder
+
+	column SourceArtifactKey
+		dataType: string
+		isHidden
+		lineageTag: 92892733-8176-4677-a3fc-21708d6a1b15
+		summarizeBy: none
+		sourceColumn: SourceArtifactKey
+
+	column DisclosureClass
+		dataType: string
+		isHidden
+		lineageTag: dcabebb6-c505-4c21-aca5-01525635508a
+		summarizeBy: none
+		sourceColumn: DisclosureClass
+
+	partition FactValidationStatus = m
+		mode: import
+		source =
+				let
+				    Source = #table(type table [ValidationKey = text, StageKey = text, ValidationCheck = text, ValidationStatus = text, EvidenceSummary = text, CheckOrder = Int64.Type, SourceArtifactKey = text, DisclosureClass = text], {
+				        {"V001", "S01", "Source-to-fact row reconciliation", "PASS", "148,686,146 fact rows equal the reconciled quarter total", 1, "SRC_P1_QA", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"V002", "S01", "Generated encounter-key uniqueness", "PASS", "148,686,146 distinct keys for 148,686,146 fact rows", 2, "SRC_P1_QA", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"V003", "S01", "Excluded-year enforcement", "PASS", "Zero released rows from 2009 and 2025", 3, "SRC_P1_QA", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"V004", "S01", "ICD transition enforcement", "PASS", "Zero ICD-era transition errors", 4, "SRC_P1_QA", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"V005", "S01", "Unsupported-measure semantics", "PASS", "Triage, revisit, and same-facility admission fields remain structural nulls", 5, "SRC_P1_QA", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"V006", "S01", "Facility master uniqueness", "PASS", "240 rows and 240 distinct state facility identifiers", 6, "SRC_P1_QA", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"V007", "S01", "Phase 1 provider-master uniqueness", "PASS", "1,805,795 rows and distinct NPIs", 7, "SRC_P1_QA", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"V008", "S01", "Independent Phase 1 release validation", "PASS", "Required release artifacts and structural checks passed", 8, "SRC_P1_INDEPENDENT", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"V009", "S02", "Provider master v2 uniqueness", "PASS", "1,813,546 unique NPIs and zero duplicates", 9, "SRC_PROVIDER_PUBLIC", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"V010", "S02", "Complete ED-observed NPI universe", "PASS", "Zero ED-observed validated NPIs absent from provider master v2", 10, "SRC_PROVIDER_PUBLIC", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"V011", "S02", "Entity-classification safeguard", "PASS", "Zero organizational NPIs classified as MD/DO", 11, "SRC_PROVIDER_PUBLIC", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"V012", "S02", "Physician-race probability QA", "PASS", "Probability bounds and sum-to-one checks passed", 12, "SRC_RACE_QA", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"V013", "S02", "Physician-gender measurement gate", "PASS", "Estimate-blind recorded-source definition checkpoint passed", 13, "SRC_GENDER_GATE", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"V014", "S02", "Primary cohort reconciliation", "PASS", "60 of 60 primary partitions validated", 14, "SRC_COHORT_PUBLIC", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"V015", "S02", "Phase 1 source immutability in cohort rebuild", "PASS", "Source release was not modified", 15, "SRC_COHORT_PUBLIC", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"V016", "S03", "Historical cohort reconciliation", "PASS", "16 of 16 historical partitions reconciled", 16, "SRC_HISTORICAL_GATE", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"V017", "S03", "Historical hourly-LOS safeguard", "PASS", "Zero prohibited hourly-LOS constructions", 17, "SRC_HISTORICAL_GATE", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"V018", "S03", "Independent historical-results audit", "PASS", "38 of 38 checks passed; findings are not disclosed", 18, "SRC_HISTORICAL_AUDIT", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"V019", "S05", "Verified restart-safe pause", "PAUSED_VERIFIED", "No project process active after the authorized stop", 19, "SRC_PAUSE", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"V020", "S05", "Synthetic schema reconciliation", "PASS", "800 fictional rows reproduced across five schema families", 20, "SRC_SYNTHETIC_QA", "PUBLIC_SAFE_PROJECT_METADATA"}
+				    })
+				in
+				    Source
+
+	annotation PBI_ResultType = Table
+

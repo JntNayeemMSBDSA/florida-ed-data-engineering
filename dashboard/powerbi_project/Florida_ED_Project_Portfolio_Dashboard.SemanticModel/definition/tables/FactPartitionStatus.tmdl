@@ -1,0 +1,171 @@
+table FactPartitionStatus
+	lineageTag: 3d58f0c2-5eea-4fce-b88b-fd1b48573514
+
+	column PartitionKey
+		dataType: string
+		isHidden
+		lineageTag: 6e79a94b-9166-41e1-bbd7-9c41773ff35c
+		summarizeBy: none
+		sourceColumn: PartitionKey
+
+	column PeriodKey
+		dataType: int64
+		isHidden
+		formatString: #,##0
+		lineageTag: da9c47b7-485d-473f-8700-b098f4b797f4
+		summarizeBy: none
+		sourceColumn: PeriodKey
+
+	column SchemaFamilyKey
+		dataType: string
+		isHidden
+		lineageTag: 82276026-7808-4b6d-a8d1-31d923ec8696
+		summarizeBy: none
+		sourceColumn: SchemaFamilyKey
+
+	column PartitionStatus
+		dataType: string
+		lineageTag: ec9e9ff7-5c09-4813-8137-0c296af28e9a
+		summarizeBy: none
+		sourceColumn: PartitionStatus
+
+	column ReconciliationStatus
+		dataType: string
+		lineageTag: 6f0985c8-a412-4dfd-a1bd-5ea69a76b999
+		summarizeBy: none
+		sourceColumn: ReconciliationStatus
+
+	column AvailableFlag
+		dataType: int64
+		formatString: #,##0
+		lineageTag: 12f3af65-5750-424b-af26-0b4b7b115d93
+		summarizeBy: none
+		sourceColumn: AvailableFlag
+
+	column ExclusionReason
+		dataType: string
+		lineageTag: 3a8a5e9c-744d-4427-b7c1-dd3062bb092d
+		summarizeBy: none
+		sourceColumn: ExclusionReason
+
+	column DiagnosisCodeEra
+		dataType: string
+		lineageTag: af489b1e-d815-4f9b-bfb0-8d674b6d8257
+		summarizeBy: none
+		sourceColumn: DiagnosisCodeEra
+
+	column LengthOfStayAvailability
+		dataType: string
+		lineageTag: c7bd81f1-9d40-455d-855d-8026fb31c2e0
+		summarizeBy: none
+		sourceColumn: LengthOfStayAvailability
+
+	column SourceClass
+		dataType: string
+		isHidden
+		lineageTag: 22472d18-1067-4112-9f22-9d363e2218d9
+		summarizeBy: none
+		sourceColumn: SourceClass
+
+	column DisclosureClass
+		dataType: string
+		isHidden
+		lineageTag: 41ec502e-b3e2-4606-b4e7-e8cc3e27b859
+		summarizeBy: none
+		sourceColumn: DisclosureClass
+
+	partition FactPartitionStatus = m
+		mode: import
+		source =
+				let
+				    Source = #table(type table [PartitionKey = text, PeriodKey = Int64.Type, SchemaFamilyKey = text, PartitionStatus = text, ReconciliationStatus = text, AvailableFlag = Int64.Type, ExclusionReason = text, DiagnosisCodeEra = text, LengthOfStayAvailability = text, SourceClass = text, DisclosureClass = text], {
+				        {"PT20051", 20051, "SF1", "COMPLETE", "PASS", 1, null, "ICD-9-CM", "Day-level LOS only", "Project metadata; no encounter rows", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PT20052", 20052, "SF1", "COMPLETE", "PASS", 1, null, "ICD-9-CM", "Day-level LOS only", "Project metadata; no encounter rows", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PT20053", 20053, "SF1", "COMPLETE", "PASS", 1, null, "ICD-9-CM", "Day-level LOS only", "Project metadata; no encounter rows", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PT20054", 20054, "SF1", "COMPLETE", "PASS", 1, null, "ICD-9-CM", "Day-level LOS only", "Project metadata; no encounter rows", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PT20061", 20061, "SF1", "COMPLETE", "PASS", 1, null, "ICD-9-CM", "Day-level LOS only", "Project metadata; no encounter rows", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PT20062", 20062, "SF1", "COMPLETE", "PASS", 1, null, "ICD-9-CM", "Day-level LOS only", "Project metadata; no encounter rows", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PT20063", 20063, "SF1", "COMPLETE", "PASS", 1, null, "ICD-9-CM", "Day-level LOS only", "Project metadata; no encounter rows", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PT20064", 20064, "SF1", "COMPLETE", "PASS", 1, null, "ICD-9-CM", "Day-level LOS only", "Project metadata; no encounter rows", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PT20071", 20071, "SF1", "COMPLETE", "PASS", 1, null, "ICD-9-CM", "Day-level LOS only", "Project metadata; no encounter rows", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PT20072", 20072, "SF1", "COMPLETE", "PASS", 1, null, "ICD-9-CM", "Day-level LOS only", "Project metadata; no encounter rows", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PT20073", 20073, "SF1", "COMPLETE", "PASS", 1, null, "ICD-9-CM", "Day-level LOS only", "Project metadata; no encounter rows", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PT20074", 20074, "SF1", "COMPLETE", "PASS", 1, null, "ICD-9-CM", "Day-level LOS only", "Project metadata; no encounter rows", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PT20081", 20081, "SF1", "COMPLETE", "PASS", 1, null, "ICD-9-CM", "Day-level LOS only", "Project metadata; no encounter rows", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PT20082", 20082, "SF1", "COMPLETE", "PASS", 1, null, "ICD-9-CM", "Day-level LOS only", "Project metadata; no encounter rows", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PT20083", 20083, "SF1", "COMPLETE", "PASS", 1, null, "ICD-9-CM", "Day-level LOS only", "Project metadata; no encounter rows", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PT20084", 20084, "SF1", "COMPLETE", "PASS", 1, null, "ICD-9-CM", "Day-level LOS only", "Project metadata; no encounter rows", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PT20091", 20091, null, "EXCLUDED", "NOT_APPLICABLE", 0, "Year excluded by project instruction", "Not processed", "Not processed", "Project metadata; no encounter rows", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PT20092", 20092, null, "EXCLUDED", "NOT_APPLICABLE", 0, "Year excluded by project instruction", "Not processed", "Not processed", "Project metadata; no encounter rows", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PT20093", 20093, null, "EXCLUDED", "NOT_APPLICABLE", 0, "Year excluded by project instruction", "Not processed", "Not processed", "Project metadata; no encounter rows", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PT20094", 20094, null, "EXCLUDED", "NOT_APPLICABLE", 0, "Year excluded by project instruction", "Not processed", "Not processed", "Project metadata; no encounter rows", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PT20101", 20101, "SF2", "COMPLETE", "PASS", 1, null, "ICD-9-CM", "Clock-derived hourly LOS eligible in Phase 2", "Project metadata; no encounter rows", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PT20102", 20102, "SF2", "COMPLETE", "PASS", 1, null, "ICD-9-CM", "Clock-derived hourly LOS eligible in Phase 2", "Project metadata; no encounter rows", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PT20103", 20103, "SF2", "COMPLETE", "PASS", 1, null, "ICD-9-CM", "Clock-derived hourly LOS eligible in Phase 2", "Project metadata; no encounter rows", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PT20104", 20104, "SF2", "COMPLETE", "PASS", 1, null, "ICD-9-CM", "Clock-derived hourly LOS eligible in Phase 2", "Project metadata; no encounter rows", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PT20111", 20111, "SF2", "COMPLETE", "PASS", 1, null, "ICD-9-CM", "Clock-derived hourly LOS eligible in Phase 2", "Project metadata; no encounter rows", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PT20112", 20112, "SF2", "COMPLETE", "PASS", 1, null, "ICD-9-CM", "Clock-derived hourly LOS eligible in Phase 2", "Project metadata; no encounter rows", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PT20113", 20113, "SF2", "COMPLETE", "PASS", 1, null, "ICD-9-CM", "Clock-derived hourly LOS eligible in Phase 2", "Project metadata; no encounter rows", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PT20114", 20114, "SF2", "COMPLETE", "PASS", 1, null, "ICD-9-CM", "Clock-derived hourly LOS eligible in Phase 2", "Project metadata; no encounter rows", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PT20121", 20121, "SF2", "COMPLETE", "PASS", 1, null, "ICD-9-CM", "Clock-derived hourly LOS eligible in Phase 2", "Project metadata; no encounter rows", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PT20122", 20122, "SF2", "COMPLETE", "PASS", 1, null, "ICD-9-CM", "Clock-derived hourly LOS eligible in Phase 2", "Project metadata; no encounter rows", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PT20123", 20123, "SF2", "COMPLETE", "PASS", 1, null, "ICD-9-CM", "Clock-derived hourly LOS eligible in Phase 2", "Project metadata; no encounter rows", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PT20124", 20124, "SF2", "COMPLETE", "PASS", 1, null, "ICD-9-CM", "Clock-derived hourly LOS eligible in Phase 2", "Project metadata; no encounter rows", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PT20131", 20131, "SF2", "COMPLETE", "PASS", 1, null, "ICD-9-CM", "Clock-derived hourly LOS eligible in Phase 2", "Project metadata; no encounter rows", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PT20132", 20132, "SF2", "COMPLETE", "PASS", 1, null, "ICD-9-CM", "Clock-derived hourly LOS eligible in Phase 2", "Project metadata; no encounter rows", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PT20133", 20133, "SF2", "COMPLETE", "PASS", 1, null, "ICD-9-CM", "Clock-derived hourly LOS eligible in Phase 2", "Project metadata; no encounter rows", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PT20134", 20134, "SF2", "COMPLETE", "PASS", 1, null, "ICD-9-CM", "Clock-derived hourly LOS eligible in Phase 2", "Project metadata; no encounter rows", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PT20141", 20141, "SF2", "COMPLETE", "PASS", 1, null, "ICD-9-CM", "Clock-derived hourly LOS eligible in Phase 2", "Project metadata; no encounter rows", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PT20142", 20142, "SF2", "COMPLETE", "PASS", 1, null, "ICD-9-CM", "Clock-derived hourly LOS eligible in Phase 2", "Project metadata; no encounter rows", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PT20143", 20143, "SF2", "COMPLETE", "PASS", 1, null, "ICD-9-CM", "Clock-derived hourly LOS eligible in Phase 2", "Project metadata; no encounter rows", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PT20144", 20144, "SF2", "COMPLETE", "PASS", 1, null, "ICD-9-CM", "Clock-derived hourly LOS eligible in Phase 2", "Project metadata; no encounter rows", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PT20151", 20151, "SF2", "COMPLETE", "PASS", 1, null, "ICD-9-CM", "Clock-derived hourly LOS eligible in Phase 2", "Project metadata; no encounter rows", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PT20152", 20152, "SF2", "COMPLETE", "PASS", 1, null, "ICD-9-CM", "Clock-derived hourly LOS eligible in Phase 2", "Project metadata; no encounter rows", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PT20153", 20153, "SF2", "COMPLETE", "PASS", 1, null, "ICD-9-CM", "Clock-derived hourly LOS eligible in Phase 2", "Project metadata; no encounter rows", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PT20154", 20154, "SF3", "COMPLETE", "PASS", 1, null, "ICD-10-CM", "Clock-derived hourly LOS eligible in Phase 2", "Project metadata; no encounter rows", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PT20161", 20161, "SF3", "COMPLETE", "PASS", 1, null, "ICD-10-CM", "Clock-derived hourly LOS eligible in Phase 2", "Project metadata; no encounter rows", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PT20162", 20162, "SF3", "COMPLETE", "PASS", 1, null, "ICD-10-CM", "Clock-derived hourly LOS eligible in Phase 2", "Project metadata; no encounter rows", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PT20163", 20163, "SF3", "COMPLETE", "PASS", 1, null, "ICD-10-CM", "Clock-derived hourly LOS eligible in Phase 2", "Project metadata; no encounter rows", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PT20164", 20164, "SF3", "COMPLETE", "PASS", 1, null, "ICD-10-CM", "Clock-derived hourly LOS eligible in Phase 2", "Project metadata; no encounter rows", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PT20171", 20171, "SF3", "COMPLETE", "PASS", 1, null, "ICD-10-CM", "Clock-derived hourly LOS eligible in Phase 2", "Project metadata; no encounter rows", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PT20172", 20172, "SF3", "COMPLETE", "PASS", 1, null, "ICD-10-CM", "Clock-derived hourly LOS eligible in Phase 2", "Project metadata; no encounter rows", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PT20173", 20173, "SF3", "COMPLETE", "PASS", 1, null, "ICD-10-CM", "Clock-derived hourly LOS eligible in Phase 2", "Project metadata; no encounter rows", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PT20174", 20174, "SF3", "COMPLETE", "PASS", 1, null, "ICD-10-CM", "Clock-derived hourly LOS eligible in Phase 2", "Project metadata; no encounter rows", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PT20181", 20181, "SF4", "COMPLETE", "PASS", 1, null, "ICD-10-CM", "Clock-derived hourly LOS eligible in Phase 2", "Project metadata; no encounter rows", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PT20182", 20182, "SF4", "COMPLETE", "PASS", 1, null, "ICD-10-CM", "Clock-derived hourly LOS eligible in Phase 2", "Project metadata; no encounter rows", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PT20183", 20183, "SF4", "COMPLETE", "PASS", 1, null, "ICD-10-CM", "Clock-derived hourly LOS eligible in Phase 2", "Project metadata; no encounter rows", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PT20184", 20184, "SF4", "COMPLETE", "PASS", 1, null, "ICD-10-CM", "Clock-derived hourly LOS eligible in Phase 2", "Project metadata; no encounter rows", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PT20191", 20191, "SF4", "COMPLETE", "PASS", 1, null, "ICD-10-CM", "Clock-derived hourly LOS eligible in Phase 2", "Project metadata; no encounter rows", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PT20192", 20192, "SF4", "COMPLETE", "PASS", 1, null, "ICD-10-CM", "Clock-derived hourly LOS eligible in Phase 2", "Project metadata; no encounter rows", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PT20193", 20193, "SF4", "COMPLETE", "PASS", 1, null, "ICD-10-CM", "Clock-derived hourly LOS eligible in Phase 2", "Project metadata; no encounter rows", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PT20194", 20194, "SF4", "COMPLETE", "PASS", 1, null, "ICD-10-CM", "Clock-derived hourly LOS eligible in Phase 2", "Project metadata; no encounter rows", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PT20201", 20201, "SF4", "COMPLETE", "PASS", 1, null, "ICD-10-CM", "Clock-derived hourly LOS eligible in Phase 2", "Project metadata; no encounter rows", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PT20202", 20202, "SF4", "COMPLETE", "PASS", 1, null, "ICD-10-CM", "Clock-derived hourly LOS eligible in Phase 2", "Project metadata; no encounter rows", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PT20203", 20203, "SF4", "COMPLETE", "PASS", 1, null, "ICD-10-CM", "Clock-derived hourly LOS eligible in Phase 2", "Project metadata; no encounter rows", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PT20204", 20204, "SF4", "COMPLETE", "PASS", 1, null, "ICD-10-CM", "Clock-derived hourly LOS eligible in Phase 2", "Project metadata; no encounter rows", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PT20211", 20211, "SF4", "COMPLETE", "PASS", 1, null, "ICD-10-CM", "Clock-derived hourly LOS eligible in Phase 2", "Project metadata; no encounter rows", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PT20212", 20212, "SF4", "COMPLETE", "PASS", 1, null, "ICD-10-CM", "Clock-derived hourly LOS eligible in Phase 2", "Project metadata; no encounter rows", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PT20213", 20213, "SF4", "COMPLETE", "PASS", 1, null, "ICD-10-CM", "Clock-derived hourly LOS eligible in Phase 2", "Project metadata; no encounter rows", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PT20214", 20214, "SF4", "COMPLETE", "PASS", 1, null, "ICD-10-CM", "Clock-derived hourly LOS eligible in Phase 2", "Project metadata; no encounter rows", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PT20221", 20221, "SF4", "COMPLETE", "PASS", 1, null, "ICD-10-CM", "Clock-derived hourly LOS eligible in Phase 2", "Project metadata; no encounter rows", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PT20222", 20222, "SF4", "COMPLETE", "PASS", 1, null, "ICD-10-CM", "Clock-derived hourly LOS eligible in Phase 2", "Project metadata; no encounter rows", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PT20223", 20223, "SF4", "COMPLETE", "PASS", 1, null, "ICD-10-CM", "Clock-derived hourly LOS eligible in Phase 2", "Project metadata; no encounter rows", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PT20224", 20224, "SF4", "COMPLETE", "PASS", 1, null, "ICD-10-CM", "Clock-derived hourly LOS eligible in Phase 2", "Project metadata; no encounter rows", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PT20231", 20231, "SF5", "COMPLETE", "PASS", 1, null, "ICD-10-CM", "Clock-derived hourly LOS eligible in Phase 2", "Project metadata; no encounter rows", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PT20232", 20232, "SF5", "COMPLETE", "PASS", 1, null, "ICD-10-CM", "Clock-derived hourly LOS eligible in Phase 2", "Project metadata; no encounter rows", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PT20233", 20233, "SF5", "COMPLETE", "PASS", 1, null, "ICD-10-CM", "Clock-derived hourly LOS eligible in Phase 2", "Project metadata; no encounter rows", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PT20234", 20234, "SF5", "COMPLETE", "PASS", 1, null, "ICD-10-CM", "Clock-derived hourly LOS eligible in Phase 2", "Project metadata; no encounter rows", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PT20241", 20241, "SF5", "COMPLETE", "PASS", 1, null, "ICD-10-CM", "Clock-derived hourly LOS eligible in Phase 2", "Project metadata; no encounter rows", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PT20242", 20242, "SF5", "COMPLETE", "PASS", 1, null, "ICD-10-CM", "Clock-derived hourly LOS eligible in Phase 2", "Project metadata; no encounter rows", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PT20243", 20243, "SF5", "COMPLETE", "PASS", 1, null, "ICD-10-CM", "Clock-derived hourly LOS eligible in Phase 2", "Project metadata; no encounter rows", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PT20244", 20244, "SF5", "COMPLETE", "PASS", 1, null, "ICD-10-CM", "Clock-derived hourly LOS eligible in Phase 2", "Project metadata; no encounter rows", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PT20251", 20251, null, "EXCLUDED", "NOT_APPLICABLE", 0, "Year excluded by project instruction", "Not processed", "Not processed", "Project metadata; no encounter rows", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PT20252", 20252, null, "EXCLUDED", "NOT_APPLICABLE", 0, "Year excluded by project instruction", "Not processed", "Not processed", "Project metadata; no encounter rows", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PT20253", 20253, null, "EXCLUDED", "NOT_APPLICABLE", 0, "Year excluded by project instruction", "Not processed", "Not processed", "Project metadata; no encounter rows", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PT20254", 20254, null, "EXCLUDED", "NOT_APPLICABLE", 0, "Year excluded by project instruction", "Not processed", "Not processed", "Project metadata; no encounter rows", "PUBLIC_SAFE_PROJECT_METADATA"}
+				    })
+				in
+				    Source
+
+	annotation PBI_ResultType = Table
+

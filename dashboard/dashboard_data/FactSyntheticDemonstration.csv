@@ -1,0 +1,14 @@
+DemoMetricKey,DemoSection,Category,MetricName,MetricValue,DemoStatus,SyntheticFlag,SourceArtifactKey,DisclosureClass
+SD001,Schema reconciliation,schema_1_2005_2008,Input rows,160,PASS,true,SRC_SYNTHETIC_SCHEMA,SYNTHETIC_PUBLIC_SAFE
+SD002,Schema reconciliation,schema_1_2005_2008,Output rows,160,PASS,true,SRC_SYNTHETIC_SCHEMA,SYNTHETIC_PUBLIC_SAFE
+SD003,Schema reconciliation,schema_2_2010_2015q3,Input rows,160,PASS,true,SRC_SYNTHETIC_SCHEMA,SYNTHETIC_PUBLIC_SAFE
+SD004,Schema reconciliation,schema_2_2010_2015q3,Output rows,160,PASS,true,SRC_SYNTHETIC_SCHEMA,SYNTHETIC_PUBLIC_SAFE
+SD005,Schema reconciliation,schema_3_2015q4_2017,Input rows,160,PASS,true,SRC_SYNTHETIC_SCHEMA,SYNTHETIC_PUBLIC_SAFE
+SD006,Schema reconciliation,schema_3_2015q4_2017,Output rows,160,PASS,true,SRC_SYNTHETIC_SCHEMA,SYNTHETIC_PUBLIC_SAFE
+SD007,Schema reconciliation,schema_4_2018_2022,Input rows,160,PASS,true,SRC_SYNTHETIC_SCHEMA,SYNTHETIC_PUBLIC_SAFE
+SD008,Schema reconciliation,schema_4_2018_2022,Output rows,160,PASS,true,SRC_SYNTHETIC_SCHEMA,SYNTHETIC_PUBLIC_SAFE
+SD009,Schema reconciliation,schema_5_2023_2024,Input rows,160,PASS,true,SRC_SYNTHETIC_SCHEMA,SYNTHETIC_PUBLIC_SAFE
+SD010,Schema reconciliation,schema_5_2023_2024,Output rows,160,PASS,true,SRC_SYNTHETIC_SCHEMA,SYNTHETIC_PUBLIC_SAFE
+SD011,Clinical category demonstration,Acute myocardial infarction,Synthetic rows,260,PASS,true,SRC_SYNTHETIC_CATEGORY,SYNTHETIC_PUBLIC_SAFE
+SD012,Clinical category demonstration,Chest pain,Synthetic rows,276,PASS,true,SRC_SYNTHETIC_CATEGORY,SYNTHETIC_PUBLIC_SAFE
+SD013,Clinical category demonstration,Diabetes mellitus,Synthetic rows,264,PASS,true,SRC_SYNTHETIC_CATEGORY,SYNTHETIC_PUBLIC_SAFE

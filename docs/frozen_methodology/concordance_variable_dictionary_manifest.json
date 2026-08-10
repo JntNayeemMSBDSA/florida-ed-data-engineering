@@ -1,0 +1,16 @@
+{
+  "created_utc": "2026-07-26T18:46:29.766697+00:00",
+  "tables": [
+    "concordance_visit_core",
+    "concordance_charge_components",
+    "concordance_elixhauser_flags",
+    "visit_discretion_outcomes"
+  ],
+  "model_designs": [
+    "race",
+    "sex_gender"
+  ],
+  "includes_complete_model_outcome_catalog": true,
+  "variables": 664,
+  "status": "complete"
+}

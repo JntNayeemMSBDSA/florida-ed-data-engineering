@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Florida_ED_Project_Portfolio_Dashboard"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "7b241fac-cfa6-4dd6-87b1-0e3068d1c80f"
+  }
+}

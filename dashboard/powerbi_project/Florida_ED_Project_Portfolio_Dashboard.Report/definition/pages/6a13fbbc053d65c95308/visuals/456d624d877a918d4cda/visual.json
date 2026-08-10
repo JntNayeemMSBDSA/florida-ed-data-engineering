@@ -1,0 +1,72 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "456d624d877a918d4cda",
+  "position": {
+    "x": 24,
+    "y": 188,
+    "z": 0,
+    "height": 220,
+    "width": 560,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "clusteredBarChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimMetric"
+                    }
+                  },
+                  "Property": "MetricName"
+                }
+              },
+              "queryRef": "DimMetric.MetricName",
+              "nativeQueryRef": "MetricName",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Dashboard Measures"
+                    }
+                  },
+                  "Property": "Selected Provider Category Value"
+                }
+              },
+              "queryRef": "Dashboard Measures.Selected Provider Category Value",
+              "nativeQueryRef": "Selected Provider Category Value"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Selected ED-observed provider categories — not a complete distribution'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

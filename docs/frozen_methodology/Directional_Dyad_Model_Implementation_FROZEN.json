@@ -1,0 +1,368 @@
+{
+  "status": "FROZEN_ESTIMATE_BLIND_PASS",
+  "implementation_version": "directional_dyad_model_implementation_v1_20260726",
+  "frozen_utc": "2026-07-27T07:46:08.799633+00:00",
+  "coefficient_or_outcome_estimates_read_by_freeze_script": false,
+  "preexisting_directional_adjusted_result_files": 0,
+  "postfreeze_schema_compatibility_correction": {
+    "script": "scripts/16_apply_multiple_testing.py",
+    "scope": "Accept the already-audited historical AMI field name cohort_definition as a schema alias for definition when constructing its unchanged BH multiplicity-family label.",
+    "scientific_specification_changed": false,
+    "sample_outcome_estimator_contrast_or_multiplicity_changed": false,
+    "timing": "Detected by static header review while the non-directional common-primary race M2 computation was still running and before any real directional result file existed.",
+    "result_values_read_to_make_correction": false
+  },
+  "parent_extension": {
+    "path": "documentation/Directional_Dyad_Analysis_Plan_Extension_FROZEN.json",
+    "bytes": 470931,
+    "sha256": "3574fd278d194042dabddb7abe7a9e9ecf9f3b8e5f06fa9e48d3a44836a00d5a"
+  },
+  "implementation_document": {
+    "path": "documentation/Directional_Dyad_Model_Implementation_Specification.md",
+    "bytes": 9319,
+    "sha256": "51b76a5ece6858862fbe2b5f0cce7edfe1350cf0549dd6124f3916cc2be498c1"
+  },
+  "bindings": {
+    "directional_base_manifest": {
+      "path": "analysis_data/directional_dyad_base/directional_dyad_base_manifest.json",
+      "bytes": 12720,
+      "sha256": "ade03546ea7652999284e55993f5f9ecc35ec71337d9dec729febd291d0228f5"
+    },
+    "directional_base_independent_audit": {
+      "path": "qa/independent_directional_dyad_base_audit.json",
+      "bytes": 27554,
+      "sha256": "2aa89c2b2c0b6dc89725e4270e311bfb116595e5be5c9eb6621308fff0e306c1"
+    },
+    "directional_support_manifest": {
+      "path": "results/directional_dyads/support/directional_support_manifest.json",
+      "bytes": 2883,
+      "sha256": "0cf374b3c9b574371baa8baa5993e828019d5a8ebdeb6b1fd81a5cb74ebfe7e3"
+    },
+    "directional_support_gate": {
+      "path": "qa/directional_cell_support_gate.json",
+      "bytes": 741,
+      "sha256": "0e9fc38aaf7633b5bcab0b797df892b2257604bf2f2fc35d1b0898a52ecd96df"
+    },
+    "directional_support_independent_audit": {
+      "path": "qa/independent_directional_cell_support_audit.json",
+      "bytes": 2158,
+      "sha256": "fa457c7ed1e86ef272bb21cb779495e4510ce3b904b8426fb745cd83b6bea965"
+    },
+    "provider_measurement_gate": {
+      "path": "qa/pre_estimation_measurement_gate.json",
+      "bytes": 15653,
+      "sha256": "575095a279b632b407792142b6d92ec596a1d073781a6306479cfc695f22c786"
+    },
+    "cohort_validation_gate": {
+      "path": "qa/cohort_validation_report.json",
+      "bytes": 2148,
+      "sha256": "153197dd95d814b5189706f42e8f85bc5b74991266db81185343508acc688275"
+    },
+    "directional_extension_gate": {
+      "path": "qa/directional_dyad_extension_pre_estimation_gate.json",
+      "bytes": 1451,
+      "sha256": "416771e528cc1f41c9cbf869f446921e3777c0fa75d7bf676b131176c14ed4b8"
+    }
+  },
+  "cell_encodings": {
+    "gender": "Four mutually exclusive recorded physician-gender by recorded patient-sex indicators.",
+    "race": "X[r,p] = posterior_physician_race[r] * I(recorded_patient_group=p); 25 columns sum to one.",
+    "intersectional": "X[r,g,p,s] = posterior_physician_race[r] * I(recorded_physician_gender=g) * I(recorded_patient_group=p) * I(recorded_patient_sex=s); 100 columns sum to one.",
+    "primary_race_prior": "AAMC 2020 Florida active-physician five-class prior",
+    "hard_and_prior_sensitivities": [
+      "hard maximum-posterior classification at t50",
+      "hard thresholds t70, t80, and t90",
+      "wru 2020 national population prior probability model",
+      "wru national-prior hard classifications",
+      "physician-level multiple imputation under alternative prior"
+    ],
+    "multiple_imputation": "20 draws at NPI level; one race draw per NPI per imputation, fixed across all visits."
+  },
+  "outcomes": {
+    "frozen_primary_outcome_definitions_secondary_directional_use": [
+      "los_hours_primary_0_168",
+      "total_charge_reported_real_2024"
+    ],
+    "resource": [
+      "procedure_count_analysis",
+      "any_procedure_flag",
+      "high_procedure_flag",
+      "em_acuity_proxy_level",
+      "em_critical_care_flag"
+    ],
+    "disposition": [
+      "routine_discharge_flag",
+      "transfer_flag",
+      "hospice_flag",
+      "mortality_flag",
+      "left_discontinued_care_flag"
+    ],
+    "charge_components": [
+      "aneschgs_real_2024",
+      "cardiochgs_real_2024",
+      "erchgs_real_2024",
+      "gastrochgs_real_2024",
+      "labchgs_real_2024",
+      "lithochgs_real_2024",
+      "medchgs_real_2024",
+      "obserchgs_real_2024",
+      "oprmchgs_real_2024",
+      "othchgs_real_2024",
+      "pharmchgs_real_2024",
+      "radchgs_real_2024",
+      "recovchgs_real_2024",
+      "traumachgs_real_2024"
+    ],
+    "clinical_discretion_exploratory": [
+      "higher_discretion_procedure_count",
+      "lower_discretion_procedure_count",
+      "ambiguous_discretion_procedure_count",
+      "any_higher_discretion_candidate_flag",
+      "any_lower_discretion_candidate_flag",
+      "higher_minus_lower_discretion_procedure_count",
+      "any_higher_minus_any_lower_discretion_candidate"
+    ],
+    "outcome_sample_rule": "Each outcome uses its complete eligible outcome-specific sample. No outcome is imputed. Primary-period hourly LOS and reported real charges retain their frozen definitions."
+  },
+  "outcome_sample_rule": "Complete outcome-specific eligible sample; no outcome imputation.",
+  "model_sequence": [
+    {
+      "model_id": "U0",
+      "description": "Unadjusted saturated directional cell means and frozen linear contrasts on each outcome-specific eligible sample.",
+      "fixed_effects": [],
+      "covariates": [],
+      "inference": "Two-way CRV1 by attending NPI and facility when support permits; raw cell summaries are always retained."
+    },
+    {
+      "model_id": "M2_DIRECTIONAL",
+      "description": "Joint factorial linear model or linear probability model with standardized adjusted cell predictions and marginal linear contrasts.",
+      "fixed_effects": [
+        "facility_by_year_quarter",
+        "principal_clinical_category"
+      ],
+      "covariates": [
+        "age spline and missing flag",
+        "payer group",
+        "patient ZIP rurality",
+        "weekend/off-hours/arrival-time band",
+        "Elixhauser indicators and count",
+        "physician ED-specialist status",
+        "physician-experience spline and missing flag",
+        "log physician-quarter ED volume and missing flag",
+        "recorded patient sex in non-intersectional race models",
+        "compatible recorded patient race/ethnicity in gender models"
+      ],
+      "inference": "Two-way physician/facility CRV1; facility wild-score bootstrap sensitivity for frozen primary-outcome directional contrasts selected before fitting."
+    },
+    {
+      "model_id": "M3_WITHIN_PHYSICIAN",
+      "description": "Within-physician sensitivity with physician, facility-by-year-quarter, and principal-clinical-category fixed effects. Time-invariant physician-group main effects are absorbed; report only identified within-physician patient simple effects and interaction differences.",
+      "fixed_effects": [
+        "attending_npi",
+        "facility_by_year_quarter",
+        "principal_clinical_category"
+      ],
+      "covariates": "same baseline covariates as M2_DIRECTIONAL",
+      "inference": "Two-way physician/facility CRV1"
+    }
+  ],
+  "covariate_contract": {
+    "age": [
+      "age",
+      "positive_part(age-18)",
+      "positive_part(age-45)",
+      "positive_part(age-65)",
+      "positive_part(age-80)",
+      "age_missing"
+    ],
+    "patient_visit": [
+      "payer categorical",
+      "patient ZIP rurality categorical",
+      "weekend and missing",
+      "off-hours and missing",
+      "arrival-time band categorical"
+    ],
+    "risk": [
+      "all validated Elixhauser flags",
+      "Elixhauser condition count"
+    ],
+    "physician": [
+      "ED specialist and missing",
+      "experience",
+      "positive_part(experience-10)",
+      "positive_part(experience-20)",
+      "positive_part(experience-30)",
+      "experience missing",
+      "log1p physician-quarter ED volume",
+      "physician-quarter volume missing"
+    ],
+    "family_specific": {
+      "race": "recorded patient sex covariates",
+      "gender": "compatible recorded patient race/ethnicity covariates",
+      "intersectional": "no duplicate patient race or sex main-effect covariates outside the saturated 100-cell basis"
+    }
+  },
+  "fixed_effects": {
+    "M2_DIRECTIONAL": [
+      "facility_by_year_quarter",
+      "principal_clinical_category"
+    ],
+    "M3_WITHIN_PHYSICIAN": [
+      "attending_npi",
+      "facility_by_year_quarter",
+      "principal_clinical_category"
+    ]
+  },
+  "inference": {
+    "primary_covariance": "Two-way CRV1 by attending NPI and facility",
+    "bootstrap": "Facility wild-score bootstrap, 9,999 draws, for frozen primary-outcome directional contrasts selected pre-fit.",
+    "confidence_level": 0.95,
+    "nonfinite_policy": "Fail closed and mark NON_ESTIMABLE."
+  },
+  "adjusted_prediction": {
+    "M2_formula": "mean(y) + (target_cell - mean_observed_cell_composition)'beta",
+    "variance": "(target_cell - mean_observed_cell_composition)' V (target_cell - mean_observed_cell_composition)",
+    "reason": "The saturated cell basis sums to one and its common level is absorbed by fixed effects; the anchored formula is invariant to the arbitrary absorbed coefficient level.",
+    "M3_policy": "Report only identified within-physician simple effects and interaction differences, not absolute physician-group cells."
+  },
+  "support_and_estimability": {
+    "primary_2010_2024": {
+      "minimum_visits_or_probability_weighted_effective_visits": 1000,
+      "minimum_unique_physicians_or_kish_effective_physicians": 30,
+      "minimum_facilities": 20,
+      "minimum_physician_clusters": 30,
+      "minimum_facility_clusters": 20,
+      "limited_support_flag": "visits/effective visits < 5000 OR physicians/effective physicians < 50 OR facilities < 30"
+    },
+    "historical_2005_2008": {
+      "minimum_visits_or_probability_weighted_effective_visits": 250,
+      "minimum_unique_physicians_or_kish_effective_physicians": 20,
+      "minimum_facilities": 15,
+      "minimum_physician_clusters": 20,
+      "minimum_facility_clusters": 15,
+      "limited_support_flag": "visits/effective visits < 1000 OR physicians/effective physicians < 30 OR facilities < 20"
+    },
+    "contrast_rule": "Every nonzero-weight cell must meet its period threshold; the contrast vector must be identified, its variance finite and nonnegative, and both clustering dimensions must meet the threshold. Otherwise mark NON_ESTIMABLE and retain the cell.",
+    "sparse_group_rule": "Never merge a sparse race, ethnicity, sex, or gender cell. Report counts and mark LIMITED_SUPPORT or NON_ESTIMABLE."
+  },
+  "multiplicity": {
+    "method": "Benjamini-Hochberg false-discovery-rate adjustment",
+    "confirmatory_family_unchanged": "The original confirmatory family remains exactly the two frozen Black/White M2 interaction contrasts for outcome-specific LOS and reported real-charge samples, with Holm adjustment. No new directional contrast is added to or relabelled as confirmatory.",
+    "directional_families": [
+      {
+        "family_id": "gender_directional_primary_outcomes",
+        "members": "6 planned contrasts x 2 frozen primary outcomes",
+        "tier": "secondary extension except originally frozen four-cell interaction remains originally prespecified"
+      },
+      {
+        "family_id": "race_directional_primary_outcomes",
+        "members": "68 planned contrasts x 2 frozen primary outcomes",
+        "tier": "secondary extension except originally frozen Black/White four-cell interaction remains originally prespecified"
+      },
+      {
+        "family_id": "intersectional_directional_primary_outcomes",
+        "members": "359 planned contrasts x 2 frozen primary outcomes",
+        "tier": "exploratory extension"
+      },
+      {
+        "family_id": "directional_resource_outcomes",
+        "members": "separate by gender/race/intersectional family",
+        "tier": "secondary for gender/race; exploratory intersectional"
+      },
+      {
+        "family_id": "directional_disposition_outcomes",
+        "members": "separate by gender/race/intersectional family",
+        "tier": "secondary for gender/race; exploratory intersectional"
+      },
+      {
+        "family_id": "directional_charge_components",
+        "members": "separate by gender/race/intersectional family",
+        "tier": "secondary for gender/race; exploratory intersectional"
+      },
+      {
+        "family_id": "directional_discretion_outcomes",
+        "members": "separate by gender/race/intersectional family",
+        "tier": "exploratory pending clinician review"
+      }
+    ],
+    "reporting": "Every result row retains raw p-value, BH q-value, 95% confidence interval, family ID, tier, outcome sample, and estimability status. No finding is selected by q-value."
+  },
+  "storage_and_restart": {
+    "matrix_scope": "Outcome-specific, or grouped only for exactly identical availability masks.",
+    "estimation_precision": "float64",
+    "lower_precision_policy": "Prohibited unless independently benchmarked and logged before use; never used for final cross-products/covariance.",
+    "writes": "Atomic, restartable, hash-bound.",
+    "compaction": "Only after independent matrix/result checkpoint passes."
+  },
+  "required_preinterpretation_audits": [
+    "directional definition unit tests",
+    "outcome-specific matrix/hash/support/rank audit",
+    "numerical and convergence audit",
+    "selected covariance and contrast audit",
+    "multiplicity audit",
+    "gender directional results audit",
+    "race directional results audit",
+    "intersectional directional results audit"
+  ],
+  "code_inventory": [
+    {
+      "path": "scripts/07_prepare_primary_model_matrix.py",
+      "bytes": 60908,
+      "sha256": "62ae3417c3685c9f81da754caa5ac1a74c1ad3fb0b8d14c9bcd3cd3e76a01471"
+    },
+    {
+      "path": "scripts/08_estimate_primary_models.py",
+      "bytes": 39148,
+      "sha256": "fe6a21ca466dd58919b9e13e6b3ec511dbaf175fbf54f29d5ae38bbb3e6bc8c9"
+    },
+    {
+      "path": "scripts/09_validate_hdfe_engine.py",
+      "bytes": 6433,
+      "sha256": "deb279ecfb4a027a5b1bd44741168d071794d7892d168aae911518a5edecf8ab"
+    },
+    {
+      "path": "scripts/16_apply_multiple_testing.py",
+      "bytes": 20922,
+      "sha256": "870e1b056d66ecbb032815d6fa3e2c00e4c07ab588ee537d85c639a8cfb76da7"
+    },
+    {
+      "path": "scripts/23_race_proxy_multiple_imputation.py",
+      "bytes": 13706,
+      "sha256": "a4f29ae7cccd4374e81db47611956ab4dfd57489de4e6ede4472fd47e2f40639"
+    },
+    {
+      "path": "scripts/30e_checkpoint_primary_matrix_audit.py",
+      "bytes": 21751,
+      "sha256": "edc4171cc2dd55ba554013666933f8b300f433bba517b2a2105adae674d1113b"
+    },
+    {
+      "path": "scripts/35_build_directional_dyad_base.py",
+      "bytes": 26690,
+      "sha256": "5d81768d53e34e72ce521b1e4e3b5c179aef0f525b8382b83fa782e94a288b60"
+    },
+    {
+      "path": "scripts/35b_independent_directional_dyad_base_audit.py",
+      "bytes": 35744,
+      "sha256": "ab84091268d62d5095c53858340385f9de06531eabc90d61247615c8ab831ef3"
+    },
+    {
+      "path": "scripts/37_build_directional_cell_support.py",
+      "bytes": 27249,
+      "sha256": "75745fbbadbc2d61e5f16b8b032a44601af38c10e4f439b34f3ab3f251c487da"
+    },
+    {
+      "path": "scripts/37b_independent_directional_cell_support_audit.py",
+      "bytes": 19110,
+      "sha256": "4b93faf86fe08a365178bffd84c28628e63e44658ad35d54512b7dac8d790d99"
+    },
+    {
+      "path": "scripts/38_freeze_directional_model_implementation.py",
+      "bytes": 14688,
+      "sha256": "d0bfabb9e4b8b3e018a2c06da2c45554773b64ea94478462b5d71884e1e82231"
+    }
+  ],
+  "language_rule": "Use association language only. Do not label any directional estimate an impact, causal effect, discrimination, concordance mechanism, or proof of clinician behavior.",
+  "fail_closed_rule": "A matrix or result is invalid unless it reproduces the exact extension-manifest hash and every provider, cohort, measurement gate, source-registry, partition, and input-matrix hash stored here. Independent validation is required before viewing or reporting estimates.",
+  "source_release_modified": false,
+  "phase2_cohort_modified": false
+}

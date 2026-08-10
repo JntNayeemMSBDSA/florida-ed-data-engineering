@@ -1,0 +1,39 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "7952179dc194b4c439f2",
+  "position": {
+    "x": 24,
+    "y": 438,
+    "z": 20,
+    "height": 170,
+    "width": 394,
+    "tabOrder": 20
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "RACE MEASUREMENT\nProbabilistic full-name Bayesian inference using official wru v2.0.0 likelihoods; Florida physician prior primary; national prior sensitivity; no residential geography; not BISG; not self-reported identity.",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI",
+                      "fontSize": "9pt",
+                      "color": "#1F4E79",
+                      "fontWeight": "bold"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

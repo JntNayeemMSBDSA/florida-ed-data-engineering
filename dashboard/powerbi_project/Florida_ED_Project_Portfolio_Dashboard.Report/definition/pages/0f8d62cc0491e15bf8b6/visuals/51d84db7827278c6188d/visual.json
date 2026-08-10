@@ -1,0 +1,114 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "51d84db7827278c6188d",
+  "position": {
+    "x": 24,
+    "y": 310,
+    "z": 0,
+    "height": 250,
+    "width": 590,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "clusteredBarChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactAnalyticalStatus"
+                    }
+                  },
+                  "Property": "ComponentStatus"
+                }
+              },
+              "queryRef": "FactAnalyticalStatus.ComponentStatus",
+              "nativeQueryRef": "ComponentStatus",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "FactAnalyticalStatus"
+                        }
+                      },
+                      "Property": "AnalyticalStatusKey"
+                    }
+                  },
+                  "Function": 5
+                }
+              },
+              "queryRef": "Count(FactAnalyticalStatus.AnalyticalStatusKey)",
+              "nativeQueryRef": "Count of AnalyticalStatusKey"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Components by current status'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "2c39278a2d4d44dae822",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "FactAnalyticalStatus"
+              }
+            },
+            "Property": "ComponentStatus"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "ae50e17c37c02d220016",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "FactAnalyticalStatus"
+                  }
+                },
+                "Property": "AnalyticalStatusKey"
+              }
+            },
+            "Function": 5
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

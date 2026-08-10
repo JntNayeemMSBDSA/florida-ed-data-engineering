@@ -1,0 +1,39 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "7736f455e1fbf8374f98",
+  "position": {
+    "x": 760,
+    "y": 386,
+    "z": 16,
+    "height": 216,
+    "width": 496,
+    "tabOrder": 16
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "FROZEN OUTCOMES AND INTERPRETATION\nCharges, disposition/admission-related measures where supported, length of stay, treatment intensity, utilization, and separate AMI/Greenwood analyses. Physician race is probabilistic; hard labels are sensitivities. Results are observational associations, not causal effects.",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI",
+                      "fontSize": "10pt",
+                      "color": "#B45309",
+                      "fontWeight": "bold"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

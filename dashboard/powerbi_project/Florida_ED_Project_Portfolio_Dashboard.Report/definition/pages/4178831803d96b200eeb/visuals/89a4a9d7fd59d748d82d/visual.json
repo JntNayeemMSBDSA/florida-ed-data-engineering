@@ -1,0 +1,109 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "89a4a9d7fd59d748d82d",
+  "position": {
+    "x": 440,
+    "y": 222,
+    "z": 0,
+    "height": 326,
+    "width": 816,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimProjectStage"
+                    }
+                  },
+                  "Property": "StageName"
+                }
+              },
+              "queryRef": "DimProjectStage.StageName",
+              "nativeQueryRef": "StageName"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactAnalyticalStatus"
+                    }
+                  },
+                  "Property": "ComponentName"
+                }
+              },
+              "queryRef": "FactAnalyticalStatus.ComponentName",
+              "nativeQueryRef": "ComponentName"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactAnalyticalStatus"
+                    }
+                  },
+                  "Property": "ComponentStatus"
+                }
+              },
+              "queryRef": "FactAnalyticalStatus.ComponentStatus",
+              "nativeQueryRef": "ComponentStatus"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactAnalyticalStatus"
+                    }
+                  },
+                  "Property": "IndependentAuditStatus"
+                }
+              },
+              "queryRef": "FactAnalyticalStatus.IndependentAuditStatus",
+              "nativeQueryRef": "IndependentAuditStatus"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactAnalyticalStatus"
+                    }
+                  },
+                  "Property": "NextAction"
+                }
+              },
+              "queryRef": "FactAnalyticalStatus.NextAction",
+              "nativeQueryRef": "NextAction"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Continuation ledger'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

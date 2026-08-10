@@ -1,0 +1,78 @@
+table FactProjectCoverage
+	lineageTag: 08c0a4ed-edd5-4257-9c79-44ba0f14206a
+
+	column ProjectMetricKey
+		dataType: string
+		isHidden
+		lineageTag: 23f9af9a-690e-4310-8303-b73f5a796ca4
+		summarizeBy: none
+		sourceColumn: ProjectMetricKey
+
+	column MetricKey
+		dataType: string
+		isHidden
+		lineageTag: ba8d1235-4844-4f8c-8f65-839abe1a59ac
+		summarizeBy: none
+		sourceColumn: MetricKey
+
+	column MetricValue
+		dataType: int64
+		formatString: #,##0
+		lineageTag: dc59d7de-e2b5-480e-b3a0-fd1b7e43a1aa
+		summarizeBy: none
+		sourceColumn: MetricValue
+
+	column MetricStatus
+		dataType: string
+		lineageTag: 03224551-4060-4429-8399-374b1f79ec7a
+		summarizeBy: none
+		sourceColumn: MetricStatus
+
+	column AsOfDate
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 6ef64c56-42ae-464c-869a-d62313378210
+		summarizeBy: none
+		sourceColumn: AsOfDate
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column SourceArtifactKey
+		dataType: string
+		isHidden
+		lineageTag: 6db00659-d715-49b1-9492-13ce6206ffda
+		summarizeBy: none
+		sourceColumn: SourceArtifactKey
+
+	column DisclosureClass
+		dataType: string
+		isHidden
+		lineageTag: f1b0057c-3c1f-4646-a20a-5ab5bfe82029
+		summarizeBy: none
+		sourceColumn: DisclosureClass
+
+	partition FactProjectCoverage = m
+		mode: import
+		source =
+				let
+				    Source = #table(type table [ProjectMetricKey = text, MetricKey = text, MetricValue = Int64.Type, MetricStatus = text, AsOfDate = date, SourceArtifactKey = text, DisclosureClass = text], {
+				        {"PC_M001", "M001", 148686146, "VALIDATED", #date(2026, 7, 26), "SRC_P1_QA", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PC_M002", "M002", 76, "VALIDATED", #date(2026, 7, 26), "SRC_P1_QA", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PC_M003", "M003", 19, "VALIDATED", #date(2026, 7, 26), "SRC_P1_MANIFEST", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PC_M004", "M004", 342, "VALIDATED", #date(2026, 7, 26), "SRC_P1_MANIFEST", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PC_M005", "M005", 5, "VALIDATED", #date(2026, 7, 26), "SRC_P1_MANIFEST", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PC_M006", "M006", 240, "VALIDATED", #date(2026, 7, 26), "SRC_P1_QA", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PC_M007", "M007", 1805795, "VALIDATED", #date(2026, 7, 26), "SRC_P1_QA", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PC_M008", "M008", 119543044, "VALIDATED", #date(2026, 7, 26), "SRC_COHORT_PUBLIC", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PC_M009", "M009", 60, "VALIDATED", #date(2026, 7, 26), "SRC_COHORT_PUBLIC", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PC_M010", "M010", 23304846, "VALIDATED", #date(2026, 8, 6), "SRC_HISTORICAL_PUBLIC", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PC_M011", "M011", 16, "VALIDATED", #date(2026, 8, 6), "SRC_HISTORICAL_PUBLIC", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PC_M012", "M012", 743767, "VALIDATED", #date(2026, 8, 6), "SRC_METHOD", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PC_M013", "M013", 800, "VALIDATED", #date(2026, 8, 6), "SRC_SYNTHETIC_QA", "PUBLIC_SAFE_PROJECT_METADATA"},
+				        {"PC_M014", "M014", 76, "VALIDATED", #date(2026, 7, 26), "SRC_P1_MANIFEST", "PUBLIC_SAFE_PROJECT_METADATA"}
+				    })
+				in
+				    Source
+
+	annotation PBI_ResultType = Table
+

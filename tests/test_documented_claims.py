@@ -50,8 +50,12 @@ def test_status_does_not_overstate_completion() -> None:
     assert states["historical_analyses"] == "COMPLETE"
     if not status["final_analytical_pass_exists"]:
         assert states["primary_race_models"] == "IN PROGRESS"
+        assert states["primary_race_m1_m3_estimation"] == "COMPLETE_AUDIT_PENDING"
+        assert states["primary_gender_models"] == "IN PROGRESS"
+        assert states["primary_gender_m1_estimation"] == "COMPLETE_AUDIT_PENDING"
+        assert states["primary_gender_m2"] == "RESTART_REQUIRED"
+        assert states["primary_gender_m3"] == "PENDING"
         for name in (
-            "primary_gender_models",
             "outcome_specific_models",
             "directional_dyad_models",
             "corrected_primary_ami",
