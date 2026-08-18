@@ -2,6 +2,12 @@
 
 This repository is the public-safe, source-controlled handoff for a production Florida Emergency Department data-engineering and research-analytics project. It documents how **148,686,146 encounter records** were standardized into **76 validated quarterly partitions** spanning **2005–2008 and 2010–2024**, how provider and facility measurement was strengthened, and how the frozen physician–patient concordance analysis was implemented.
 
+## My role and contributions
+
+I led and executed the end-to-end data-engineering and analytical workflow under faculty research guidance. My responsibilities included investigating the raw quarterly data and historical documentation; designing the five-schema standardization architecture; defining the clinical decoding, provider, facility, and visit-level enhancement rules; constructing the validated analytical cohorts; specifying and operating the large-scale analytical pipeline; investigating failures; reconciling outputs to source records; and preparing the reproducible code, validation evidence, dashboard, and documentation presented here.
+
+Faculty collaborators established and refined the broader research questions and provided methodological guidance, while a physician collaborator provided clinical feedback during the exploratory stage. The implemented workflow, execution decisions, validation controls, and submitted portfolio documented in this repository represent my work and responsibility.
+
 Current status: **Phase 1 is complete and independently validated. Phase 2 measurement, cohort construction, historical analyses, and primary race M1–M3 estimation are complete; primary gender M1 is complete. Remaining primary and sensitivity analyses and the final independent analytical-release audit are pending.** No incomplete effect estimates are reported.
 
 The repository contains no purchased encounter files, row-level records, patient identifiers, provider identifiers, facility identifiers, model matrices, coefficient tables, or unpublished numerical concordance results.
@@ -95,6 +101,6 @@ flowchart LR
 
 This is an observational research workflow. The repository documents engineering, measurement, specifications, validation, and computational status. It does not authorize treatment-outcome conclusions, disclose unfinished numerical results, or redistribute the underlying data. Use the controlled status and frozen specifications rather than inferring completion from the presence of a script or output filename.
 
-## Publication state
+## Repository status
 
-This full repository is prepared as a separate local Git project. It does not modify the earlier public portfolio, has no Git remote, and must not be pushed until the owner reviews the local `READY_TO_PUBLISH` checkpoint and gives final approval.
+This is a sanitized public portfolio release containing reproducible source code, frozen methodological specifications, validation evidence, documentation, dashboard assets, and a fictional demonstration. Restricted source data, row-level identifiers, model matrices, and unpublished numerical research results are excluded.

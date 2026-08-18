@@ -18,8 +18,4 @@ My responsibilities included:
 
 Prof. Basuroy and three other faculty collaborators established and refined the broader research questions and provided methodological guidance. A physician collaborator provided domain feedback during the earlier exploratory-sample stage.
 
-## Development tools
-
-I used AI-assisted development tools to accelerate selected implementation, code review, testing, debugging, documentation, and repository-sanitization tasks. I retained responsibility for the research design, source selection, measurement definitions, analytical specifications, validation standards, execution decisions, interpretation boundaries, and approval of the submitted work.
-
-AI tools did not independently determine the research questions, approve methodological decisions, or authorize scientific conclusions. Every public claim in this repository is tied to documented evidence and validation artifacts.
+I retained responsibility for the research design, source selection, measurement definitions, analytical specifications, validation standards, execution decisions, interpretation boundaries, and approval of the submitted work. Every public claim in this repository is tied to documented evidence and validation artifacts.
